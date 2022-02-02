@@ -39,7 +39,6 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
-            color: white;
         }
         
             .siteName {
@@ -49,16 +48,16 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
             }
 
             
-            .darkModeToggle{
-                background-color: rgb(21, 21, 21);
+            .darkModeToggle, .lightModeToggle{
                 position: absolute;
                 right: 59px;
             }
 
-                .darkModeToggle img {
+                .darkModeToggle img, .lightModeToggle img {
                     width: 35px;
                     height: 35px;
                     margin-top: 4px;
+                    cursor: pointer;
                 }
         
             .navLinks {
@@ -80,10 +79,9 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
             
                     .navLinks li {
                         list-style: none;
-                        background-color: rgb(95, 90, 90)
                     }
 
-                        body.index li.index, body.cv li.cv, body.contact li.contact, body.portfolio li.portfolio, body.copypasta li.copypasta {
+                        body.index li.index, body.cv li.cv, body.contact li.contact, body.portfolio li.portfolio, body.projects li.projects {
                             background-color: green;
                         }
 

@@ -8,10 +8,9 @@
 
 /* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
-    .darkModeToggle{
-        background-color: rgb(21, 21, 21);
+    .darkModeToggle, .lightModeToggle{
         position: absolute;
-        right: 444px;
+        right: 410px;
     }
 
     .headerNav {
