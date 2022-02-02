@@ -1,0 +1,234 @@
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(22, 21, 21);
+    color: white;
+}
+/* Tar bort alla standardinställningar för padding och margin som webbläsaren har. Sätter också body:ns bakgrund till en bild. Body:n blir till ett flexobjekt vilket
+gör den mer anpassbar till olika skärmstorlekar. Body:n kommer nu alltid att vara över footer:n så att inget innehåll blockeras av den. Det kommer också att finnas ett
+konsekvent avstånd mellan footer:n och övrigt innehåll, vilket är jättebra. Den minsta höjden som body:n kan ha sätts till 100vh.
+Den tar nu alltså alltid upp fönstrets storlek. Bakgrundsbilden ska få webbplatsen att likna en sorts meny på en restaurang. Denna sorts bakgrund riktar sig till eventuella
+restauranggäster, vilket också är den huvudsakliga målgruppen.*/
+
+    .skipToMainContent {
+        position: absolute;
+        left: -500px;
+    }
+    /* Länken placeras utanför webbsidan, 500 pixlar till vänster. "position: absolute" gör det möjligt att placera ett element utanför visningsytan. */
+
+        .skipToMainContent:focus {
+            font-size: 200%;
+            position: static;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+        /* När länken får fokus (med hjälp av tabb-tangenten) blir texten större så den är lättare att märka. Länkens position återgår till det normala med hjälp av
+        "position: static". Genom att dölja denna länk som standard så underlättar det för de användare som inte använder t.ex. en skärmläsare för att navigera (de är
+        också mycket troligen majoriteten av användarna). Webbplatsens design påverkas inte alls av länken, om den inte används. Ger länken en annan färg och en annan
+        bakgrundsfärg samt ger den en border. Dessa ändringar gör så att den sticker ut från den vanliga webbsidan. */
+        
+        .headerNav {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            color: white;
+        }
+        
+            .siteName {
+                font-size: 150%;
+                margin: .5rem;
+                color: rgb(140, 230, 225);
+            }
+
+            
+            .darkModeToggle{
+                background-color: rgb(21, 21, 21);
+                position: absolute;
+                right: 59px;
+            }
+
+                .darkModeToggle img {
+                    width: 35px;
+                    height: 35px;
+                    margin-top: 4px;
+                }
+        
+            .navLinks {
+                width: 100%;
+                display: none;
+            }
+
+                .navLinks.active {
+                    display: flex;
+                }
+            
+                .navLinks ul {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+            
+                    .navLinks li {
+                        list-style: none;
+                        background-color: rgb(95, 90, 90)
+                    }
+
+                        body.index li.index, body.cv li.cv, body.contact li.contact, body.portfolio li.portfolio, body.copypasta li.copypasta {
+                            background-color: green;
+                        }
+
+                        .navLinks li:hover {
+                            background-color: #555;
+                        }
+
+                        .navLinks ul li {
+                            text-align: center;
+                        }
+
+                        .navLinks li a {
+                            display: block;
+                            text-decoration: none;
+                            color: white;
+                            padding: 1rem;
+                        }
+            
+            .navToggle {
+                position: absolute;
+                top: .75rem;
+                right: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
+            }
+            
+                .navToggle .bar {
+                    height: 3px;
+                    width: 100%;
+                    background-color: white;
+                    border-radius: 10px;
+                }
+        
+    .pageHeading {
+        text-align: center;
+    }
+    /* Centrerar samtliga sidtitlar. */
+    
+    footer {
+        color: white;
+        background-color: rgb(12, 12, 12);
+        text-align: center;
+        font-weight: bold;
+    }
+    /* Ändrar färgen och bakgrundfärgen, centrerar texten och gör denna text fet. Footer:n sticker nu ut mer, vilket är poängen. */
+
+        footer a {
+            color: white;
+        }
+        /* Gör alla a-element inne i footer:n vita så att de passar in med den övriga texten i footer:n. */
+
+/* Gäller globalt. ------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
+
+    #mainContentIndex, #mainContentCv, #mainContentContact, #mainContentPortfolio {
+        flex: 1;
+    }
+    /*Med hjälp av "flex: 1" kommer huvudinnehållet på sidorna alltid att vara samma längd, oavsett hur stort fönstret är. Detta förhindrar att något element blir för
+    stort eller för litet beroende på skärmstorleken. */
+
+/* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
+/* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+    #indexContentContainer {
+        text-align: center;
+        margin-top: 7rem;
+    }
+
+/* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+    #mainContentCv .pageHeading {
+        margin: 1rem;
+    }
+
+        #gridContainerCv {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto auto auto auto;
+            margin: 1rem;
+        }
+
+            #gridItemCv0 {
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            #gridItemCv1 {
+                grid-row: 2;
+                grid-column: 1;
+            }
+
+            #gridItemCv2 {
+                grid-row: 3;
+                grid-column: 1;
+            }
+
+            #gridItemCv3 {
+                grid-row: 4;
+                grid-column: 1;
+            }
+
+            #gridItemCv4 {
+                grid-row: 5;
+                grid-column: 1;
+            }
+
+            #gridItemCv5 {
+                grid-row: 6;
+                grid-column: 1;
+            }
+
+/* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+/* Gäller för sidan "contact.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+    #gridContainerContact {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        text-align: center;
+    }
+
+        #gridItemContact0 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        #gridItemContact1 {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        #gridItemContact2 {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+            .icon {
+                width: 150px;
+                padding: 2rem;
+            }
+
+/* Gäller för sidan "contact.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
