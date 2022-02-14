@@ -1,0 +1,200 @@
+/*DENNA FILEN ÄR NY (ALLA FILER PÅ DENNA WEBBPLATSEN ÄR NYA, SKAPADE AV MIG (ADAM KUMLIN)*/
+
+/*Tar bort margin och padding i bodyn så att headern och footern tar upp hela övre och undre skärmen*/
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 0.5%;
+    text-align: center;
+    border-bottom: 5px solid whitesmoke;
+}
+
+/*Använder en av dem två google-headers som finns länkade i varje html-dokument*/
+header h1 {
+    font-family: 'Alex Brush';
+    display: inline;
+    padding-left: 22%;
+    font-size: 500%;
+    color: whitesmoke;
+}
+
+.headerlogos {
+    border-bottom: 1px solid whitesmoke;
+}
+
+/*Lägger till en liten simpel animation på ikonerna som gör så att dem zoomas när muspekaren är över dem, här skapas en fördröjning*/
+.headerlogos img {
+    width: 2%;
+    height: 2%;
+    float: right;
+    padding: 1%;
+    margin-right: 4%;
+    transition: transform 0.2s;
+}
+
+/*Här skapas själva animationen*/
+.headerlogos img:hover {
+    transform: scale(2.1);
+}
+
+/*Eftersom att bambiikonen är i samma div som dem övriga ikonerna så bambiikonen att följa samma beteende, bambiikonen ska vara lite annorlunda så därför anvönds !important för att skriva över standardinställningarna för div:en*/
+.headerdeerlogo {
+    float: left !important;
+    width: 3% !important;
+    transform: none !important;
+}
+
+/*När muspekaren är över texten ändrar texten färg till gul-grönt (yellowgreen)*/
+nav a:hover {
+    color: yellowgreen;
+}
+
+/*Tar bort linjen som skapas under länkar*/
+a:link {
+    text-decoration: none;
+}
+
+/*Tar bort punkterna på listan i nav:en*/
+nav ul {
+    list-style-type: none;
+    padding-bottom: 3%;
+}
+
+/*Tillämpar en google-font på texten i nav:en, lägger till en float och delar upp texten med padding*/
+nav a {
+    float: left;
+    padding: 1% 8%;
+    margin-left: 6%;
+    font-size: 200%;
+    font-weight: bolder;
+    color: whitesmoke;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+/*Figuren är försöker alltid att vara på samma plats på sidan m.h.a. position: relative*/
+figure {
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/*Gör så att bilden ändrar storlek beroende på hur stort webbläsarfönstret är samt gör bilden lite mörkare så att texten syns bättre*/
+figure img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.4;
+}
+
+/*Tillämpar en google-font, gör så att headern följer bilden*/
+figure h2 {
+    margin-left: 41%;
+    position: absolute;
+    font-size: 550%;
+    bottom: 80%;
+    font-family: 'Alex Brush';
+}
+
+/*Tillämpar en google-font, gör så att texten följer bilden*/
+figure table {
+    position: absolute;
+    font-size: 200%;
+    bottom: 25%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 14%;
+}
+
+figure table th {
+    font-size: 125%;
+}
+
+/*Gör så att texten i tabellen börjar på vänster sida*/
+figure table td, th {
+    border: 1px solid whitesmoke;
+    text-align: left;
+    padding: 2%;
+}
+
+
+section {
+    color: whitesmoke;
+    text-align: center;
+}
+
+/*Gör så att bordern på tabellen blir lite tunnare och tydligare*/
+section table {
+    font-size: 200%;
+    bottom: 25%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 14%;
+}
+
+section table th {
+    font-size: 125%;
+}
+
+section table td, th {
+    border: 1px solid whitesmoke;
+    text-align: left;
+    padding: 2%;
+}
+
+/*Tillämpar en google-font*/
+section h2 {
+    font-size: 550%;
+    font-family: 'Alex Brush';
+}
+
+section p {
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section img {
+    width: 40%;
+    margin-bottom: 10%;
+}
+
+section form {
+    margin-bottom: 5%;
+    border: 2px solid whitesmoke;
+    margin-right: 30%;
+    margin-left: 30%;
+    padding-bottom: 2%;
+}
+
+/*Om ett rum är bokat så blir texten röd*/
+.bookingsbooked {
+    color: red;
+}
+
+/*När muspekaren är över texten blir muspekaren en "not-allowed", för att signalera att det inte går att boka just den dagen*/
+.bookingsbooked:hover {
+    cursor: not-allowed;
+}
+
+/*Om ett rum är tillgängligt blir texten ljusgrön*/
+.bookingsavailable {
+    color:lightgreen;
+}
+
+/*När muspekaren är över texten blir bakgrunden mörkgrön och muspekaren blir en "pointer"*/
+.bookingsavailable:hover {
+    background-color: rgba(146, 224, 146, 0.466);
+    cursor: pointer;
+}
+
+/*Gör så att footern alltid finns längst ner på sidan*/
+footer {
+    bottom: 0;
+    background-color: gray;
+    text-align: center;
+    padding: 0.1%;
+}

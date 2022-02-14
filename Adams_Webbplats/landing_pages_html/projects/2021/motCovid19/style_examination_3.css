@@ -1,0 +1,39 @@
+#wholeArticle {
+    width: 40%;
+    margin-left: 29%;
+    border: 5px solid black;
+    padding: 2%;
+}
+/* Centrerar article:n, bestämmer storleken och padding samt lägger till en liten border runt den. */
+
+#articleHeading {
+    font-size: 50px;
+    text-align: center;
+}
+/* Centrerar huvudrubriken i #wholeArticle och gör teckenstorleken större. */
+
+.articleSubHeading {
+    text-align: center;
+}
+/* Centrerar mellanrubrikerna i #wholeArticle. */
+
+#articleImage {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+/* Gör så att bildens storlek anpassar sig efter "#wholeArticle":s storlek. */
+
+#options {
+    margin-top: 5%;
+    margin-left: 28%;
+    margin-bottom: 2%;
+}
+/* Centrerar inställningarna så att de är i mitten under #wholeArticle men ovanför diagrammet ("#canvas"). */
+
+#canvas {
+    width: 75%;
+    margin-left: 12%;
+    border: 5px dotted black;
+}
+/* Bestämmer storleken på div:en i figure:en, centrerar den och lägger till en liten border runt den. */

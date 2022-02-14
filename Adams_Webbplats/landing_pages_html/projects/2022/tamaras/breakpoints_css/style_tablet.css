@@ -1,0 +1,120 @@
+@media screen and (min-width: 481px) {
+/* När bredden på skärmen är 481px eller mer. För mindre tablet:s (och resterande enheter). Dessa brytpunkter kan sättas mer specifikt med hjälp av en webbtrafiksanalys. Då
+skulle man kunna få reda på vilka de mest använda enheterna är och deras skärmstorlekar. I och med det kan brytpunkterna bli mer precisa. Exempelvis om en stor majoritet av
+användarna använder en viss typ av mobiltelefon så kan brytpunkten sättas så att den kompletterar just denna mobiltelefon bäst. Dessa brytpunkter är
+fortsättningsvis mycket hjälpsamma när det gäller plattformsanpassning. En webbplats kan se helt annorlunda ut på en mobiltelefon jämfört med på en dator. Exempelvis
+kan innehållet visas mer utspritt (både horisontellt och vertikalt) på en dator och mer koncentrerat (endast vertikalt) på en mobiltelefon. Då är layouten mer anpassad
+för olika plattformar som webbplatsen kan besökas på. Detta är en plattformsanpassning. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .headerHeading {
+        text-align: center;
+    }
+    /* Centrerar huvudrubriken, underrubriken (slogan:en) och logotypen. */
+
+        .headerHeading h1 {
+            font-size: 295%;
+            display: inline;
+        }
+        /* Gör huvudrubriken lite mindre så att layout:en fungerar. Huvudrubriken visas nu också som inline istället för block.
+        Det gör så att den kan vara till vänster om logotypen. Denna layout är bättre för större skärmar då allt inte behöver "tryckas ihop". */
+
+        .headerHeading img {
+            position: static;
+            max-width: 8%;
+            margin: 0;
+            top: auto;
+        }
+        /* Logotypens position är nu "static". Det är img-elementets vanliga inställning. Nu är den inte längre fast i den vänstra delen av skärmen som när den
+        istället hade inställningen "position: absolute". Sänker logotypens maxbredd till 8% så att den inte blir lika stor. Tar bort margin och återställer "top":s
+        värde till det normala. */
+
+        .headerHeading h2 {
+            font-size: 135%;
+            display: inline;
+        }
+        /* Gör underrubriken (slogan:en) lite mindre så att layout:en fungerar. Underrubriken (slogan:en) visas nu också som inline istället för block.
+        Det gör så att den kan vara till höger om logotypen. Denna layout är bättre för större skärmar då allt inte behöver "tryckas ihop". */
+
+    .globalNav a {
+        font-size: 150%;
+        border-top: 3px solid black;
+        border-bottom: 1px solid black;
+    }
+    /* Gör knapparnas text lite mindre så de inte blir för stora. Ger också knapparna en border längst upp och längst ner. */
+    
+        .navLink0, .navLink2 {
+            flex: 33%;
+        }
+        /* Dessa knappar tar nu upp 33% var av en enda rad istället för en hel rad. Detta är bättre för enheter med större skärmar. */
+
+        .navLink1 {
+            flex: 33%;
+            border-right: 0.5px solid black;
+            border-left: 0.5px solid black;
+        }
+        /* Denna knapp tar nu upp 33% av en enda rad istället för en hel rad. Ger den en border till vänster och till höger. */
+    
+    .pageHeading {
+        font-size: 200%;
+    }
+    /* Gör alla sidtitlar större. Detta gör texten mer synlig på större skärmar. */
+
+    h3 {
+        font-size: 120%;
+    }
+    /* Gör alla h3-element större. Detta gör texten mer synlig på större skärmar. */
+    
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Gäller globalt och för sidorna "index.html", "menu.html" samt "book.html". ------------------------------------------------------------------------------------ */
+
+    p, figcaption, #gridItemIndex2 h4, #pageSubHeadingMenu  {
+        font-size: 110%;
+    }
+    /* Gör p och figcaption-elementens text större. Även #pageSubHeadingMenu:s och #pageSubHeadingMenu:s text görs större. Detta gör texten mer synlig på större skärmar. */
+
+        footer p {
+            font-size: initial;
+        }
+        /* Ändringen ovan gäller inte för footer:ns p-element med hjälp av "font-size: initial." Footer:ns text behöver inte vara lika stor då den inte är lika viktig som
+        huvudinnehållet på webbplatsen. */
+
+/* Gäller globalt och för sidorna "index.html", "menu.html" samt "book.html". ------------------------------------------------------------------------------------ */
+}
+
+@media screen and (min-width: 768px) {
+    /* När bredden på skärmen är 768px eller mer. För tablet:s (och resterande enheter). Dessa brytpunkter kan sättas mer specifikt med hjälp av en webbtrafiksanalys. Då
+    skulle man kunna få reda på vilka de mest använda enheterna är och deras skärmstorlekar. I och med det kan brytpunkterna bli mer precisa. Exempelvis om en stor majoritet av
+    användarna använder en viss typ av mobiltelefon så kan brytpunkten sättas så att den kompletterar just denna mobiltelefon bäst. Dessa brytpunkter är
+    fortsättningsvis mycket hjälpsamma när det gäller plattformsanpassning. En webbplats kan se helt annorlunda ut på en mobiltelefon jämfört med på en dator. Exempelvis
+    kan innehållet visas mer utspritt (både horisontellt och vertikalt) på en dator och mer koncentrerat (endast vertikalt) på en mobiltelefon. Då är layouten mer anpassad
+    för olika plattformar som webbplatsen kan besökas på. Detta är en plattformsanpassning. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .headerHeading h1 {
+        font-size: 380%;
+    }
+    /* Gör huvudrubriken ännu större. Detta gör texten mer synlig på större skärmar. */
+
+    .headerHeading h2 {
+        font-size: 180%;
+    }
+    /* Gör underrubriken (slogan:en) ännu större. Detta gör texten mer synlig på större skärmar. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* För sidan "book.html". ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+    form input, #formMessage {
+        width: 15rem;
+    }
+    /* Ökar bredden till 15rem så de är lättare att använda på en större tablet. */
+
+        #formButton {
+            width: 13rem;
+        }
+        /* Gör knappen större, fast inte lika stor som de övriga input-elementen. Det gör det lättare att skilja på knappen och dessa. */
+
+/* För sidan "book.html". ----------------------------------------------------------------------------------------------------------------------------------------- */
+}

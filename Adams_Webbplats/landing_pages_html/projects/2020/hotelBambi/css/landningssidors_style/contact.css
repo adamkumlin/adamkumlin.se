@@ -1,0 +1,19 @@
+/*DENNA FILEN ÄR NY (ALLA FILER PÅ DENNA WEBBPLATSEN ÄR NYA, SKAPADE AV MIG (ADAM KUMLIN)*/
+
+/*ÖVERSKRIVNING: Gör hela headern (header till nav a) rosa*/
+header {
+    border-color: pink;
+}
+
+header h1 {
+    color: pink;
+}
+
+.headerlogos {
+    border-color: pink;
+   }
+
+nav a {
+    color: pink;
+}
+

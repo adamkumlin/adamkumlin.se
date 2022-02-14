@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+<title>JavaScript Basics</title>
+
+<!-- custom CSS -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,600" rel="stylesheet">
+<style type="text/css">
+html { font-family: 'Ubuntu', sans-serif; display: block; margin: 0px auto;color: #333333;}
+#container section, header {
+width: 90%;
+border: 1px solid #888;
+padding: 10px;
+border-radius: 5px;
+}
+.task_box {
+text-align: left;
+width: 30%;
+display: inline-block;
+border: 1px solid #888;
+padding: 10px;
+margin: 5px;
+border-radius: 5px;
+vertical-align: bottom;
+}
+fieldset {
+border-radius: 5px;
+background: #efefef;
+border: 0;
+}
+header, section {
+margin: 0.5em;
+}
+</style>
+
+<script src="scripts.js">
+</script> 
+</head>
+<body>
+ 
+	<div id="container">
+		<header>
+			<h1>Grundl&auml;ggande JavaScript</h1>
+			<article>
+				<h2>Om uppgiften</h2>
+				<p>Inl&auml;mningsuppgift 1 best&aring;r av att skriva funktionalitet i form av funktioner/procedurer till en f&auml;rdig mallsida.</p>
+				<p>Allm&auml;nt kriterium f&ouml;r samtliga inl&auml;mningsuppgifter:</p>
+				<ul>
+					<li>Allt ska testas av inl&auml;mnaren f&ouml;re inl&auml;mning. Det ska inte l&auml;mnas in ofullst&auml;ndiga eller delvis felaktiga l&ouml;sningar.</li>
+					<li>Koden ska vara l&auml;ttl&auml;slig, dvs ha kommentarer, bra namn p&aring; variabler, funktionsnamn etc. och ha en bra indentering.</li>
+				</ul>
+				<p>Denna HTML-sida best&aring;r av en serie formul&auml;r med knappar kopplade till h&auml;ndelser. Varje knapp anropar en funktion i script.js. Uppgiften g&aring;r ut p&aring; att f&auml;rdigst&auml;lla funktionerna s&aring; att de utf&ouml;r vad som f&ouml;rv&auml;ntas av dem.</p>
+			</article>
+		</header>
+		<section>
+			<div class="task_box">
+				<h2>Byt ut text</h2>
+				<p>I HTML-elementet #text finns textstr&auml;ngen <em>AI</em> uppm&auml;rkt med span-element. Genom att loopa igenom dessa element ska deras inneh&aring;ll bytas ut mot den textstr&auml;ng som matas in i formul&auml;ret n&auml;r knappen klickas p&aring;.</p>
+				
+				<p>G+: Ut&ouml;ka funktionen s&aring; att &auml;ven ett ord som inte finns i span-element byts ut, f&ouml;rslagsvis <em>robotic mower</em>.</p>
+				<form>
+					<fieldset>
+						<input type="text" id="input_text" value=""/>
+						<input onclick="swap_text()" value="Byt ut text" type="button"/>
+					</fieldset>
+				</form>				
+			</div>
+			<div class="task_box">
+				<h2>Byt ut f&auml;rg och font</h2>				
+				<p>Font och f&auml;rg p&aring; samtliga rubriker skall &auml;ndras dynamiskt vid tryck p&aring; knappen, du v&auml;ljer sj&auml;lv f&auml;rg och font. F&ouml;r G kan f&auml;rg och font h&aring;rdkodas i funktionen.</p>
+				<p>G+: anv&auml;nd formul&auml;ret f&ouml;r att skicka in f&auml;rg och font.</p>
+				<form>
+					<fieldset>
+						<label for="font_color">Font color</label><br/>
+						<input type="text" id="font_color" value=""/><br/>
+						<label for="font_family">Font</label><br/>
+						<input type="text" id="font_family" value=""/><br/>
+						<input onclick="swap_color_and_font()" value="Byt ut f&auml;rg och font" type="button"/>
+					</fieldset>
+				</form>					
+			</div>
+			<div class="task_box">
+				<h2>Multiplicera</h2>
+				<p>I denna uppgift ska anv&auml;ndaren fylla i tv&aring; textrutor (#number_1 och #number_2) och trycka p&aring; knappen. Ifall b&aring;da &auml;r positiva tal och under 1000 ska de multipliceras. Om n&aring;got av talen &auml;r negativt eller ej under 1000, eller ej ett tal, s&aring; ska ett felmeddelande visas. All output ska visas i &lt;span&gt;-elementet #result nedan.</p>
+				
+				<form>
+					<fieldset>
+						<input type="text" id="number_1" value="" size="5"/> * 
+						<input type="text" id="number_2" value="" size="5"/> = <span id="result"></span>
+						<input onclick="multiply()" value="Ber&auml;kna" type="button"/>
+					</fieldset>
+				</form>		
+			
+			</div>
+			<div class="task_box">
+				<h2>R&auml;kna tecken och ord</h2>
+				<p>I denna uppgift ska anv&auml;ndaren skriva in text och vid h&auml;ndelsen onkeyup ska en funktion anropas som r&auml;knar ut antal tecken textrutan #text_count.</p>
+				
+				<p>G+: bygg ut funktionen s&aring; att den ocks&aring; r&auml;knar ut antal ord. Hint: f&ouml;r att r&auml;kna ord kan du r&auml;kna mellanslag.</p>
+
+				<p>ID f&ouml;r &lt;span&gt;-elementen &auml;r #char_count och #word_count.</p>
+				<form>
+					<fieldset>
+						<textarea id="text_count" onkeyup="count_chars_and_words()"></textarea> 
+						<p>Antal tecken: <span id="char_count"></span><br/>
+						Antal ord: <span id="word_count"></span></p>
+					</fieldset>
+				</form>							
+			</div>
+			<div class="task_box">
+				<h2>Konvertera kommaseparerad text till ul-lista</h2>
+				<p>I textf&auml;ltet #csv_text nedan ska en kommaseparerad text skrivas in. Vid tryck p&aring; knappen anropas en funktion som delar upp texten i dess best&aring;ndsdelar och skriver ut en ul-lista till elementet #converted_list.</p>
+				<form>
+					<fieldset>
+						<textarea id="csv_text" onkeyup=""></textarea> 
+						<input onclick="convert_to_list()" value="Konvertera" type="button"/>
+					</fieldset>					
+				</form>	
+				<div id="converted_list">
+				
+				</div>
+			</div>
+			<div class="task_box">
+				<h2>Konvertera</h2>
+				<p>Formul&auml;ret nedan inneh&aring;ller en textbox #to_convert och en select-lista #unit med enheter. Uppgiften g&aring;r ut p&aring; att skriva en konverterare som plockar upp v&auml;rdet av respektive element och konverterar till l&auml;mplig enhet, som sedan skrivs ut till #converted. Anv&auml;nd en switch eller if-sats f&ouml;r att testa enhet och returnera r&auml;tt v&auml;rde och kom ih&aring;g att testa v&auml;rdet f&ouml;rst.</p>	
+
+				<p>Formler f&ouml;r konverteringarna finns som kommentar i funktionen.</p>
+
+				<form>
+					<fieldset>
+						<input type="text" id="to_convert" value="" size="5"/> konverteras fr&aring;n 
+						<select id="unit">
+							<option value="F">Fahrenheit</option>
+							<option value="cup">cup</option>
+							<option value="lb">lb/pound</option>
+						</select> 
+						till <input type="text" id="converted" value="" size="5"/>
+						<input onclick="converter()" value="Konvertera" type="button"/>
+					</fieldset>
+				</form>
+			
+			</div>
+		</section>
+		<section>		
+			<article id="text">
+				<h2>Texten</h2>
+				<p>When I was walking with my two year old daughter the other day we saw a robotic mower, a fairly common sight these days, and I could not resist thinking about <span>AI</span>. What if robotic mowers got the upper hand of the technological development and were the first to gain artificial general intelligence? I was thinking about a thought experiment named <a href="https://wiki.lesswrong.com/wiki/Paperclip_maximizer" rel="noreferrer">The paperclip maximiser</a>, once introduced by Nick Bostr&ouml;m. Basically, the <span>AI</span> would develop itself so to optimise itself in reaching its goal, which would be manufacturing paperclips. If there was no termination condition it would just go on making paperclips, perhaps creating machines creating paperclips, and when resources of the planet were exhausted, attempt to make use of other celestial bodies (it would of course have to find a way to reach them, and preferrably before resources were exhausted, but we suppose that we are talking about what by then would be a very intelligent machine or piece of software).</p>
+				<p>What would the robotic mower do? Would it be satisfied with finishing the lawn for now, or would it attempt to find more grass to cut? Would it start to grow grass in other areas and create more robotic mowers, perhaps mowers receiving energy from the grass that they cut? And if we turn our attention to self driving cars, would they try to optimise the time for a trip by creating shorter roads from A to B? Well, it turned out to be a silly thought experiment in the end, but termination conditions remain important.</p>
+				<p>Sometimes, scientific breakthroughs happen because of sharper senses and more computational power. <span>AI</span> can provide that. Scientific breakthroughs might also shift perspectives, and I expect an <span>AI</span> to at least shift its perspective, but that it would still be recognisable. I suppose that a termination condition requirement is partly from programming, a human activity which creates <span>AI</span>, which then might start programming. Our thoughts about <span>AI</span> say something about ourselves. We think that things we program need a good set of rules and a clearly defined termination condition because that is (partly) how our applications work following the programming languages and machines we have developed.</p>
+		
+			</article>
+		</section>
+		<footer>
+
+		</footer>
+	</div>
+ 
+</body>
+</html>
+

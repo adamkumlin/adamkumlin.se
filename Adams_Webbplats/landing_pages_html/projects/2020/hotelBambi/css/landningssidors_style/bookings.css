@@ -1,0 +1,24 @@
+/*DENNA FILEN ÄR NY (ALLA FILER PÅ DENNA WEBBPLATSEN ÄR NYA, SKAPADE AV MIG (ADAM KUMLIN)*/
+
+/*ÖVERSKRIVNING: Gör hela headern (header till nav a) ljusblå (aqua)*/
+header {
+    border-color: aqua;
+}
+
+header h1 {
+    color: aqua;
+}
+
+.headerlogos {
+    border-color: aqua;
+   }
+
+nav a {
+    color: aqua;
+}
+
+/*ÖVERSKRIVNING: Lägger till en margin längst ner*/
+section {
+    margin-bottom: 10%;
+}
+

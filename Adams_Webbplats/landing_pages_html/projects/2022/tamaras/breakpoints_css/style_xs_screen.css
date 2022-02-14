@@ -1,0 +1,100 @@
+@media screen and (max-width: 319px) {
+/* När bredden på skärmen är 319px eller mindre. För äldre enheter med extra små skärmar. Dessa brytpunkter kan sättas mer specifikt med hjälp av en webbtrafiksanalys. Då
+skulle man kunna få reda på vilka de mest använda enheterna är och deras skärmstorlekar. I och med det kan brytpunkterna bli mer precisa. Exempelvis om en stor majoritet av
+användarna använder en viss typ av mobiltelefon så kan brytpunkten sättas så att den kompletterar just denna mobiltelefon bäst. Dessa brytpunkter är
+fortsättningsvis mycket hjälpsamma när det gäller plattformsanpassning. En webbplats kan se helt annorlunda ut på en mobiltelefon jämfört med på en dator. Exempelvis
+kan innehållet visas mer utspritt (både horisontellt och vertikalt) på en dator och mer koncentrerat (endast vertikalt) på en mobiltelefon. Då är layouten mer anpassad
+för olika plattformar som webbplatsen kan besökas på. Detta är en plattformsanpassning. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    body {
+        width: 800px;
+    }
+    /* Sätter body:ns bredd till ett konsekvent 800px. Sidans storlek ändrar sig sedan så att det får plats i fönstret.
+    Innehåll blir nu aldrig mindre än fönstret. Detta är inte ett perfekt sätt att göra detta på, men det är det enda som fungerade.
+    Om det finns ett bättre sätt så vill jag gärna veta. */
+
+        .headerHeading {
+            text-align: center;
+        }
+        /* Centrerar huvudrubriken och underrubriken (slogan:en). */
+
+            .headerHeading h1 {
+                font-size: 750%;
+            }
+            /* Gör huvudrubrikens text större. Detta gör texten mer synlig på extra små enheter. */
+
+            .headerHeading img {
+                display: none;
+            }
+            /* Logotypen visas inte som standard. Eftersom att skärmbredden är så pass begränsad så måste tyvärr logotypen vara osynlig när webbplatsen visas på en mobiltelefon.
+            Detta är inget lätt val att göra då logotypen är så pass viktig för en webbplats identitet. Men i detta fall var den avvägningen tvungen att göras då designen påverkas
+            negativt av logotypen. Det är dessutom mycket svårt, kanske till och med omöjligt att placera logotypen rätt till vänster då skärmen är så pass liten. */
+
+            .headerHeading h2 {
+                font-size: 500%;
+            }
+            /* Gör underrubrikens (slogan:ens) text större. Detta gör texten mer synlig på extra små enheter. */
+
+        .globalNav a {
+            font-size: 500%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            border-width: 10px;
+        }
+        /* Gör nav-länkarna större. Även deras border:s görs tjockare. De blir då lättare att trycka på med extra små enheter. */
+
+        .pageHeading {
+            font-size: 500%;
+        }
+        /* Gör sidtitlarnas text större. Detta gör texten mer synlig på extra små enheter. */
+
+        h3 {
+            font-size: 400%;
+        }
+        /* Gör alla h3-element större. Detta gör texten mer synlig på extra små enheter. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Gäller globalt och för sidorna "index.html" samt "menu.html". ------------------------------------------------------------------------------------------------- */
+
+        p, figcaption, #gridItemIndex2 h4 {
+            font-size: 350%;
+        }
+        /* Gör alla p och figcaption-elements text större. Även h4:n från #gridItemIndex2 påverkas. Detta gör texten mer synlig på extra små enheter. */
+
+/* Gäller globalt och för sidorna "index.html" samt "menu.html". ------------------------------------------------------------------------------------------------- */
+/* För sidorna "index.html" och "menu.html". --------------------------------------------------------------------------------------------------------------------- */
+
+        #gridItemIndex0, #gridItemIndex1, #gridItemIndex2, #gridItemMenu0, #gridItemMenu1, #gridItemMenu2 {
+            border-width: 15px;
+        }
+        /* Gör alla grid-items border:s större. Detta gör dem mer synliga på extra små enheter. */
+
+            #gridItemIndex1 img {
+                width: 20%;
+            }
+            /* Gör ikonerna större så de är lättare att se samt trycka på. */
+
+/* För sidorna "index.html" och "menu.html". --------------------------------------------------------------------------------------------------------------------- */
+/* För sidan "book.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+        form input, #formMessage, #formButton{
+            font-size: 110%;
+            width: 24rem;
+            height: 10rem;
+        }
+        /* Gör alla input-element större. Även #formMessage och #formButton påverkas. Deras text blir också större. Detta gör texten mer synlig på extra små enheter. */
+
+            #formEmail {
+                font-size: 74%;
+            }
+            /* Gör #formEmail:s teckenstorlek lite mindre än resterande input-element så att placeholder:ns text ska få plats. */
+
+        #formMessage {
+            height: 15rem;
+        }
+        /* Gör elementet #formMessage högre så den sticker ut mer från de andra input-elementen. */
+
+/* För sidan "book.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+}
