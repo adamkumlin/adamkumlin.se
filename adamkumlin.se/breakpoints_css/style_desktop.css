@@ -1,0 +1,105 @@
+@media screen and (min-width: 961px) {
+/* När bredden på skärmen är 961px eller mer. För laptop:s och andra desktop:s. Dessa brytpunkter kan sättas mer specifikt med hjälp av en webbtrafiksanalys. Då
+skulle man kunna få reda på vilka de mest använda enheterna är och deras skärmstorlekar. I och med det kan brytpunkterna bli mer precisa. Exempelvis om en stor majoritet av
+användarna använder en viss typ av mobiltelefon så kan brytpunkten sättas så att den kompletterar just denna mobiltelefon bäst. Dessa brytpunkter är
+fortsättningsvis mycket hjälpsamma när det gäller plattformsanpassning. En webbplats kan se helt annorlunda ut på en mobiltelefon jämfört med på en dator. Exempelvis
+kan innehållet visas mer utspritt (både horisontellt och vertikalt) på en dator och mer koncentrerat (endast vertikalt) på en mobiltelefon. Då är layouten mer anpassad
+för olika plattformar som webbplatsen kan besökas på. Detta är en plattformsanpassning. */
+
+/* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+    #mainContentCv h2 {
+        text-align: center;
+    }
+    
+    #mainContentCv ul {
+        list-style-position: inside;
+    }
+
+        #gridContainerCv {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto auto;
+            margin: 1rem;
+            text-align: center;
+        }
+
+            #gridItemCv0 {
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            #gridItemCv1 {
+                grid-row: 1;
+                grid-column: 2;
+            }
+
+            #gridItemCv2 {
+                grid-row: 2;
+                grid-column: 1;
+            }
+
+            #gridItemCv3 {
+                grid-row: 2;
+                grid-column: 2;
+            }
+
+            #gridItemCv4 {
+                grid-row: 3;
+                grid-column: 1;
+            }
+
+            #gridItemCv5 {
+                grid-row: 3;
+                grid-column: 2;
+            }
+
+/* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+    #gridContainerContact {
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        margin-top: 13rem;
+    }
+
+        #gridItemContact0 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        #gridItemContact1 {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        #gridItemContact2 {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        #gridItemContact3 {
+            grid-row: 1;
+            grid-column: 4;
+        }
+
+/* Gäller för sidan "projects.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+#gridContainerProjects {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+}
+
+    #gridItemProjects1 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #gridItemProjects2 {
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    #gridItemProjects0 ul, #gridItemProjects1 ul, #gridItemProjects2 ul{
+        list-style-position: inside;
+    }
+/* Gäller för sidan "projects.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<!--Ändrar webbsidans språk till svenska. -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kontakta mig</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&display=swap" rel="stylesheet"> <!--Typsnittet är Shippori Mincho B1 av FONTDASU via https://fonts.google.com/specimen/Shippori+Mincho+B1#standard-styles
+    (Jag vet inte hur man refererar till ett typsnitt enligt APA).-->
+    <!--Länkar en google-font.-->
+
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!--Länkar en stilmall.-->
+    
+    <link rel="stylesheet" type="text/css" media="(min-width: 768px)" href="../breakpoints_css/style_tablet.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 961px)" href="../breakpoints_css/style_desktop.css">
+    <!--Länkar tre stilmallar som endast läses in beroende på skärmbredden. Genom att dessa extra stilmallar inte läses in direkt så blir webbplatsen snabbare.
+    Prestandan ökar. Detta är ett bättre alternativ till att t.ex. alla stilmallar läses in, oavsett om skärmen upfyller de krav så läses de ändå in.-->
+
+</head>
+
+<body class="contact" onload="checkDarkMode()">
+    <header>
+
+        <a href="#mainContentIndex" class="skipToMainContent">Hoppa till huvudinnehållet</a>
+        <!-- Skapar en länk som användaren kan klicka. Den tar hen till huvudinnehållet på sidan. Detta är ett vektyg som gör webbplatsen mer tillgänglig. Den låter
+        t.ex. användare med nedsatt syn kunne använda webbplaysen med skärmläsare. Denna länk är bra att ha även för de med små enheter som vill komma till innehållet direkt
+        utan att behöva scrolla förbi en massa annat. Den är bättre att ha än att inte ha, även fast den inte alltid behövs. Denna länk, samt alla andra länkar kan kommas åt med
+        tab-tangenten. Hela webbplatsen går lika bra att använda med ett tangentbord, vilket är mycket bra och viktigt. Detta är en aspekt inom tillgänglighet, att kunna använda
+        webbplatsen med endast ett tangentbord.-->
+
+        <nav class="headerNav">
+            <h1 class="siteName">Adam Kumlin</h1>
+            
+            <a href="#" class="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+            <a class="darkModeToggle"><img src="../images/sun_icon.png"></a>
+            <a class="lightModeToggle" style="display: none;"><img src="../images/moon_icon.png"></a>
+
+            <div class="navLinks">
+                <ul>
+                    <li class="index"><a href="../index.html">Hem</a></li>
+                    <li class="cv"><a href="cv.html">CV</a></li>
+                    <li class="contact"><a href="contact.html">Kontakta mig</a></li>
+                    <li class="portfolio"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="projects"><a href="projects.html">Skolprojekt</a></li>
+                <ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mainContentContact">
+
+        <h2 class="pageHeading">Kontakta mig</h2>
+
+        <div id="gridContainerContact">
+
+            <div id="gridItemContact0">
+                <a href="https://www.linkedin.com/" target="_blank"><img class="icon" src="../images/linkedin_icon.png" alt="Bild på LinkedIn:s logotyp"></a>
+            </div>
+
+            <div id="gridItemContact1">
+                <a href="mailto:kumlinadam99@gmail.com"><img class="icon" src="../images/email_icon.png" alt="Bild på Gmail:s logotyp"></a>
+            </div>
+
+            <div id="gridItemContact2">
+                <a href="tel:0768567664"><img class="icon" src="../images/phone_icon.png" alt="Bild på en telefonikon"></a>
+            </div>
+
+            <div id="gridItemContact3">
+                <a href="https://github.com/adamkumlin" target="_blank"><img class="icon" src="../images/github_icon.png" alt="Bild på GitHub:s logotyp"></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>© 2022 Adam Kumlin.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    
+</body>
+</html>

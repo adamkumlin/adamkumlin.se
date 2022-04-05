@@ -2,13 +2,13 @@
 
 <html lang="sv">
 <!--Ändrar webbsidans språk till svenska. -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projekt</title>
-
+    <title>Adam Kumlin</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,17 +16,18 @@
     (Jag vet inte hur man refererar till ett typsnitt enligt APA).-->
     <!--Länkar en google-font.-->
 
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!--Länkar en stilmall.-->
 
-    <link rel="stylesheet" type="text/css" media="(min-width: 768px)" href="../breakpoints_css/style_tablet.css">
-    <link rel="stylesheet" type="text/css" media="(min-width: 961px)" href="../breakpoints_css/style_desktop.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 768px)" href="breakpoints_css/style_tablet.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 961px)" href="breakpoints_css/style_desktop.css">
     <!--Länkar tre stilmallar som endast läses in beroende på skärmbredden. Genom att dessa extra stilmallar inte läses in direkt så blir webbplatsen snabbare.
-    Prestandan ökar. Detta är ett bättre alternativ till att t.ex. alla stilmallar läses in, oavsett om skärmen upfyller de krav så läses de ändå in.-->
-
+    Prestandan ökar. Detta är ett bättre alternativ till att t.ex. alla stilmallar läses in, oavsett om skärmen upfyller de krav så läses de ändå in. Detta är en
+    prestandaanpassning.-->
+    
 </head>
 
-<body class="projects">
+<body class="index" onload="checkDarkMode()">
     <header>
 
         <a href="#mainContentIndex" class="skipToMainContent">Hoppa till huvudinnehållet</a>
@@ -45,59 +46,38 @@
                 <span class="bar"></span>
             </a>
 
-            <a class="darkModeToggle"><img src="../images/sun_icon.png"></a>
-            <a class="lightModeToggle" style="display: none;"><img src="../images/moon_icon.png"></a>
+                <a class="darkModeToggle"><img src="images/sun_icon.png"></a>
+                <a class="lightModeToggle" style="display: none;"><img src="images/moon_icon.png"></a>
 
             <div class="navLinks">
                 <ul>
-                    <li class="index"><a href="../index.html">Hem</a></li>
-                    <li class="cv"><a href="cv.html">CV</a></li>
-                    <li class="contact"><a href="contact.html">Kontakta mig</a></li>
-                    <li class="portfolio"><a href="portfolio.html">Portfolio</a></li>
-                    <li class="projects"><a href="projects.html">Projekt</a></li>
+                    <li class="index"><a href="index.html">Hem</a></li>
+                    <li class="cv"><a href="landing_pages_html/cv.html">CV</a></li>
+                    <li class="contact"><a href="landing_pages_html/contact.html">Kontakta mig</a></li>
+                    <li class="portfolio"><a href="landing_pages_html/portfolio.html">Portfolio</a></li>
+                    <li class="projects"><a href="landing_pages_html/projects.html">Skolprojekt</a></li>
                 <ul>
             </div>
         </nav>
     </header>
 
-    <div id="mainContentProjects">
-        <h2 class="pageHeading">Projekt</h2>
+    <div id="mainContentIndex">
 
-       <div id="gridContainerProjects">
+        <h2 class="pageHeading">Hem</h2>
 
-           <div id="gridItemProjects0">
-                <h3>2020</h3>
+        <div id="indexContentContainer">
 
-                <ul>
-                    <li><a href="projects/2020/hotelBambi/html/index.html" target="_blank">Hotel Bambi</a></li>
-                </ul>
-           </div>
+            <p>Detta är min webbplats. Här kan du se allt om Adam Kumlin.</p>
+            <p>Du kan till exempel läsa hans CV, se hans tidigare projekt, bilder och mycket mer. Välkommen!</p>
 
-           <div id="gridItemProjects1">
-                <h3>2021</h3>
-
-                <ul>
-                    <li><a href="projects/2021/jsBasics/index.html" target="_blank">JS Basics</a></li>
-                    <li><a href="projects/2021/vaxtPalatset/index_examination_2.html" target="_blank">Växtpalatset</a></li>
-                    <li><a href="projects/2021/motCovid19/index_examination_3.html" target="_blank">Mot Covid-19</a></li>
-                </ul>
-            </div>
-
-            <div id="gridItemProjects2">
-                <h3>2022</h3>
-
-                <ul>
-                    <li><a href="projects/2022/tamaras/index.html" target="_blank">Tamaras</a></li>
-                </ul>
-            </div>
-       </div>
+        </div>
     </div>
 
     <footer>
         <p>© 2022 Adam Kumlin.</p>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>
