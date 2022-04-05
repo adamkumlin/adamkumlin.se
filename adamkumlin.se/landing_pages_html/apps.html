@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CV</title>
-
+    <title>Appar</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,10 +25,10 @@
 
 </head>
 
-<body class="cv" onload="checkDarkMode()">
+<body class="apps" onload="checkDarkMode()">
     <header>
 
-        <a href="#mainContentCv" class="skipToMainContent">Hoppa till huvudinnehållet</a>
+        <a href="#mainContentApps" class="skipToMainContent">Hoppa till huvudinnehållet</a>
         <!-- Skapar en länk som användaren kan klicka. Den tar hen till huvudinnehållet på sidan. Detta är ett vektyg som gör webbplatsen mer tillgänglig. Den låter
         t.ex. användare med nedsatt syn kunne använda webbplaysen med skärmläsare. Denna länk är bra att ha även för de med små enheter som vill komma till innehållet direkt
         utan att behöva scrolla förbi en massa annat. Den är bättre att ha än att inte ha, även fast den inte alltid behövs. Denna länk, samt alla andra länkar kan kommas åt med
@@ -61,84 +60,48 @@
         </nav>
     </header>
 
-    <div id="mainContentCv">
+    <div id="mainContentApps">
+        <h2 class="pageHeading">Appar</h2>
 
-        <h2 class="pageHeading">CV</h2>
+       <div id="gridContainerApps">
 
-        <div id="gridContainerCv">
-            
-            <div id="gridItemCv0">
-                <h3>Om mig</h3>
+            <div id="gridItemApps0">
+                <h3>Kalkylator</h3>
 
-                <p>
-                    Adam Kumlin<br>
-                    Strömstarevägen 41<br>
-                    43495 Kungsbacka<br>
-                    Telefon, mobil: <a href="tel:0768567664">0768-567664</a><br>
-                    E-post: <a href="mailto:kumlinadam99@gmail.com">kumlinadam99(at)gmail.com</a>
-                </p>
+                <input type="text" id="calculatorInput" disabled>
+
+                <div id="group1">
+                    <div id="number9">9</div>
+                    <div id="number8">8</div>
+                    <div id="number7">7</div>
+                    <div id="add">+</div>
+                </div>
+                <div id="group2">
+                    <div id="number6">6</div>
+                    <div id="number5">5</div>
+                    <div id="number4">4</div>
+                    <div id="subtract">-</div>
+                </div>
+                <div id="group3">
+                    <div id="number3">3</div>
+                    <div id="number2">2</div>
+                    <div id="number1">1</div>
+                    <div id="number0">0</div>
+                </div>
+
+                <div id="equals">=</div>
             </div>
             
-            <div id="gridItemCv1">
-                <h3>Utbildning</h3>
 
-                <ul>
-                    <li>Webbredaktörsprogrammet inriktning frontend, Högskolan i Borås<br>
-                        aug 2020 - juni 2023
-                    </li>
-
-                    <li>Samhällsvetenskapsprogrammet inriktning Beteende, Aranäsgymnasiet Kungsbacka<br>
-                        aug 2015 - juni 2018
-                    </li>
-                </ul>
-            </div>
-
-            <div id="gridItemCv2">
-                <h3>Anställningar</h3>
-
-                <ul>
-                    <li>Aranäs Fastigheter AB, Kungsbacka<br>
-                        Städade korridorer, rensade ogräs och delade ut reklam- samt informationsblad från företaget.<br>
-                        Sommar 2016, 2017
-                    </li>
-
-                    <li>
-                        Aranäs Fastigheter AB, Kungsbacka<br>
-                        Kollade till miljörum så att det såg snyggt och bra ut.<br>
-                        Sommar 2019, 2020
-                    </li>
-                </ul>
-            </div>
-
-            <div id="gridItemCv3">
-                <h3>Språk</h3>
-
-                <ul>
-                    <li>Svenska, modersmål</li>
-                    <li>Engelska, mycket bra i tal och skrift</li>
-                    <li>Tyska, grundläggande kunskaper</li>
-                    <li>Ryska, grundläggande kunskaper</li>
-                </ul>
-            </div>
-
-            <div id="gridItemCv4">
-                <h3>Datorkunskaper</h3>
-
-                <p>
-                    Mycket van att jobba med Google-produkter som Google Drive och Gmail. Är även mycket van med Office-paketet. Har kunskaper inom CSS, HTML och JavaScript. Har även grundläggande kunskaper inom C#.
-                </p>
-            </div>
-
-            <div id="gridItemCv5">
-                <h3>Körkort och referenser</h3>
+            <div id="gridItemApps1">
                 
-                <ul>
-                    <li>Innehar B-körkort.</li>
-                    <li>Christian Danielsson, tel. mobil: 0761-953404</li>
-                </ul>
             </div>
-        </div>
-        
+
+            <div id="gridItemApps2">
+                
+            </div>
+
+       </div>
     </div>
 
     <footer>
