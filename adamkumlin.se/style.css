@@ -255,11 +255,11 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
         grid-column: 1;
     }
 
-        #gridItemProjects0 ul, #gridItemProjects1 ul, #gridItemProjects2 ul{
+        #gridItemProjects0 ul, #gridItemProjects1 ul, #gridItemProjects2 ul {
             list-style-position: inside;
         }
 
-        #gridItemProjects0 a, #gridItemProjects1 a, #gridItemProjects2 a{
+        #gridItemProjects0 a, #gridItemProjects1 a, #gridItemProjects2 a {
             color: blue;
         }
     
@@ -279,14 +279,19 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
         grid-column: 1;
     }
 
-        #number0, #number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #add, #subtract, #equals {
+        #number0, #number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #add, #subtract, #equals, #multiply, #divide {
             display: inline-block;
-            border: 2px solid white;
-            width: 1rem;
+            width: 2rem;
+            cursor: pointer;
         }
 
+            #number0:hover, #number1:hover, #number2:hover, #number3:hover, #number4:hover, #number5:hover, #number6:hover, #number7:hover, #number8:hover, #number9:hover, #add:hover, #subtract:hover, #multiply:hover, #divide:hover {
+                background-color: red;
+            }
+
         #equals {
-            width: 5.5rem;
+            width: 4.3rem;
+            background-color: green;
         }
 
     #gridItemApps1 {
