@@ -1,4 +1,4 @@
-let result;
+/*let result;
 let numberStorage = [];
 
 let zero = document.getElementById("number0");
@@ -78,4 +78,4 @@ add.addEventListener("click", () => {
 
 function calculate() {
 
-}
+}*/
