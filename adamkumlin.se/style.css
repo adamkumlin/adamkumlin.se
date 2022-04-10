@@ -123,6 +123,7 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
         
     .pageHeading {
         text-align: center;
+        font-size: 300%;
     }
     /* Centrerar samtliga sidtitlar. */
     
@@ -277,6 +278,7 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
     #gridItemApps0 {
         grid-row: 1;
         grid-column: 1;
+        margin-bottom: 1rem;
     }
 
         #number0, #number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #add, #subtract, #equals, #multiply, #divide {
@@ -297,11 +299,37 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
     #gridItemApps1 {
         grid-row: 2;
         grid-column: 1;
+        border-top: 2px solid white
     }
+
+        #gridItemApps1 button {
+            margin-bottom: 2rem;
+            border-radius: 25px;
+            width: 10rem;
+            height: 3rem;
+            font-size: 120%;
+            cursor: pointer;
+        }
+
+            #gridItemApps1 button:hover {
+                background-color: rgb(120, 186, 243);
+            }
 
     #gridItemApps2 {
         grid-row: 3;
         grid-column: 1;
+    }
+
+    #gridContainerApps h3 {
+        font-size: 200%;
+    }
+    
+    #gridContainerApps h4 {
+        font-size: 140%;
+    }
+
+    #gridContainerApps h5 {
+        font-size: 110%;
     }
 
 /* Gäller för sidan "apps.html". ---------------------------------------------------------------------------------------------------------------------------------- */
