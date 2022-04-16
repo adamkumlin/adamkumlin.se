@@ -320,6 +320,16 @@ restauranggäster, vilket också är den huvudsakliga målgruppen.*/
         grid-column: 1;
     }
 
+        .productContainer {
+            float: left;
+            margin-right: 10rem;
+        }
+
+        .productContainer img {
+            max-width: 10rem;
+            height: auto;
+        }
+
     #gridContainerApps h3 {
         font-size: 200%;
     }
