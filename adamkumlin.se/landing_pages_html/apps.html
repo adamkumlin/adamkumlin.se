@@ -23,6 +23,9 @@
     <!--Länkar tre stilmallar som endast läses in beroende på skärmbredden. Genom att dessa extra stilmallar inte läses in direkt så blir webbplatsen snabbare.
     Prestandan ökar. Detta är ett bättre alternativ till att t.ex. alla stilmallar läses in, oavsett om skärmen upfyller de krav så läses de ändå in.-->
 
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
 </head>
 
 <body class="apps" onload="checkDarkMode()">
@@ -148,6 +151,10 @@
                     <button id="product2Button" onclick="buy(this)">Köp</button>
                 </div>
             </div>
+
+            <py-script>
+                
+            </py-script>
 
        </div>
     </div>
