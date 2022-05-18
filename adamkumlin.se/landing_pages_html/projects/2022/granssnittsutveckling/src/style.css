@@ -1,0 +1,35 @@
+body {
+  background-color: gainsboro;
+  margin: 0;
+  padding: 0;
+}
+/* Ger body:n en bakgrundfärg och tar bort margin samt padding. */
+
+  h1, h2, p {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  /* Centrerar samtliga textelement, ger dem ett eget typsnitt. */
+
+    h1 {
+      font-size: 400%;
+    }
+    /* Gör huvudrubriken större. */
+
+    input{
+      display: block;
+      margin: 0 auto;
+      border-radius: 25px;
+      width: 15rem;
+      height: 2rem;
+      font-size: 120%;
+    }
+    /* Centrerar textboxen och gör den mindre rektangulär. Den görs också högre och bredare med en större teckenstorlek. */
+
+  .InformationCard {
+    margin-bottom: 4rem;
+    background-color: rgb(206, 186, 159);
+    border: 2px solid black;
+    border-radius: 25px;
+  }
+  /* Lägger till en margin, ger komponenten en bakgrundsfärg och en border. Border:n görs mindre rektangulär. */
