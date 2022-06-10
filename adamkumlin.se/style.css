@@ -1,345 +1,330 @@
-/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
-
-body {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: rgb(22, 21, 21);
-    color: white;
+html {
+    width: 100%;
+    height: 100%;
 }
-/* Tar bort alla standardinställningar för padding och margin som webbläsaren har. Sätter också body:ns bakgrund till en bild. Body:n blir till ett flexobjekt vilket
-gör den mer anpassbar till olika skärmstorlekar. Body:n kommer nu alltid att vara över footer:n så att inget innehåll blockeras av den. Det kommer också att finnas ett
-konsekvent avstånd mellan footer:n och övrigt innehåll, vilket är jättebra. Den minsta höjden som body:n kan ha sätts till 100vh.
-Den tar nu alltså alltid upp fönstrets storlek. Bakgrundsbilden ska få webbplatsen att likna en sorts meny på en restaurang. Denna sorts bakgrund riktar sig till eventuella
-restauranggäster, vilket också är den huvudsakliga målgruppen.*/
 
-    .skipToMainContent {
-        position: absolute;
-        left: -500px;
-    }
-    /* Länken placeras utanför webbsidan, 500 pixlar till vänster. "position: absolute" gör det möjligt att placera ett element utanför visningsytan. */
-
-        .skipToMainContent:focus {
-            font-size: 200%;
-            position: static;
-            background-color: black;
-            color: white;
-            border: 1px solid white;
-        }
-        /* När länken får fokus (med hjälp av tabb-tangenten) blir texten större så den är lättare att märka. Länkens position återgår till det normala med hjälp av
-        "position: static". Genom att dölja denna länk som standard så underlättar det för de användare som inte använder t.ex. en skärmläsare för att navigera (de är
-        också mycket troligen majoriteten av användarna). Webbplatsens design påverkas inte alls av länken, om den inte används. Ger länken en annan färg och en annan
-        bakgrundsfärg samt ger den en border. Dessa ändringar gör så att den sticker ut från den vanliga webbsidan. */
-        
-        .headerNav {
-            display: flex;
-            position: relative;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        
-            .siteName {
-                font-size: 150%;
-                margin: .5rem;
-                color: rgb(140, 230, 225);
-            }
-            
-            a {
-                text-decoration: none;
-            }
-
-            .darkModeToggle, .lightModeToggle{
-                position: absolute;
-                margin-right: 6rem;
-            }
-
-                .darkModeToggle img, .lightModeToggle img {
-                    width: 35px;
-                    height: 35px;
-                    margin-top: 4px;
-                    cursor: pointer;
-                }
-        
-            .navLinks {
-                width: 100%;
-                display: none;
-            }
-
-                .navLinks.active {
-                    display: flex;
-                }
-            
-                .navLinks ul {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    margin: 0;
-                    padding: 0;
-                }
-            
-                    .navLinks li {
-                        list-style: none;
-                    }
-
-                        body.index li.index, body.cv li.cv, body.contact li.contact, body.portfolio li.portfolio, body.projects li.projects, body.apps li.apps {
-                            background-color: green;
-                        }
-
-                        .navLinks li:hover {
-                            background-color: #555;
-                        }
-
-                        .navLinks ul li {
-                            text-align: center;
-                        }
-
-                        .navLinks li a {
-                            display: block;
-                            text-decoration: none;
-                            color: white;
-                            padding: 1rem;
-                        }
-            
-            .navToggle {
-                position: absolute;
-                top: .75rem;
-                right: 1rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 30px;
-                height: 21px;
-            }
-            
-                .navToggle .bar {
-                    height: 3px;
-                    width: 100%;
-                    background-color: white;
-                    border-radius: 10px;
-                }
-        
-    .pageHeading {
-        text-align: center;
-        font-size: 300%;
-    }
-    /* Centrerar samtliga sidtitlar. */
-    
-    footer {
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(22, 21, 21);
         color: white;
-        background-color: rgb(12, 12, 12);
-        text-align: center;
-        font-weight: bold;
+        background: linear-gradient(-45deg, #3c63ce, #1054bb, #5e8bce, #32d1d1);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
     }
-    /* Ändrar färgen och bakgrundfärgen, centrerar texten och gör denna text fet. Footer:n sticker nu ut mer, vilket är poängen. */
 
-        footer a {
-            color: white;
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
-        /* Gör alla a-element inne i footer:n vita så att de passar in med den övriga texten i footer:n. */
 
-/* Gäller globalt. ------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
+        .skipToMainContent {
+            position: absolute;
+            left: -500px;
+        }
+        /* Länken placeras utanför webbsidan, 500 pixlar till vänster. "position: absolute" gör det möjligt att placera ett element utanför visningsytan. */
 
-    #mainContentIndex, #mainContentCv, #mainContentContact, #mainContentPortfolio, #mainContentProjects, #mainContentApps {
-        flex: 1;
-    }
-    /*Med hjälp av "flex: 1" kommer huvudinnehållet på sidorna alltid att vara samma längd, oavsett hur stort fönstret är. Detta förhindrar att något element blir för
-    stort eller för litet beroende på skärmstorleken. */
+            .skipToMainContent:focus {
+                font-size: 200%;
+                position: static;
+                background-color: black;
+                color: white;
+                border: 1px solid white;
+            }
+            /* När länken får fokus (med hjälp av tabb-tangenten) blir texten större så den är lättare att märka. Länkens position återgår till det normala med hjälp av
+            "position: static". Genom att dölja denna länk som standard så underlättar det för de användare som inte använder t.ex. en skärmläsare för att navigera (de är
+            också mycket troligen majoriteten av användarna). Webbplatsens design påverkas inte alls av länken, om den inte används. Ger länken en annan färg och en annan
+            bakgrundsfärg samt ger den en border. Dessa ändringar gör så att den sticker ut från den vanliga webbsidan. */
 
-/* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
-/* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+            .gridContainerNav {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto auto auto;
+                text-align: center;
+                border: 2px solid red;
+                height: 100vh;
+            }
 
-    #indexContentContainer {
-        text-align: center;
-        margin-top: 7rem;
-    }
+                .gridItemNav0 {
+                    grid-column: 2;
+                    grid-row: 2;
+                    bottom: 50%;
+                }
 
-/* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+                .gridItemNav1 {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
 
-    #mainContentCv .pageHeading {
-        margin: 1rem;
-    }
+                .gridItemNav2 {
+                    grid-column: 2;
+                    grid-row: 1;
+                }
 
-        #gridContainerCv {
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-rows: auto auto auto auto auto auto;
+                .gridItemNav3 {
+                    grid-column: 3;
+                    grid-row: 1;
+                }
+
+                .gridItemNav4 {
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+
+                .gridItemNav5 {
+                    grid-column: 2;
+                    grid-row: 3;
+                }
+
+                .gridItemNav6 {
+                    grid-column: 3;
+                    grid-row: 3;
+                }
+            
+                .siteName {
+                    font-size: 150%;
+                    margin: .5rem;
+                    color: rgb(140, 230, 225);
+                }
+
+                .navLinks a {
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    padding: 1rem;
+                }
+                
+        .pageHeading {
+            text-align: center;
+            font-size: 300%;
+        }
+        /* Centrerar samtliga sidtitlar. */
+        
+        footer {
+            color: white;
+            background-color: rgb(12, 12, 12);
+            text-align: center;
+            font-weight: bold;
+        }
+        /* Ändrar färgen och bakgrundfärgen, centrerar texten och gör denna text fet. Footer:n sticker nu ut mer, vilket är poängen. */
+
+            footer a {
+                color: white;
+            }
+            /* Gör alla a-element inne i footer:n vita så att de passar in med den övriga texten i footer:n. */
+
+    /* Gäller globalt. ------------------------------------------------------------------------------------------------------------------------------------------------- */
+    /* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
+
+        #mainContentIndex, #mainContentCv, #mainContentContact, #mainContentPortfolio, #mainContentProjects, #mainContentApps {
+            flex: 1;
+            border: 2px solid yellow;
+        }
+        /*Med hjälp av "flex: 1" kommer huvudinnehållet på sidorna alltid att vara samma längd, oavsett hur stort fönstret är. Detta förhindrar att något element blir för
+        stort eller för litet beroende på skärmstorleken. */
+
+    /* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
+    /* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+        #indexContentContainer {
+            text-align: center;
+            margin-top: 7rem;
+        }
+
+    /* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+    /* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+        #mainContentCv .pageHeading {
             margin: 1rem;
         }
 
-            #gridItemCv0 {
+            #gridContainerCv {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto auto auto;
+                margin: 1rem;
+            }
+
+                #gridItemCv0 {
+                    grid-row: 1;
+                    grid-column: 1;
+                }
+
+                #gridItemCv1 {
+                    grid-row: 2;
+                    grid-column: 1;
+                }
+
+                #gridItemCv2 {
+                    grid-row: 3;
+                    grid-column: 1;
+                }
+
+                #gridItemCv3 {
+                    grid-row: 4;
+                    grid-column: 1;
+                }
+
+                #gridItemCv4 {
+                    grid-row: 5;
+                    grid-column: 1;
+                }
+
+                #gridItemCv5 {
+                    grid-row: 6;
+                    grid-column: 1;
+                }
+
+    /* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+    /* Gäller för sidan "contact.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+
+        #gridContainerContact {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+            text-align: center;
+        }
+
+            #gridItemContact0 {
                 grid-row: 1;
                 grid-column: 1;
             }
 
-            #gridItemCv1 {
+            #gridItemContact1 {
                 grid-row: 2;
                 grid-column: 1;
             }
 
-            #gridItemCv2 {
+            #gridItemContact2 {
                 grid-row: 3;
                 grid-column: 1;
             }
 
-            #gridItemCv3 {
-                grid-row: 4;
-                grid-column: 1;
-            }
+                .icon {
+                    width: 150px;
+                    padding: 2rem;
+                }
 
-            #gridItemCv4 {
-                grid-row: 5;
-                grid-column: 1;
-            }
+    /* Gäller för sidan "contact.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+    /* Gäller för sidan "projects.html". ---------------------------------------------------------------------------------------------------------------------------------- */
 
-            #gridItemCv5 {
-                grid-row: 6;
-                grid-column: 1;
-            }
-
-/* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Gäller för sidan "contact.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-
-    #gridContainerContact {
+    #gridContainerProjects {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto auto;
         text-align: center;
     }
 
-        #gridItemContact0 {
+        #gridItemProjects0 {
             grid-row: 1;
             grid-column: 1;
         }
 
-        #gridItemContact1 {
+        #gridItemProjects1 {
             grid-row: 2;
             grid-column: 1;
         }
 
-        #gridItemContact2 {
+        #gridItemProjects2 {
             grid-row: 3;
             grid-column: 1;
         }
 
-            .icon {
-                width: 150px;
-                padding: 2rem;
+            #gridItemProjects0 ul, #gridItemProjects1 ul, #gridItemProjects2 ul {
+                list-style-position: inside;
             }
 
-/* Gäller för sidan "contact.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-/* Gäller för sidan "projects.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+            #gridItemProjects0 a, #gridItemProjects1 a, #gridItemProjects2 a {
+                color: blue;
+            }
+        
+    /* Gäller för sidan "projects.html". ---------------------------------------------------------------------------------------------------------------------------------- */
 
-#gridContainerProjects {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    text-align: center;
-}
+    /* Gäller för sidan "apps.html". ---------------------------------------------------------------------------------------------------------------------------------- */
 
-    #gridItemProjects0 {
-        grid-row: 1;
-        grid-column: 1;
+    #gridContainerApps {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        text-align: center;
     }
 
-    #gridItemProjects1 {
-        grid-row: 2;
-        grid-column: 1;
-    }
-
-    #gridItemProjects2 {
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-        #gridItemProjects0 ul, #gridItemProjects1 ul, #gridItemProjects2 ul {
-            list-style-position: inside;
+        #gridItemApps0 {
+            grid-row: 1;
+            grid-column: 1;
+            margin-bottom: 1rem;
         }
 
-        #gridItemProjects0 a, #gridItemProjects1 a, #gridItemProjects2 a {
-            color: blue;
-        }
-    
-/* Gäller för sidan "projects.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-
-/* Gäller för sidan "apps.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-
-#gridContainerApps {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    text-align: center;
-}
-
-    #gridItemApps0 {
-        grid-row: 1;
-        grid-column: 1;
-        margin-bottom: 1rem;
-    }
-
-        #number0, #number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #add, #subtract, #equals, #multiply, #divide {
-            display: inline-block;
-            width: 2rem;
-            cursor: pointer;
-        }
-
-            #number0:hover, #number1:hover, #number2:hover, #number3:hover, #number4:hover, #number5:hover, #number6:hover, #number7:hover, #number8:hover, #number9:hover, #add:hover, #subtract:hover, #multiply:hover, #divide:hover {
-                background-color: red;
+            #number0, #number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #add, #subtract, #equals, #multiply, #divide {
+                display: inline-block;
+                width: 2rem;
+                cursor: pointer;
             }
 
-        #equals {
-            width: 4.3rem;
-            background-color: green;
-        }
+                #number0:hover, #number1:hover, #number2:hover, #number3:hover, #number4:hover, #number5:hover, #number6:hover, #number7:hover, #number8:hover, #number9:hover, #add:hover, #subtract:hover, #multiply:hover, #divide:hover {
+                    background-color: red;
+                }
 
-    #gridItemApps1 {
-        grid-row: 2;
-        grid-column: 1;
-        border-top: 2px solid white
-    }
-
-        #gridItemApps1 button {
-            margin-bottom: 2rem;
-            border-radius: 25px;
-            width: 10rem;
-            height: 3rem;
-            font-size: 120%;
-            cursor: pointer;
-        }
-
-            #gridItemApps1 button:hover {
-                background-color: rgb(120, 186, 243);
+            #equals {
+                width: 4.3rem;
+                background-color: green;
             }
 
-    #gridItemApps2 {
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-        .productContainer {
-            float: left;
-            margin-right: 10rem;
+        #gridItemApps1 {
+            grid-row: 2;
+            grid-column: 1;
+            border-top: 2px solid white
         }
 
-        .productContainer img {
-            max-width: 10rem;
-            height: auto;
+            #gridItemApps1 button {
+                margin-bottom: 2rem;
+                border-radius: 25px;
+                width: 10rem;
+                height: 3rem;
+                font-size: 120%;
+                cursor: pointer;
+            }
+
+                #gridItemApps1 button:hover {
+                    background-color: rgb(120, 186, 243);
+                }
+
+        #gridItemApps2 {
+            grid-row: 3;
+            grid-column: 1;
         }
 
-    #gridContainerApps h3 {
-        font-size: 200%;
-    }
-    
-    #gridContainerApps h4 {
-        font-size: 140%;
-    }
+            .productContainer {
+                float: left;
+                margin-right: 10rem;
+            }
 
-    #gridContainerApps h5 {
-        font-size: 110%;
-    }
+            .productContainer img {
+                max-width: 10rem;
+                height: auto;
+            }
 
-/* Gäller för sidan "apps.html". ---------------------------------------------------------------------------------------------------------------------------------- */
+        #gridContainerApps h3 {
+            font-size: 200%;
+        }
+        
+        #gridContainerApps h4 {
+            font-size: 140%;
+        }
+
+        #gridContainerApps h5 {
+            font-size: 110%;
+        }
+
+    /* Gäller för sidan "apps.html". ---------------------------------------------------------------------------------------------------------------------------------- */
