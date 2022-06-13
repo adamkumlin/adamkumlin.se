@@ -6,37 +6,5 @@
     kan innehållet visas mer utspritt (både horisontellt och vertikalt) på en dator och mer koncentrerat (endast vertikalt) på en mobiltelefon. Då är layouten mer anpassad
     för olika plattformar som webbplatsen kan besökas på. Detta är en plattformsanpassning. */
 
-/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
-    .darkModeToggle, .lightModeToggle{
-        position: absolute;
-        right: 410px;
-    }
-
-    .headerNav {
-        flex-direction: row;
-    }
-
-        .navLinks {
-            display: flex;
-            width: initial;
-        }
-
-            .navLinks ul {
-                flex-direction: row;
-                width: initial;
-            }
-
-        .navToggle {
-            display: none;
-        }
-
-/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
-/* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-
-    #indexContentContainer {
-        margin-top: 18rem;
-    }
-
-/* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
 }

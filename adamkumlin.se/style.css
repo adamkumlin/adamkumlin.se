@@ -1,6 +1,5 @@
 html {
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
 }
 
     body {
@@ -10,9 +9,7 @@ html {
         flex-direction: column;
         height: 100%;
         width: 100%;
-        background-color: rgb(22, 21, 21);
-        color: white;
-        background: linear-gradient(-45deg, #3c63ce, #1054bb, #5e8bce, #32d1d1);
+        background: linear-gradient(-45deg, #3c63ce, #bb1010, #e03ad3, #32d1d1);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
     }
@@ -52,57 +49,64 @@ html {
                 grid-template-columns: auto auto auto;
                 grid-template-rows: auto auto auto;
                 text-align: center;
-                border: 2px solid red;
                 height: 100vh;
             }
+
+                .gridContainerNav a {
+                    font-family: 'Averia Sans Libre', cursive;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 300%;
+                }
 
                 .gridItemNav0 {
                     grid-column: 2;
                     grid-row: 2;
-                    bottom: 50%;
+                    transform:translateY(50%);
                 }
 
                 .gridItemNav1 {
                     grid-column: 1;
                     grid-row: 1;
+                    transform:translateY(90%) rotate(-10deg);
                 }
 
                 .gridItemNav2 {
                     grid-column: 2;
                     grid-row: 1;
+                    transform:translateY(70%);
                 }
 
                 .gridItemNav3 {
                     grid-column: 3;
                     grid-row: 1;
+                    transform:translateY(90%) rotate(10deg);
                 }
 
                 .gridItemNav4 {
                     grid-column: 1;
                     grid-row: 3;
+                    transform:translateY(10%) rotate(10deg);
                 }
 
                 .gridItemNav5 {
                     grid-column: 2;
                     grid-row: 3;
+                    transform:translateY(30%);
                 }
 
                 .gridItemNav6 {
                     grid-column: 3;
                     grid-row: 3;
+                    transform:translateY(10%) rotate(10deg);
                 }
             
                 .siteName {
-                    font-size: 150%;
-                    margin: .5rem;
-                    color: rgb(140, 230, 225);
-                }
-
-                .navLinks a {
-                    display: block;
-                    text-decoration: none;
-                    color: white;
-                    padding: 1rem;
+                    font-size: 500%;
+                    color: gold;
+                    font-family: 'Oregano', cursive;
+                    margin: 0;
+                    padding: 0;
                 }
                 
         .pageHeading {
@@ -127,22 +131,13 @@ html {
     /* Gäller globalt. ------------------------------------------------------------------------------------------------------------------------------------------------- */
     /* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
 
-        #mainContentIndex, #mainContentCv, #mainContentContact, #mainContentPortfolio, #mainContentProjects, #mainContentApps {
+        #mainContentCv, #mainContentContact, #mainContentPortfolio, #mainContentProjects, #mainContentApps {
             flex: 1;
-            border: 2px solid yellow;
         }
         /*Med hjälp av "flex: 1" kommer huvudinnehållet på sidorna alltid att vara samma längd, oavsett hur stort fönstret är. Detta förhindrar att något element blir för
         stort eller för litet beroende på skärmstorleken. */
 
     /* Gäller globalt och för sidorna "index.html", "cv.html" och "contact.html". -------------------------------------------------------------------------------------- */
-    /* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
-
-        #indexContentContainer {
-            text-align: center;
-            margin-top: 7rem;
-        }
-
-    /* Gäller för sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------- */
     /* Gäller för sidan "cv.html". ---------------------------------------------------------------------------------------------------------------------------------- */
 
         #mainContentCv .pageHeading {
