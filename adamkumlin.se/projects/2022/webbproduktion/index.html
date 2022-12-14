@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Logga in</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--Länkar en CSS-fil.-->
+</head>
+<body>
+    
+        <h1>Logga in</h1>
+        <!--Skapar en titel för webbsidan.-->
+
+        <p id="errorMessage"></p>
+        <!--Skapar ett p-element för eventuella felmeddelanden.-->
+
+        <form id="form">
+            <label for="formUsername">Användarnamn</label><input required type="text" id="formUsername" name="formUsername" value="">
+            <label for="formPassword">Lösenord</label><input required type="password" id="formPassword" name="formPassword" value="">
+            <label for="formSubmit">Logga in</label><input type="submit" id="formSubmit" value="Skicka">
+        </form>
+        <!--Skapar ett formulär med tre input-element: ett för användarnamn, ett för lösenord och en knapp som skickar iväg formuläret.-->
+
+    <script src="script.js"></script>
+    <!--Länkar en JavaScript-fil.-->
+</body>
+</html>

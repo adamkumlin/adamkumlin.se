@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Växtpalatset</title>
+</head>
+<body>
+    <!-- Adam Kumlin, 31KDW1, Webbredaktörsprogrammet distans. -->
+
+    <h1>Växtpalatset</h1>
+
+    <div id="productInfo">
+
+        <h2 id="productCounter"></h2>
+
+        <h2 id="productPriceTotal"></h2>
+
+        <button onclick="buy()">Köp</button>
+
+    </div>
+    <!-- Skapar en div "productInfo" med element där all information om köpet kommer upp, exempelvus hur många produkter som har lagts till och hur mycket totalpriset blir. Här finns också-
+    knappen "Köp" som anropar en funktion. -->
+
+    <div id="productContainer0">
+
+        <h2 id="productName0"></h2>
+
+        <span id="productOrigin0"></span>
+
+        <span id="productHeight0"></span>
+
+        <p id="productDescription0"></p>
+
+        <img id="productImage0" src="">
+
+        <span id="productPrice0"></span>
+
+        <button id="productAdd0" onclick="addToCart(this);">Lägg till i varukorg</button>
+
+        <button id="productRemove0" onclick="removeFromCart(this)">Ta bort från varukorg</button>
+
+        <h3 id="productCount0">Antal: 0</h3>
+        <!-- Sätter standardvärdet till "Antal: 0". -->
+
+    </div>
+    <!-- Div:en är en mall för den första produkten ("products[0]"). Här finns element som ska visa produktens namn, beskrivning, bild och pris. Längst ner finns två knappar. När användaren klickar på knapparna så anropas en-
+    funktion som tar med knapparnas information genom nyckelordet "this". -->
+
+    <div id="productContainer1"></div>
+
+        <h2 id="productName1"></h2>
+
+        <span id="productOrigin1"></span>
+
+        <span id="productHeight1"></span>
+
+        <p id="productDescription1"></p>
+
+        <img id="productImage1" src="">
+
+        <span id="productPrice1"></span>
+
+        <button id="productAdd1" onclick="addToCart(this)">Lägg till i varukorg</button>
+
+        <button id="productRemove1" onclick="removeFromCart(this)">Ta bort från varukorg</button>
+
+        <h3 id="productCount1">Antal: 0</h3>
+        <!-- Sätter standardvärdet till "Antal: 0". -->
+        
+    </div>
+    <!-- Div:en är en mall för den andra produkten ("products[1]"). Här finns element som ska visa produktens namn, beskrivning, bild och pris. Längst ner finns två knappar. När användaren klickar på knapparna så anropas en-
+    funktion som tar med knapparnas information genom nyckelordet "this". -->
+
+    <div id="productContainer2"></div>
+
+        <h2 id="productName2"></h2>
+
+        <span id="productOrigin2"></span>
+
+        <span id="productHeight2"></span>
+
+        <p id="productDescription2"></p>
+
+        <img id="productImage2" src="">
+
+        <span id="productPrice2"></span>
+
+        <button id="productAdd2" onclick="addToCart(this)">Lägg till i varukorg</button>
+
+        <button id="productRemove2" onclick="removeFromCart(this)">Ta bort från varukorg</button>
+
+        <h3 id="productCount2">Antal: 0</h3>
+        <!-- Sätter standardvärdet till "Antal: 0". -->
+
+    </div>
+    <!-- Div:en är en mall för den tredje produkten ("products[2]"). Här finns element som ska visa produktens namn, beskrivning, bild och pris. Längst ner finns två knappar. När användaren klickar på knapparna så anropas en-
+    funktion som tar med knapparnas information genom nyckelordet "this". -->
+    
+    <script src="script_examination_2.js"></script>
+    <!-- Länkar script-filen med detta HTML-dokumentet. -->
+    
+</body>
+</html>

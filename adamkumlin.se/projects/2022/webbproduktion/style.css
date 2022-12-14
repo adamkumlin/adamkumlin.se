@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    #username {
+        top: 1rem;
+        right: 1rem;
+        position: absolute;
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 300%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        font-size: 200%;
+    }
+
+    #errorMessage {
+        text-align: center;
+        font-weight: bold;
+        color: red;
+    }
+
+    form {
+        text-align: center;
+        flex: 1;
+    }
+
+        label {
+            display: block;
+            font-size: 140%;
+        }
+
+        input {
+            margin-bottom: 2rem;
+            border-radius: 25px;
+            width: 10rem;
+            height: 3rem;
+            font-size: 120%;
+        }
+
+            input[type="text"], input[type="password"] {
+                text-align: center;
+            }
+
+            #formSubmit {
+                cursor: pointer;
+            }
+
+    #gridContainer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        text-align: center;
+        margin-top: 6rem;
+    }
+
+        #gridItemCourseInformation {
+            grid-row: 1;
+            grid-column: 1;
+            border-right: 2px dashed black;
+        }
+
+            .courseContainer {
+                margin-bottom: 5rem;
+            }
+        
+        #gridItemQuiz {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+            h3 {
+                margin-top: 3rem;
+                font-size: 140%;
+            }
+
+                .question {
+                    font-size: 130%;
+                }
+
+                .alternative0, .alternative1, .alternative2, .alternative3 {
+                    background-color: rgba(209, 114, 114, 0.308);
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    cursor: pointer;
+                    color: black;
+                    font-size: 150%;
+                    border: 1px solid black;
+                    width: 50%;
+                    margin: auto;
+                    margin-bottom: 1rem;
+                }
+
+                    .alternative0:hover, .alternative1:hover, .alternative2:hover, .alternative3:hover {
+                        background-color: aqua;
+                        width: 60%;
+                        font-size: 160%;
+                    }
+
+                    .alternative0:active, .alternative1:active, .alternative2:active, .alternative3:active {
+                        background-color: rgba(209, 114, 114, 0.308);
+                    }

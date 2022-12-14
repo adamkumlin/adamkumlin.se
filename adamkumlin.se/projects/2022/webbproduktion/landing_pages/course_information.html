@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kursinformation</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <!--Länkar en CSS-fil.-->
+</head>
+
+<body onload="displayUserData()">
+<!--När sidans "body" laddas så körs funktionen "displayUserData()".-->
+
+    <header>
+        <p id="username"></p>
+        <!--Skapar ett p-element som kommer innehålla användarnamnet på användaren.-->
+    </header>
+    
+        <h1>Kursinformation</h1>
+        <!--Skapar en titel för webbsidan.-->
+        
+        <div id="gridContainer">
+        <!--Skapar en grid-container som innehåller alla grid-items.-->
+
+            <div id="gridItemCourseInformation">
+            <!--Skapar ett grid-item som innehåller kursinformation om alla kurser. Grid-item:s används för att lättare och mer konsekvent positionera innehållet på sidan.-->
+
+                <h2>Kursinformation</h2>
+                <!--Skapar en titel för avsnittet.-->
+
+                <div id="coursesContainer"></div>
+                <!--Skapar en div som kommer att innehålla all kursinformation.-->
+
+                <template id="templateCourses">
+                    <div class="courseContainer">
+                        <h3 class="courseName"></h3>
+                        <p class="courseId"></p>
+                        <p class="courseCredits"></p>
+                        <p><span class="courseStartWeek"></span><span class="courseEndWeek"></span></p>
+                        <p class="courseSchool"></p>
+                    </div>
+                </template>
+                <!--Skapar en template som innehåller en div. Div:en innehåller namnet på kursen ("courseName"), kursens ID ("courseId") och hur många högskolepoäng som ges ("courseCredits"). Dessutom finns information om när kursen börjar ("courseStartWeek") och när den slutar ("courseEndWeek") samt på vilket lärosäte den ges ("courseSchool").-->
+            </div>
+
+            <div id="gridItemQuiz">
+            <!--Skapar ett grid-item som innehåller en quiz. Grid-item:s används för att lättare placera innehållet på sidan.-->
+
+                <h2>Testverktyg</h2>
+                <!--Skapar en titel för avsnittet.-->
+
+                <div id="quizContainer0"></div>
+                <!--Skapar en div som kommer att innehålla frågorna 1 till och med 4.-->
+
+                <div id="quizContainer4">
+                    <h3>Fråga 5</h3>
+
+                    <p class="question"></p>
+    
+                    <div class="alternative0"></div>
+                    <div class="alternative1"></div>
+                </div>
+
+                <div id="quizContainer5">
+                    <h3>Fråga 6</h3>
+
+                    <p class="question"></p>
+
+                    <div class="alternative0"></div>
+                    <div class="alternative1"></div>
+                    <div class="alternative2"></div>
+                    <div class="alternative3"></div>
+                </div>
+
+                <div id="quizContainer6">
+                    <h3>Fråga 7</h3>
+
+                    <p class="question"></p>
+
+                    <div class="alternative0"></div>
+                    <div class="alternative1"></div>
+                    <div class="alternative2"></div>
+                </div>
+
+                <div id="quizContainer7">
+                    <h3>Fråga 8</h3>
+
+                    <p class="question"></p>
+
+                    <div class="alternative0"></div>
+                    <div class="alternative1"></div>
+                    <div class="alternative2"></div>
+                    <div class="alternative3"></div>
+                </div>
+
+                <div id="quizContainer8">
+                    <h3>Fråga 9</h3>
+
+                    <p class="question"></p>
+
+                    <div class="alternative0"></div>
+                    <div class="alternative1"></div>
+                    <div class="alternative2"></div>
+                    <div class="alternative3"></div>
+                </div>
+
+                <div id="quizContainer9">
+                    <h3>Fråga 10</h3>
+                    
+                    <p class="question"></p>
+    
+                    <div class="alternative0"></div>
+                    <div class="alternative1"></div>
+                </div>
+                <!--Skapar 6 stycken div:ar med element i sig, högst upp i varje div finns ett rubrik som visar vilken div som är till för vilken fråga. Rubrikerna använder ingen JavaScript alls då det inte behövs här. Div:arna har olika antal element i sig då de har olika antal möjliga alternativ.-->
+
+                <template id="templateQuiz">
+                    <h3 class="questionNumber"></h3>
+
+                    <div class="questionContainer">
+                        <p class="question"></p>
+    
+                        <div class="alternative0"></div>
+                        <div class="alternative1"></div>
+                        <div class="alternative2"></div>
+                        <div class="alternative3"></div>
+                    </div>
+                </template>
+                <!--Skapar en template som innehåller en div. Div:en innehåller frågan och fyra svarsalternativ i div:ar.-->
+            </div>
+        </div>
+
+    <script src="course_information.js"></script>
+    <!--Länkar en JavaScript-fil.-->
+</body>
+</html>

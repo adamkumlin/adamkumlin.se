@@ -1,0 +1,37 @@
+/*DENNA FILEN ÄR NY (ALLA FILER PÅ DENNA WEBBPLATSEN ÄR NYA, SKAPADE AV MIG (ADAM KUMLIN)*/
+
+/*ÖVERSKRIVNING: Gör hela headern (header till nav a) ljusgrön (lime) samt ändrar färgen på nav a:hover till gul*/
+header {
+    border-color: lime;
+}
+
+header h1 {
+    color: lime;
+}
+
+.headerlogos {
+    border-color: lime;
+   }
+
+nav a {
+    color: lime;
+}
+
+/*Gör texten gul istället för gul-grön (yellowgreen) när muspekaren är på texten, det sticker inte ut annars*/
+nav a:hover {
+    color: yellow;
+}
+
+/*ÖVERSKRIVNING: Ändrar fonten, fontstorleken samt lägger till en margin*/
+section p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150%;
+    margin: 3%;
+}
+
+/*ÖVERSKRIVNING: Lägger till en margin till höger*/
+section h2 {
+    margin-right: 5%;
+}
+
+

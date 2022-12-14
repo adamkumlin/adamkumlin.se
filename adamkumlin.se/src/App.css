@@ -1,0 +1,52 @@
+@-webkit-keyframes HomeAnimation {
+  0%{background-position:89% 60%}
+  50%{background-position:6% 10%}
+  100%{background-position:89% 60%}
+}
+
+  @-moz-keyframes HomeAnimation {
+  0%{background-position:89% 60%}
+  50%{background-position:6% 10%}
+  100%{background-position:89% 60%}
+}
+
+  @keyframes HomeAnimation {
+  0%{background-position:89% 60%}
+  50%{background-position:6% 10%}
+  100%{background-position:89% 60%}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+.App {
+  text-align: center;
+}
+
+  .NavBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20%;
+  }
+
+    .NavBar a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Tenor Sans', sans-serif;
+      font-size: 200%;
+      font-weight: bold;
+    }
+
+      .navLink0:active {
+        
+      }
+      
+  .Home {
+    height: 100vh;
+    background: linear-gradient(270deg, #ac488b, #467de2);
+    background-size: 400% 400%;
+
+    -webkit-animation: HomeAnimation 8s ease infinite;
+    -moz-animation: HomeAnimation 8s ease infinite;
+    animation: HomeAnimation 8s ease infinite;
+  }

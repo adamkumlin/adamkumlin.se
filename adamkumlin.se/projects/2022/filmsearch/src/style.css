@@ -1,0 +1,61 @@
+body {
+  background-color: gainsboro;
+  margin: 0;
+  padding: 0;
+}
+/* Ger body:n en bakgrundfärg och tar bort margin samt padding. */
+
+  h1, h2, p {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  /* Centrerar samtliga textelement, ger dem ett eget typsnitt. */
+
+    h1 {
+      font-size: 400%;
+    }
+    /* Gör huvudrubriken större. */
+
+  input, button {
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+    width: 15rem;
+    height: 2rem;
+    font-size: 120%;
+  }
+  /* Centrerar textboxen och knappen. De görs mindre kvadratiska. De görs också högre och bredare med en större teckenstorlek. */
+
+    button:hover {
+      cursor: pointer;
+    }
+    /* Ändrar muspekarens utseende när muspekaren är över knappen. */
+
+  .ResultsTable, th, td, .DetailsBox {
+    border: 1px solid black;
+  }
+  /* Lägger till en border runt faktarutan och tabellen och dess th- och td-element. */
+
+    .ResultsTable, .DetailsBox {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    /* Centrerar komponenternas text och lägger till en margin längst upp. */
+
+      .ResultsTable th {
+        background-color: rgba(0, 0, 0, 0.671);
+        color: white;
+      }
+      /* Ändrar bakgrundsfärgen och textfärgen. */
+
+        .ResultsTable tbody tr:hover {
+          background-color: aquamarine;
+          cursor: pointer;
+        }
+        /* När muspekaren är över en rad i "ResultsTable":s tbody så görs radens bakgrundsfärg ljusblå. Muspekaren utseende ändras också. */
+
+      .DetailsBox {
+        background-color: pink;
+        border-radius: 30px;
+      }
+      /* Ändrar bakgrundsfärgen och gör rutan mindre rektangulär. */

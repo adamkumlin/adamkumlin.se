@@ -1,0 +1,283 @@
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(images/background.jpg);
+}
+/* Tar bort alla standardinställningar för padding och margin som webbläsaren har. Sätter också body:ns bakgrund till en bild. Body:n blir till ett flexobjekt vilket
+gör den mer anpassbar till olika skärmstorlekar. Body:n kommer nu alltid att vara över footer:n så att inget innehåll blockeras av den. Det kommer också att finnas ett
+konsekvent avstånd mellan footer:n och övrigt innehåll, vilket är jättebra. Den minsta höjden som body:n kan ha sätts till 100vh.
+Den tar nu alltså alltid upp fönstrets storlek. Bakgrundsbilden ska få webbplatsen att likna en sorts meny på en restaurang. Denna sorts bakgrund riktar sig till eventuella
+restauranggäster, vilket också är den huvudsakliga målgruppen.*/
+
+    .skipToMainContent {
+        position: absolute;
+        left: -500px;
+    }
+    /* Länken placeras utanför webbsidan, 500 pixlar till vänster. "position: absolute" gör det möjligt att placera ett element utanför visningsytan. */
+
+        .skipToMainContent:focus {
+            font-size: 200%;
+            position: static;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+        /* När länken får fokus (med hjälp av tabb-tangenten) blir texten större så den är lättare att märka. Länkens position återgår till det normala med hjälp av
+        "position: static". Genom att dölja denna länk som standard så underlättar det för de användare som inte använder t.ex. en skärmläsare för att navigera (de är
+        också mycket troligen majoriteten av användarna). Webbplatsens design påverkas inte alls av länken, om den inte används. Ger länken en annan färg och en annan
+        bakgrundsfärg samt ger den en border. Dessa ändringar gör så att den sticker ut från den vanliga webbsidan. */
+
+    .headerHeading h1 {
+        font-size: 300%;
+        margin: 0;
+
+        font-family: 'Shippori Mincho B1', serif; 
+        /* Typsnittet är Shippori Mincho B1 av FONTDASU via https://fonts.google.com/specimen/Shippori+Mincho+B1#standard-styles 
+        Jag är osäker på hur man refererar till ett typsnitt via APA). */
+    }
+    /* Gör huvudrubriken större. Tar bort margin och ändrar typsnittet. */
+
+    .headerHeading img {
+        position: absolute;
+        max-width: 20%;
+        height: auto;
+        border: 2px solid white;
+        border-radius: 45%;
+        top: 2%;
+        margin-left: 75%;
+    }
+    /* Ändrar logotypens position till "absolute". Det gör så att logotypen kan placeras var som helst på skärmen, oberoende av andra elements positioner.
+    Gör logotypens maxbredd till 20%. Höjden bestäms av bredden, bilden kommer nu aldrig att få fel proportioner. Lägger också till en border runt logotypen.
+    Ökar denna border:s radie så att border:n blir rundare likt en cirkel. "top" ändras så att logotypen finns lite högre upp på sidan.
+    Slutligen ges logotypen en stor margin till vänster så att den alltid finns placerad i det vänstra hörnet längst upp på sidan. */
+
+    .headerHeading h2 {
+        font-size: 150%;
+        margin: 0;
+
+        font-family: 'Shippori Mincho B1', serif; 
+        /* Typsnittet är Shippori Mincho B1 av FONTDASU via https://fonts.google.com/specimen/Shippori+Mincho+B1#standard-styles
+        Jag är osäker på hur man refererar till ett typsnitt via APA). */
+    }
+    /* Gör underrubriken (slogan:en) större. Tar bort margin och ändrar typsnittet. */
+
+    .globalNav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* Gör den globala navigationen till en flexbox. Ger flexboxen "wrap" egenskapen. Då tar den upp fler rader än en. Navigationssystemet är mycket simpelt och enkelt att lära
+    sig. Det är tre stora knappar som är antingen i en rad eller i en kolumn. Navigationssystemets design kan kopplas till användbarhetsaspekten effektivitet. Det handlar om att
+    användare ska kunna göra något snabbt och effektivt. Navigationsknapparna är simpla, stora och enkla att använda. De är alltså mycket effektiva. De är också lätta att lära sig.
+    En användare som har använt webbplatsen innan kan säkerligen använda navigationssystemet igen utan problem då det är så simpelt. 
+    Att något ska vara lätt att lära sig är också centralt inom användbarhet. Att navigationssystemet är så enkelt är alltså mycket positivt. */
+        
+        .globalNav a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 200%;
+        }
+        /* Ändrar färgen, centrerar texten och tar bort länk-dekorationen. Gör också texten större. */
+        
+            .globalNav a:active {
+                background-color: white;
+            }
+            /* När användaren trycker på en knapp så blir knappens bakgrund vit. Detta ger bra feedback att något händer när användaren trycker på en
+            knapp. */
+
+            .globalNav a:hover {
+                color: white;
+            }
+            /* När muspekaren är över knapparna så ändras textfärgen till vitt. Denna funktion går inte att utnyttja på enheter med touch-kontroller
+            men det gör ingen skada om det ändå finns med. Det kan vara så att webbläsarfönstret på en dator har gjorts mindre. Då ska texten
+            fortfarande ändra färg när muspekaren är över den. */
+
+        .navLink0, .navLink1, .navLink2 {
+            flex: 100%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+        }
+        /* Gör så att knapparna tar upp var sin rad och ger dem lite padding så de blir lättare att trycka på med en mobiltelefon. */
+
+        .navLink0, .navLink2 {
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+        /* Lägger till en border längst upp och längst ner för två element. Då blir knapparna lättare att skilja på. */
+
+    .pageHeading {
+        text-align: center;
+    }
+    /* Centrerar samtliga sidtitlar. */
+    
+    footer {
+        color: white;
+        background-color: black;
+        text-align: center;
+        font-weight: bold;
+    }
+    /* Ändrar färgen och bakgrundfärgen, centrerar texten och gör denna text fet. Footer:n sticker nu ut mer, vilket är poängen. */
+
+        footer a {
+            color: white;
+        }
+        /* Gör alla a-element inne i footer:n vita så att de passar in med den övriga texten i footer:n. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Gäller globalt och för sidorna "index.html", "book.html" och "menu.html". ------------------------------------------------------------------------------------- */
+
+    #mainContentIndex, #mainContentBook, #mainContentMenu {
+        flex: 1;
+    }
+    /*Med hjälp av "flex: 1" kommer huvudinnehållet på sidorna alltid att vara samma längd, oavsett hur stort fönstret är. Detta förhindrar att något element blir för
+    stort eller för litet beroende på skärmstorleken. */
+
+/* Gäller globalt och för sidorna "index.html", "book.html" och "menu.html". -------------------------------------------------------------------------------------- */
+/* För sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+    #gridContainerIndex {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        text-align: center
+    }
+    /* Skapar en grid-container med tre lika stora rader. Innehållet placeras vertikalt, vilket är mer mobilvänligt. Centrerar också innehållet. */
+
+        #gridItemIndex0 {
+            grid-row: 1;
+            border-top: 5px dotted gray;
+        }
+        /* Det första grid-item:et placeras på den första raden. Det ges en border längst upp för att lättare kunna skilja det från de övriga
+        grid-items:en. */
+    
+        #gridItemIndex1 {
+            grid-row: 2;
+            border-top: 5px dotted gray;
+        }
+        /* Det andra grid-item:et placeras på den andra raden. Det ges en border längst upp för att lättare kunna skilja det från de övriga
+        grid-items:en. */
+
+            #gridItemIndex1 img {
+                width: 60px;
+            }
+            /* Ändrar ikonernas bredd till ett konsekvent 60px så de aldrig blir för stora eller för små oavsett vad skärmbredden är. */
+
+                #gridItemIndex1 img:active {
+                    transform: scale(1.5);
+                }
+                /* När användaren trycker på en ikon så blir den större. */
+
+                #gridItemIndex1 img:hover {
+                    transform: scale(1.5);
+                }
+                /* Gör så att logotyperna istället blir större när muspekaren är över dem. Det gör de lättare att märka. 
+                Denna funktion går inte att utnyttja på enheter med touch-kontroller men det gör ingen skada om det ändå finns med. 
+                Det kan vara så att webbläsarfönstret på en dator har gjorts mindre. Då ska ikonerna fortfarande bli större när
+                muspekaren är över dem. */
+    
+        #gridItemIndex2 {
+            grid-row: 3;
+            border-top: 5px dotted gray;
+        }
+        /* Det tredje grid-item:et placeras på den tredje raden. Det ges en border längst upp för att lättare kunna skilja det från de övriga
+        grid-items:en. */
+
+/* För sidan "index.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* För sidan "book.html". ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+    #gridContainerBook {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        text-align: center;
+    }
+    /* Skapar en grid-container med en kolumn och en rad, vilket gör innehållets placering konsekvent. Centrerar också innehållet. */
+
+        #gridItemBook {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        /* Placerar grid-item:et i den första kolumnen och på den första raden. */
+
+            #calendar {
+                display: none;
+            }
+            /* Kalendern visas inte som standard då det är svårt att använda den med touch-kontroller. */
+
+            form {
+                text-align: center;
+            }
+            /* Centrerar texten i form:en. */
+            
+                form input, #formMessage {
+                    display: block;
+                    width: 11rem;
+                    height: 3rem;
+                    margin: auto;
+                }
+                /* Centrerar textboxarna och knapparna i form:en med hjälp av "display: block" och "margin: auto". "margin: auto" gör så att de är centrerade i sina containrar.
+                Nu visas de också i block-form istället för i inline-form. Då går de att centrera lättare.
+                Sätter bredden till 11rem och höjden till 3rem så de är lättare att använda på en mobiltelefon. */
+
+                    #formButton {
+                        width: 9rem;
+                    }
+                    /* Gör knappen större, fast inte lika stor som de övriga input-elementen. Det gör det lättare att skilja på knappen och dessa. */
+
+                #formMessage {
+                    height: initial;
+                    resize: none;
+                }
+                /* Överskriver höjdändringen ovan med hjälp av "initial" så att elementet sticker ut mer. Gör så att textarea:ns storlek inte kan justeras av användaren
+                då det skulle förstöra layout:en. */
+
+/* För sidan "book.html". ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* För sidan "menu.html". ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+    #gridContainerMenu0 {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    /* Skapar en grid-container med en enda kolumn. Innehållet placeras vertikalt, vilket är mer mobilvänligt. Centrerar också innehållet. */
+        
+        .gridItemMenu0a, .gridItemMenu0b {
+            grid-column: 1;
+            border-bottom: 5px dotted gray;
+        }
+        /* Gör så att alla grid-item:s finns placerade i den första (och enda) kolumnen. Ger alla grid-items en border längst ner så de går att skilja
+        från varandra. */
+
+            #gridItemMenu0First {
+                border-top: 5px dotted gray; 
+            }
+            /* Lägger till en border längst upp då sidtiteln är ovanför. */
+
+    #pageSubHeadingMenu {
+        text-align: center;
+    }
+    /* Centrerar sidan "menu.html":s undertitel. */
+
+    #gridContainerMenu1 {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    /* Skapar en grid-container med en kolumn. Innehållet placeras vertikalt, vilket är mer mobilvänligt. */
+
+        .gridItemMenu1a, .gridItemMenu1b, .gridItemMenu1c, .gridItemMenu1d {
+            grid-column: 1;
+            text-align: center;
+        }
+        /* Centrerar bilderna och lägger dem i samma kolumn. */
+        
+            .gridItemMenu1a figure img, .gridItemMenu1b figure img, .gridItemMenu1c figure img, .gridItemMenu1d figure img {
+                max-width: 100%;
+                height: auto;
+            }
+            /* Ändrar alla fotons maxbredd till 100%, höjden beror på bredden. */
+
+/* För sidan "menu.html". ----------------------------------------------------------------------------------------------------------------------------------------- */

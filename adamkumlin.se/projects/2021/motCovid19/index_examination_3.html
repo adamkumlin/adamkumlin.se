@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mot covid-19</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+        <!-- Länkar chart.js till detta HTML-dokument genom ett Content Delivery Network (CDN). -->
+
+        <link rel="stylesheet" type="text/css" href="style_examination_3.css">
+        <!-- Länkar ett css-dokument till detta HTML-dokument. -->
+    
+    </head>
+
+    <body>
+
+        <article id="wholeArticle">
+
+            <h1 id="articleHeading">Mot covid-19</h1>
+
+            <figure>
+
+                <img id="articleImage" src="bilder/handwashing.jpg" alt="En person som tvättar händerna">
+                <!-- Sätter in en bild som är relevant till organisationen samt grafen då pandemin är ämnet och handtvättning är starkt kopplat till det. En bild på Twitters logotyp skulle också kunna användas, men
+                den är endast kopplad till diagrammet och inte till företaget alls. Därför används bilden på personen som tvättar händerna. -->
+
+            </figure>
+
+            <article class="articleSection">
+
+                <h2 class="articleSubHeading">Vilka vi är och vad vi gör</h2>
+
+                <p>
+                    Vi har varit i en svår period under en längre tid nu. Mot covid-19 är en ideell organisation som är baserad i Göteborg. I organisationen har vi cirka 100 trogna medlemmar.
+                    Vi gör allt vi kan för att människor ska hålla avstånd, tvätta händerna, bära munskydd och bli vaccinerade när de kan. Mot covid-19 vill att människor ska vara så säkra som möjligt så att vi
+                    kan gå tillbaka till det normala livet snarast. Pandemin påverkar människor på olika sätt och vi vill ta reda på vad människor pratar om angående pandemin, då kan vi också få mer klarhet 
+                    om hur människor mår och vad de tänker på generellt. Då kan vi kanske också få reda på ett ungefär hur lång tid vi har kvar innan pandemin är slut. När människor t.ex. börjar prata mindre
+                    och mindre om pandemin under en längre tid kan det vara ett tecken på att saker håller på att gå tillbaka till det normala igen.
+                </p>
+                <!-- Skriver ett stycke om vilka organisationen är och vad de gör. -->
+
+            </article>
+        
+            <article class="articleSection">
+
+                <h2 class="articleSubHeading">Om diagrammet</h2>
+
+                <p>
+                    Vi har undersökt hur många tweets som har lagts upp kopplade till pandemin för att försöka få ökad förståelse för hur människor mår och hur de känner angående den nuvarande
+                    situationen. Längst ner kan du se ett diagram som visar hur många tweets som publicerades under en viss dag. Dessa tweets är alla relaterade till pandemin på något sätt.
+                    Det finns olika ämnen (dataset:s, (ett dataset är en samling av data)) som t.ex. "Mental hälsa", "Socialt beteende", "Vaccin", m.m. och under respektive ämne (dataset) finns hashtaggar 
+                    som är relaterade till just det ämnet (dataset:et). Till exempel har ämnet (dataset:et) "Mental hälsa" hashtaggarna "#mentalhealth", "#wellbeing", "#stress", m.m. När du först öppnar webbsidan ser du 
+                    alla ämnen (dataset:s) i ett ostackat linjediagram (du kan ändra detta senare, se nedan under mellanrubriken "Om inställningarna"), det visar hur många tweets som skrevs inom respektive ämne (dataset)
+                    under en viss tidsperiod (från 18 juni 2020 till 27 augusti 2020). Alla ämnen (dataset:s) har sin egna färg, exempelvis har "Mental hälsa" färgen röd medan "Socialt beteende" har färgen ljusblå, osv. 
+                    Detta gäller också för hashtaggar inom varje enskilt ämne (dataset). Exempelvis, inom ämnet (dataset:et) "Teknologi" har hashtaggen "#digitaltransformation" färgen mörkgrön medan hashtaggen "#ai" 
+                    har färgen mörkblå, osv.
+                </p>
+
+                <p>
+                    Diagrammet kan vara ett linjediagram, det visar punkter ihopkopplade med linjer som representerar data. Diagrammet kan också vara ett stapeldiagram, ett stapeldiagram visar staplar som representerar data. 
+                    Dessa två diagram går även att stacka. I ett stackat linjediagram (kallas även för ytdiagram, på engelska: "area chart") representeras data genom varje enskild ämnes (dataset:s) färgs area. 
+                    Som tidigare nämnts så har ämnet (dataset:et) "Mental hälsa" färgen röd. Den röda färgens area representerar då "Mental hälsa":s data. I ett stackat stapeldiagram är staplarna stackade 
+                    på varandra istället för att de är bredvid varandra, det kan då bli lättare att tolka diagrammet om många data är med. Se under mellanrubriken "Om inställningarna" för information om hur du gör dessa ändringar.
+                    För muspekaren över en punkt eller stapel för att se dess data. Exempelvis den 24 juli 2020 lades det upp 8479 tweets kopplade till "Socialt beteende", 1096 tweets kopplade till "Mental hälsa", osv. 
+                    Du kan också ändra ämne (dataset) till t.ex. dataset:et (ämnet) "Vaccin" (mer om detta under mellanrubriken "Om inställningarna"). Då ser du hur många tweets som lades upp under en viss dag med en 
+                    eller flera hashtaggar. Exempelvis den 16 juli 2020 lades det upp 23 tweets med hashtaggen "#covidvaccine", 978 tweets med hashtaggen "#vaccine", osv. Dessa hashtaggar är under ämnet (dataset:et) "Vaccin".
+                </p>
+                <!-- Skriver två stycken som handlar om själva diagrammet. -->
+
+            </article>
+
+            <article class="articleSection">
+
+                <h2 class="articleSubHeading">Om inställningarna</h2>
+
+                <p>
+                    Det finns flera inställningar som du kan göra för att du ska kunna ta del av diagrammet som just du vill. Samtliga inställningar finns under mellanrubriken "Inställningar" längre ner.
+                    Du kan ändra diagramtyp (menyn "Diagram"), här går det att välja mellan ett linjediagram och ett stapeldiagram. Sedan kan du även välja att dölja ett eller flera ämnen (dataset:s) eller hashtaggar 
+                    för ett enskilt ämne (dataset). Då trycker du på ämnets (dataset:ets) eller hashtaggens färg högst upp i diagrammet. Vi tar exemplet med ämnet (dataset:et) "Mental hälsa" igen. 
+                    Det ämnet (dataset:et) har färgen röd, om du trycker på "Mental hälsa":s färg högst upp i diagrammet så visas inte det ämnets (dataset:ets) data längre. Diagrammet anpassar sig därefter 
+                    till de ämnen (dataset) eller hashtaggar som inte är dolda. Sedan kan du också välja om diagrammet ska vara stackat eller ej (menyn "Stack"). Du kan dessutom ändra dataset (ämne) med menyn "Dataset". 
+                    Valet "Alla" visar samtliga ämnen (dataset:s) och deras respektive antal tweets. Sedan kan du välja t.ex. "Vaccin". Då ser du flera olika hashtaggar. Dessa är hashtaggar som har använts i tweets som har 
+                    en koppling med just ämnet (dataset:et) "Vaccin", exempelvis "#vaccine" och "#covidvaccine", osv. Diagrammet är då fokuserat på just ämnet (dataset:et) "Vaccin". Efter att du har gjort en eller flera 
+                    inställningar så måste du trycka på knappen "Uppdatera" för att diagrammet ska få de inställningarna eller inställningen som du gjort (gäller inte om du vill dölja ett eller flera ämnen (dataset:s) eller 
+                    hashtaggars data)).
+                </p>
+                <!-- Skriver ett stycke om inställningarna som användaren kan göra med diagrammet. -->
+            
+            </article>
+
+        </article>
+
+        <section id="options">
+
+            <h2>Inställningar</h2>
+
+            <form action="javascript:void(0);">
+            <!-- Form-elementet måste ha action="javascript:void(0) i sig, annars uppdateras webbsidan när knappen trycks på. -->
+
+                <label for="selectDataset">Dataset</label>
+                <select id="selectDataset">
+                    <option value="all">Alla</option>
+                    <option value="socialtBeteende">Socialt beteende</option>
+                    <option value="karantanliv">Karantänliv</option>
+                    <option value="vaccin">Vaccin</option>
+                    <option value="klimatforandringar">Klimatförändringar</option>
+                    <option value="teknologi">Teknologi</option>
+                    <option value="mentalHalsa">Mental hälsa</option>
+                </select>
+                <!-- Lägger till ett select-element som låter användaren välja vilket dataset som diagrammet ska visa. -->
+
+                <label for="selectChart">Diagram</label>
+                <select id="selectChart">
+                    <option value="line">Linjediagram</option>
+                    <option value="bar">Stapeldiagram</option>
+                </select>
+                <!-- Lägger till ett select-element som låter användaren välja vilken typ av diagram som ska ritas. -->
+
+                <label for="selectStack">Stack</label>
+                <select id="selectStack">
+                    <option value="notStacked">Ostackat</option>
+                    <option value="stacked">Stackat</option>
+                </select>
+                <!-- Lägger till ett select-element som låter användaren välja om grafen ska vara stackad eller ej. -->
+
+                <button onclick="updateChart()">Uppdatera</button>
+                <!-- Lägger till en knapp som kopplas till funktionen "updateChart()". -->
+
+            </form>
+
+        </section>
+
+
+        <div id="canvas">
+
+            <canvas id="chart"></canvas>
+
+        </div>
+        <!-- Skapar ett div-element med ett canvas-element i sig. -->
+
+        <script src="datasets.js"></script>
+        <script src="scripts_examination_3.js"></script>
+        <!-- Länkar "datasets.js" och "script_examination_3.js" till detta HTML-dokument. -->
+
+    </body>
+</html>

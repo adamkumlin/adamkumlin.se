@@ -1,0 +1,256 @@
+@media screen and (min-width: 961px) {
+/* När bredden på skärmen är 961px eller mer. För laptop:s och andra desktop:s. Dessa brytpunkter kan sättas mer specifikt med hjälp av en webbtrafiksanalys. Då
+skulle man kunna få reda på vilka de mest använda enheterna är och deras skärmstorlekar. I och med det kan brytpunkterna bli mer precisa. Exempelvis om en stor majoritet av
+användarna använder en viss typ av mobiltelefon så kan brytpunkten sättas så att den kompletterar just denna mobiltelefon bäst. Dessa brytpunkter är
+fortsättningsvis mycket hjälpsamma när det gäller plattformsanpassning. En webbplats kan se helt annorlunda ut på en mobiltelefon jämfört med på en dator. Exempelvis
+kan innehållet visas mer utspritt (både horisontellt och vertikalt) på en dator och mer koncentrerat (endast vertikalt) på en mobiltelefon. Då är layouten mer anpassad
+för olika plattformar som webbplatsen kan besökas på. Detta är en plattformsanpassning. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .headerHeading h1 {
+        font-size: 400%;
+    }
+    /* Gör huvudrubriken ännu större. Detta gör texten mer synlig på större skärmar. */
+
+    .headerHeading h2 {
+        font-size: 200%;
+    }
+    /* Gör underrubriken (slogan:en) ännu större. Detta gör texten mer synlig på större skärmar. */
+
+    .globalNav a {
+        font-size: 200%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    /* Minskar knapparnas storlek då användaren förutsätts använda en mus, knapparna behöver därför inte vara lika stora. Gör texten ännu större så den syns bättre på större
+    skärmar. */
+
+        .globalNav a:active {
+            background-color: transparent;
+            transform: translateY(1rem);
+        }
+        /* När knapparna klickas på så flyttas knapparna lite neråt vilket ger extra feedback till användaren. Överskrider också bakgrundfärgsändringen. */
+
+    .pageHeading {
+        font-size: 250%;
+    }
+    /* Gör alla sidtitlar ännu större. Detta gör texten mer synlig på större skärmar. */
+
+    h3 {
+        font-size: 150%;
+    }
+    /* Gör alla h3-element ännu större. Detta gör texten mer synlig på större skärmar. */
+
+/* Gäller globalt. ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Gäller globalt och för sidorna "index.html", "menu.html" samt "book.html". ------------------------------------------------------------------------------------ */
+
+    p, figcaption, #gridItemIndex2 h4, #pageSubHeadingMenu  {
+        font-size: 120%;
+    }
+    /* Gör p och figcaption-elementens text ännu större. Även #pageSubHeadingMenu:s och #pageSubHeadingMenu:s text görs större. Detta gör texten mer synlig på större skärmar. */
+
+/* Gäller globalt och för sidorna "index.html", "menu.html" samt "book.html". ------------------------------------------------------------------------------------ */
+/* För sidan "index.html". --------------------------------------------------------------------------------------------------------------------------------------- */
+    
+    #gridContainerIndex {
+        grid-template-columns: 33% 33% 33%;
+    }
+    /* Ger grid-containern tre lika stora kolumner istället för en enda kolumn så grid-item:sen ska kunna placeras mer horisontellt över hela skärmen
+    istället för endast vertiaklt. Detta är bättre för enheter med större skärmar. */
+
+        #gridItemIndex0 {
+            grid-column: 1;
+            border-right: 5px dotted gray;
+            border-top: 0;
+        }
+        /* Grid-item:et placeras i den första kolumnen. (Grid item:et är redan på den första raden). Det ges en border till höger. Tar bort border:n
+        längst upp. */
+
+        #gridItemIndex1 {
+            grid-column: 2;
+            grid-row: 1;
+            border-top: 0;
+        }
+        /* Grid-item:et placeras i den andra kolumnen på den första raden. Tar bort border:n längst upp. */
+
+            #gridItemIndex1 img:active {
+                transform: none;
+            }
+            /* Ändrar så att logotyperna inte längre blir större när de trycks på. Detta är bättre anpassat för en muspekare. */
+
+        #gridItemIndex2 {
+            grid-column: 3;
+            grid-row: 1;
+            border-left: 5px dotted gray;
+            border-top: 0;
+        }
+        /* Grid-item:et placeras i den tredje kolumnen på den första raden. Ger item:et en border till vänster, tar också
+        bort border:n längst upp. */
+
+/* För sidan "index.html". --------------------------------------------------------------------------------------------------------------------------------------- */
+/* För sidan "book.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+    #gridContainerBook {
+        grid-template-columns: auto auto auto;
+    }
+    /* Ger grid-containern tre kolumner istället för en så grid-item:sen ska kunna centreras lättare. */
+
+        #gridItemBook {
+            grid-column: 2;
+        }
+        /* Grid-item:et placeras i den andra nya kolumnen. (Grid item:et är redan på den första raden). */
+
+            #formMonthAndTime, label[for=formMonthAndTime]  {
+                display: none;
+            }
+            /* Elementen visas inte som standard då kalendern har tagit deras funktion. Label:n till textboxen anropas genom att ta med for-attributet. */
+
+            form input {
+                height: initial;
+            }
+            /* Överskriver ändringarna av form:ens input-element med hjälp av "initial". Användaren förutsätts använda en mus så då behöver
+            textboxarna inte vara lika stora. */
+
+                #formButton {
+                    width: initial;
+                    display: inline;
+                }
+                /* Överskriver ändringarna ovan med hjälp av "initial". Knappen är nu mindre, då sticker den ut från resten av input-elementen.
+                Den visas nu också istället i inline-form så att den kan placeras bredvid sin label. */
+
+            #calendar {
+                display: block;
+                text-align: center;
+                border: 5px solid gray;
+                margin-bottom: 10%;
+            }
+            /* Gör kalendern synlig med "display: block" och centrerar innehållet. Ger den också en border samt en margin längst ner för att 
+            separera kalendern från övrigt innehåll. En kalender där användaren kan välja dagar genom att klicka på de själva dagarna är mycket
+            mer vänligt för användare med möss. */
+
+                #calendar select, #calendarMonth {
+                    display: block;
+                    margin: auto;
+                    width: 11rem;
+                }
+                /* Centrerar select-elementet i #calendar (elementen visas som block samtidigt som bredden automatiskt ställs in).
+                Även #calendarMonth påverkas. Sätter bredden till 11rem. */
+
+                #weekdays, .week {
+                    display: flex;
+                    margin-left: 3%;
+                    margin-right: 3%;
+                }
+                /* #weekdays och .week ges en margin till vänster och till höger. De blir till två flex-items. */ 
+
+                    .day, .notJanuary, .weekday {
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: 0;
+                        background-color: white;
+                        border: 1px solid black;
+                        font-size: 200%;
+                    }
+                    /* Flex-items:en blir större eller mindre så att det får plats på skärmen, alla flex-items:en tar alltid upp lika
+                    mycket utrymme relativt till varandra som de gör normalt även fast de blir större eller mindre. Detta görs genom att sätta flex-grow och flex-shrink till 1.
+                    Då blir inte t.ex. någon rad en annan storlek än resten av raderna. Gör också texten större samt ändrar bakgrundsfärgen och ger items:en en border. */
+
+                    .weekday {
+                        background-color: gray;
+                    }
+                    /* Gör veckodagarnas bakgrund grå så de sticker ut. */
+
+                        .day:active, .day:hover {
+                            color: green;
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                        /* När .day klickas på eller när muspekaren är över .day ändras textens utseende, texten blir fet och textfärgen ändras till grönt. 
+                        Dessutom ändras muspekarens utseende. Detta ger bättre feedback att något har hänt/händer när någon dag klickas på/muspekaren är över
+                        någon dag. */
+
+                        .day:active {
+                            color: black;
+                        }
+                        /* Textfärgen blir istället svart (istället för grönt) när .day klickas på. Det ger bättre feedback att något har hänt när användaren
+                        har t.ex. klickat på en dag. Eftersom att textens standardfärg är svart så "blinkar" dagarna när användaren klickar på dem. 
+                        Då förstår användaren att något har hänt. */
+
+                    .notJanuary {
+                        color: gray;
+                    }
+                    /* Ändrar .notJanuary:s textfärg till grått så de sticker ut från de andra dagarna. */
+
+                        .notJanuary:hover {
+                            cursor: not-allowed;
+                        }
+                        /* När muspekaren är över .notJanuary ändras muspekarens utseende. Detta är ännu en signal till användaren att dessa dagar är annorlunda
+                        och att de inte går att välja. */
+
+/* För sidan "book.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* För sidan "menu.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+    #gridContainerMenu0 {
+        grid-template-columns: 50% 50%;
+    }
+    /* Skapar en grid-container med två lika stora kolumner så att innehållet blir mer horisontellt utspritt. Detta är bättre för enheter med större skärmar. */
+        
+        .gridItemMenu0a {
+            border-right: 5px dotted gray;
+            border-bottom: 0;
+        }
+        /* (Grid item:et är redan på den första raden). Ger alla grid-item:et en border på högersidan. Tar också bort border:n länst ner då footern är nedanför.
+        Då ser det inte konstigt ut. */
+
+            #gridItemMenu0First {
+                border-top: 0;
+            }
+            /* Tar bort grid-item:ets border högst upp då sidtiteln är ovanför. Då ser det inte konstigt ut. */
+
+        .gridItemMenu0b {
+            grid-column: 2;
+            border-bottom: 0;
+        }
+        /* Gör så att tre av alla grid-items finns placerade i den andra nya kolumnen. Tar också bort border:n länst ner då footern är nedanför.
+        Då ser det inte konstigt ut. */
+
+    #gridContainerMenu1 {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    /* Ändrar så att grid-container:n har två lika stora kolumner och två lika stora rader. Innehållet blir mer horisontellt utspritt. 
+    Detta är bättre för enheter med större skärmar. */
+
+        .gridItemMenu1a figure img, .gridItemMenu1b figure img, .gridItemMenu1c figure img, .gridItemMenu1d figure img {
+            max-width: 70%;
+            height: auto;
+        }
+        /* Ändrar alla fotons maxbredd till 70%. Höjden justeras automatiskt så att bilderna ska kunna synas utan problem. */
+        
+        .gridItemMenu1a {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        /* Placerar grid-item:et i kolumn 1 och på rad 1. */
+
+        .gridItemMenu1b {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        /* Placerar grid-item:et i kolumn 2 och på rad 1. */
+
+        .gridItemMenu1c {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        /* Placerar grid-item:et i kolumn 1 och på rad 2. */
+
+        .gridItemMenu1d {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        /* Placerar grid-item:et i kolumn 2 och på rad 2. */
+
+/* För sidan "menu.html". ---------------------------------------------------------------------------------------------------------------------------------------- */
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<!--Ändrar webbsidans språk till svenska. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meny</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&display=swap" rel="stylesheet"> <!--Typsnittet är Shippori Mincho B1 av FONTDASU via https://fonts.google.com/specimen/Shippori+Mincho+B1#standard-styles -->
+    <!--Länkar en google-font.-->
+
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!--Länkar en stilmall.-->
+
+    <link rel="stylesheet" type="text/css" media="(max-width: 319px)" href="../breakpoints_css/style_xs_screen.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 481px)" href="../breakpoints_css/style_tablet.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 961px)" href="../breakpoints_css/style_desktop.css">
+    <!--Länkar tre stilmallar som endast läses in beroende på skärmbredden. Genom att dessa extra stilmallar inte läses in direkt så blir webbplatsen snabbare.
+    Prestandan ökar. Detta är ett bättre alternativ till att t.ex. alla stilmallar läses in, oavsett om skärmen upfyller de krav så läses de ändå in.-->
+
+</head>
+
+<body>
+    <header>
+
+        <a href="#mainContentMenu" class="skipToMainContent">Hoppa till huvudinnehållet</a>
+        <!-- Skapar en länk som användaren kan klicka. Den tar hen till huvudinnehållet på sidan. Detta är ett vektyg som gör webbplatsen mer tillgänglig. Den låter
+        t.ex. användare med nedsatt syn kunne använda webbplaysen med skärmläsare. Denna länk är bra att ha även för de med små enheter som vill komma till innehållet direkt
+        utan att behöva scrolla förbi en massa annat. Den är bättre att ha än att inte ha, även fast den inte alltid behövs. Denna länk, samt alla andra länkar kan kommas åt med
+        tab-tangenten. Hela webbplatsen går lika bra att använda med ett tangentbord, vilket är mycket bra och viktigt. Detta är en aspekt inom tillgänglighet, att kunna använda
+        webbplatsen med endast ett tangentbord.-->
+
+        <div class="headerHeading">
+            <h1>Tamaras</h1>
+            <img src="../images/logo.png" alt="Bild på Tamaras logotyp">
+            <h2>Ta mera av Tamaras</h2>
+        </div>
+        <!--Skapar en huvudrubrik och en underrubrik (slogan:en). Även företagets logotyp placeras här.-->
+
+        <nav>
+            <div class="globalNav">
+                <a class="navLink0" href="../index.html">Hem</a>
+                <a class="navLink1" href="book.html">Boka bord</a>
+                <a class="navLink2" href="menu.html">Meny</a>
+            </div>
+        </nav>
+        <!--Skapar en global navigation med länkar i en div.-->
+
+    </header>
+
+    <div id="mainContentMenu">
+    <!--Skapar en container som innehåller huvudinnehållet på sidan (allt förutom footer:n och header:n). Detta avsnitt kan användaren hoppa till
+    med hjälp av länken "Hoppa till huvudinnehållet" längre upp.-->
+
+        <h2 class="pageHeading" id="pageHeadingMenu">Meny</h2>
+        <!--Skapar en rubrik för sidan.-->
+
+        <div id="gridContainerMenu0">
+
+            <div class="gridItemMenu0a" id="gridItemMenu0First">
+                <h3>Kocken tipsar</h3>
+                <p>Svensk oxfilé och potatisklyftor med rödvinssås 239:-<p>
+                <p>Fish and chips med coleslaw 139:-</p>
+            </div>
+
+            <div class="gridItemMenu0b">
+                <h3>Kött</h3>
+                <p>Svensk oxfilé och potatisklyftor med rödvinssås 240:-</p>
+                <p>Honungsglaserade revbensspjäll med sötpotatis 260:-</p>
+            </div>
+
+            <div class="gridItemMenu0a">
+                <h3>Kyckling</h3>
+                <p>Chicken tikka med masalasås 129:-</p>
+                <p>Mexikanska kycklingtacos med grönsaker och guacamole 219:-</p>
+            </div>
+
+            <div class="gridItemMenu0b">
+                <h3>Fisk</h3>
+                <p>Fish and chips med coleslaw 139:-</p>
+                <p>Ugnsbakad lax med färskpotatis 189:-</p>
+            </div>
+
+            <div class="gridItemMenu0a">
+                <h3>Vegetariskt</h3>
+                <p>Vegetarisk sushi med japansk sojasås och wasabi 219:-</p>
+                <p>Vegetariska vårrullar fyllda med grönsaker och veggofärs 199:-</p>
+            </div>
+
+            <div class="gridItemMenu0b">
+                <h3>Veganskt</h3>
+                <p>Vegansk ärtsoppa med champinjoner 149:-</p>
+                <p>Vegansk potatissallad med bönor och tomater 109:-</p>
+            </div>
+
+            <div class="gridItemMenu0a">
+                <h3>Desserter</h3>
+                <p>Vaniljglass med chokladsås 39:-</p>
+                <p>Crème brûlée med bär 69:-</p>
+                <p>Cheesecake 79:-</p>
+                <p>Chokladmousse 39:-</p>
+            </div>
+
+            <div class="gridItemMenu0b">
+                <h3>För barnen</h3>
+                <p>Pannkakor med sylt och grädde 49:-</p>
+                <p>Spaghetti och köttfärssås 49:-</p>
+                <p>Köttbullar och potatis med lingonsylt 49:-</p>
+                <p>Chicken nuggets med pommes frites 49:-</p>
+            </div>
+
+            <div class="gridItemMenu0a">
+                <h3>Kalla drycker</h3>
+                <p>Cola 33cl 29:-</p>
+                <p>Vatten 100cl 9:-</p>
+                <p>Starköl 5% 33cl 39:-</p>
+                <p>Lättöl 0% 33cl 29:-</p>
+                <p>Husets vin rött 13% 100cl 299:-</p>
+                <p>Husets vin vitt 13% 100cl 299:-</p>
+            </div>
+
+            <div class="gridItemMenu0b">
+                <h3>Varma drycker</h3>
+                <p>Bryggkaffe 29:-</p>
+                <p>Kaffe latte 49:-</p>
+                <p>Cappuccino 39:-</p>
+                <p>Espresso 29:-</p>
+                <p>Te 19:-</p>
+                <p>Varm choklad 39:-</p>
+            </div>
+            <!--Skapar tio olika grid-items med olika maträtter och drycker.-->
+
+        </div>
+
+        <h3 id="pageSubHeadingMenu">Foton från menyn</h3>
+        <!--Skapar en underrubrik.-->
+
+        <div id="gridContainerMenu1">
+        <!-- Skapar en till grid-container. -->
+ 
+            <div class="gridItemMenu1a">
+                <figure>
+                    <img src="../images/sushi.jpg" alt="Bild på sex sushibitar">
+                    <!--Samtlliga bilder på webbplatsen har en alt-text som berättar för användaren vad bilden visar. Detta är bra för användare med nedatt syn. Detta är en aspekt
+                    inom tillgänlighet. Att kunna ta till sig synlig information på andra sätt. Det finns ingen poäng att inte ha en alt-text till en bild. Om t.ex. bilden har
+                    försvunnit så kan man fortfarande veta vad det är som ska synas på bilden. Bilden är också komprimerad, vilket gör dess filstorlek mindre. Detta är bättre
+                    för webbplatsens prestanda. Detta är ännu en prestandaanpassning.-->
+
+                    <figcaption>Vegetarisk sushi med japansk sojasås och wasabi</figcaption>
+                </figure>
+            </div>
+
+            <div class="gridItemMenu1b">
+                <figure>
+                    <img src="../images/tacos.jpg" alt="Bild på tre tacos">
+                    <!--Samtlliga bilder på webbplatsen har en alt-text som berättar för användaren vad bilden visar. Detta är bra för användare med nedatt syn. Detta är en aspekt
+                    inom tillgänlighet. Att kunna ta till sig synlig information på andra sätt. Det finns ingen poäng att inte ha en alt-text till en bild. Om t.ex. bilden har
+                    försvunnit så kan man fortfarande veta vad det är som ska synas på bilden. Bilden är också komprimerad, vilket gör dess filstorlek mindre. Detta är bättre
+                    för webbplatsens prestanda. Detta är ännu en prestandaanpassning.-->
+
+                    <figcaption>Mexikanska kycklingtacos med guacamole</figcaption>
+                </figure>
+            </div>
+
+            <div class="gridItemMenu1c">
+                <figure>
+                    <img src="../images/fish_and_chips.jpg" alt="Bild på fish and chips med coleslaw bredvid">
+                    <!--Samtlliga bilder på webbplatsen har en alt-text som berättar för användaren vad bilden visar. Detta är bra för användare med nedatt syn. Detta är en aspekt
+                    inom tillgänlighet. Att kunna ta till sig synlig information på andra sätt. Det finns ingen poäng att inte ha en alt-text till en bild. Om t.ex. bilden har
+                    försvunnit så kan man fortfarande veta vad det är som ska synas på bilden. Bilden är också komprimerad, vilket gör dess filstorlek mindre. Detta är bättre
+                    för webbplatsens prestanda. Detta är ännu en prestandaanpassning.-->
+
+                    <figcaption>Fish and chips med coleslaw</figcaption>
+                </figure>
+            </div>
+
+            <div class="gridItemMenu1d">
+                <figure>
+                    <img src="../images/creme_brulee.jpg" alt="Bild på crème brûlée med bär på">
+                    <!--Samtlliga bilder på webbplatsen har en alt-text som berättar för användaren vad bilden visar. Detta är bra för användare med nedatt syn. Detta är en aspekt
+                    inom tillgänlighet. Att kunna ta till sig synlig information på andra sätt. Det finns ingen poäng att inte ha en alt-text till en bild. Om t.ex. bilden har
+                    försvunnit så kan man fortfarande veta vad det är som ska synas på bilden. Bilden är också komprimerad, vilket gör dess filstorlek mindre. Detta är bättre
+                    för webbplatsens prestanda. Detta är ännu en prestandaanpassning.-->
+
+                    <figcaption>Crème brûlée med bär</figcaption>
+                </figure>
+            </div>
+            <!--Lägger till fyra bilder med bildtexter.-->
+
+        </div>
+    </div>
+    
+    <footer>
+        <address>
+            <p>© 2021 Tamaras. Tel: <a href="tel:0123-456789">0123-456789</a>. <a href="mailto:tamaras@ingenriktigemail.se">tamaras@ingenriktigemail.se</a>. Lekgatan 5, 43495 Göteborg.</p>
+        </address>
+        <!--Texten har flera olika a-element i sig som ringer ett visst nummer eller mejlar en viss e-post.-->
+        
+        <p>
+            <a href="https://pixabay.com/sv/photos/papper-gammal-textur-pergament-1074131" target="_blank">Bakgrundsbild</a> av <a href="https://pixabay.com/sv/users/chrisfiedler-935884/" target="_blank">ChrisFiedler</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/fish-and-chips-skottland-usa-platt-2753360/" target="_blank">fish and chips</a> av <a href="https://pixabay.com/sv/users/famifranquoi-3240024/" target="_blank">Famifranquoi</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/sushi-japanska-plattan-power-fisk-2853382/" target="_blank">sushi</a> av <a href="https://pixabay.com/sv/users/drawsandcooks-6719143/" target="_blank">Kevin Petit</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/tacos-mexikan-mat-lunch-uts%c3%b6kt-4540402/" target="_blank">tacos</a> av <a href="https://pixabay.com/sv/users/adoproducciones-121887/" target="_blank">Alfonso Charles</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/efterr%c3%a4tt-hallon-bl%c3%a5b%c3%a4r-paj-4204924/" target="_blank">crème brûlée</a> av <a href="https://pixabay.com/sv/users/lukinigor-12475636/" target="_blank">Igor Lukin</a> från Pixabay.
+            Ikoner av <a href="https://www.freepik.com" target="_blank">Freepik</a> från <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>.
+        </p>
+        <!--Texten har flera olika a-element i sig som önskar en viss länk, länken öppnas i en ny filk med hjälp av "target="_blank"".-->
+        
+    </footer>
+    <!--Lägger till en footer med kontaktinformation och uppehovsrättsinformation.-->
+    
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<!--Ändrar webbsidans språk till svenska. -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boka bord</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&display=swap" rel="stylesheet"> <!--Typsnittet är Shippori Mincho B1 av FONTDASU via https://fonts.google.com/specimen/Shippori+Mincho+B1#standard-styles
+    (Jag vet inte hur man refererar till ett typsnitt enligt APA).-->
+    <!--Länkar en google-font.-->
+
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!--Länkar en stilmall.-->
+
+    <link rel="stylesheet" type="text/css" media="(max-width: 319px)" href="../breakpoints_css/style_xs_screen.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 481px)" href="../breakpoints_css/style_tablet.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 961px)" href="../breakpoints_css/style_desktop.css">
+    <!--Länkar tre stilmallar som endast läses in beroende på skärmbredden. Genom att dessa extra stilmallar inte läses in direkt så blir webbplatsen snabbare.
+    Prestandan ökar. Detta är ett bättre alternativ till att t.ex. alla stilmallar läses in, oavsett om skärmen upfyller de krav så läses de ändå in.-->
+
+</head>
+
+<body>
+    <header>
+        
+        <a href="#mainContentBook" class="skipToMainContent">Hoppa till huvudinnehållet</a>
+        <!-- Skapar en länk som användaren kan klicka. Den tar hen till huvudinnehållet på sidan. Detta är ett vektyg som gör webbplatsen mer tillgänglig. Den låter
+        t.ex. användare med nedsatt syn kunne använda webbplaysen med skärmläsare. Denna länk är bra att ha även för de med små enheter som vill komma till innehållet direkt
+        utan att behöva scrolla förbi en massa annat. Den är bättre att ha än att inte ha, även fast den inte alltid behövs. Denna länk, samt alla andra länkar kan kommas åt med
+        tab-tangenten. Hela webbplatsen går lika bra att använda med ett tangentbord, vilket är mycket bra och viktigt. Detta är en aspekt inom tillgänglighet, att kunna använda
+        webbplatsen med endast ett tangentbord.-->
+        
+        <div class="headerHeading">
+            <h1>Tamaras</h1>
+            <img src="../images/logo.png" alt="Bild på Tamaras logotyp">
+            <h2>Ta mera av Tamaras</h2>
+        </div>
+        <!--Skapar en huvudrubrik och en underrubrik (slogan:en). Även företagets logotyp placeras här.-->
+
+        <nav>
+            <div class="globalNav">
+                <a class="navLink0" href="../index.html">Hem</a>
+                <a class="navLink1" href="book.html">Boka bord</a>
+                <a class="navLink2" href="menu.html">Meny</a>
+            </div>
+        </nav>
+        <!--Skapar en global navigation med länkar i en div.-->
+
+    </header>
+
+    <div id="mainContentBook">
+    <!--Skapar en container som innehåller huvudinnehållet på sidan (allt förutom footer:n och header:n). Detta avsnitt kan användaren hoppa till
+    med hjälp av länken "Hoppa till huvudinnehållet" längre upp.-->
+
+        <h2 class="pageHeading">Boka bord</h2>
+        <!--Skapar en rubrik för sidan.-->
+
+        <div id="gridContainerBook">
+        <!--Skapar en grid-container. Här kommer alla grid-items för denna webbsida att vara.-->
+
+            <div id="gridItemBook">
+            <!--Skapar ett grid-item.-->
+
+                <div id="calendar">
+                    <p>
+                        <label for="calendarMonth">Välj månad</label>
+                        <input type="month" value="2022-01" min="2022-01" max="2022-01" id="calendarMonth">
+                    </p>
+                    <!--Skapar en input där användaren kan välja månad, endast en månad kan dock väljas eftersom att kalendern neran endast är anpassad för januari 2022.
+                    "Id" och "for"-attributen läggs till om formuläret ska kunna fungera i framtiden.-->
+
+                    <div id="weekdays">
+                        <div class="weekday">Må</div>
+                        <div class="weekday">Ti</div>
+                        <div class="weekday">On</div>
+                        <div class="weekday">To</div>
+                        <div class="weekday">Fr</div>
+                        <div class="weekday">Lö</div>
+                        <div class="weekday">Sö</div>
+                    </div>
+                    <!--Skapar ett div element med 5 div element i sig. De är alla veckodagar.-->
+
+                    <div class="week">
+                        <div class="notJanuary">27</div>
+                        <div class="notJanuary">28</div>
+                        <div class="notJanuary">29</div>
+                        <div class="notJanuary">30</div>
+                        <div class="notJanuary">31</div>
+                        <div class="day">01</div>
+                        <div class="day">02</div>
+                    </div>
+
+                    <div class="week">
+                        <div class="day">03</div>
+                        <div class="day">04</div>
+                        <div class="day">05</div>
+                        <div class="day">06</div>
+                        <div class="day">07</div>
+                        <div class="day">08</div>
+                        <div class="day">09</div>
+                    </div>
+
+                    <div class="week">
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day">14</div>
+                        <div class="day">15</div>
+                        <div class="day">16</div>
+                    </div>
+
+                    <div class="week">
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                    </div>
+
+                    <div class="week">
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+                        <div class="day">29</div>
+                        <div class="day">30</div>
+                    </div>
+
+                    <div class="week">
+                        <div class="day">31</div>
+                        <div class="notJanuary">01</div>
+                        <div class="notJanuary">02</div>
+                        <div class="notJanuary">03</div>
+                        <div class="notJanuary">04</div>
+                        <div class="notJanuary">05</div>
+                        <div class="notJanuary">06</div>
+                    </div>
+                    <!--Skapar 6 div element med 5 div element i sig. De är alla datum i januari 2022. Även datum från andra månader som är i samma vecka som något eller några
+                    datum i januari 2022 har tagits med. Dessa är dock gråmarkerade och går inte att välja. Detta uppnås med hjälp av klassen "notJanuary".-->
+
+                    <p>
+                        <label>Välj tid
+                            <select id="time">
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </label>
+                    </p>
+                    <!--Skapar en select med tider från 11:00 till 22:00.-->
+                </div>
+
+                <form>
+                    <p><label for="formMonthAndTime">Dag och tid (obligatoriskt)</label><input type="datetime-local" min="2022-01-01T11:00" max="2022-01-31T21:00" id="formMonthAndTime"></p>
+                    <!--Endast värden mellan den 1 januari 2022 kl. 11 och 31 januari 2022 kl 21:00 kan väljas. "Id" och "for"-attributen läggs till om formuläret ska kunna fungera
+                    i framtiden med hjälp av JavaScript.-->
+
+                    <p><label for="formName">Namn (obligatoriskt)</label><input required placeholder="Anna Andersson" id="formName"></p>
+                    <!--Gör textboxen obligatorisk samt lägger in en platshållare. "Id" och "for"-attributen läggs till om formuläret ska kunna fungera
+                    i framtiden med hjälp av JavaScript.-->
+                        
+                    <p><label for="formPhone">Telefon (obligatoriskt)</label><input type="tel" required placeholder="0123456789" id="formPhone"></p>
+                    <!--Gör textboxen obligatorisk samt lägger in en platshållare. "Id" och "for"-attributen läggs till om formuläret ska kunna fungera
+                    i framtiden med hjälp av JavaScript.-->
+
+                    <p><label for="formEmail">E-post (obligatoriskt)</label><input type="email" required placeholder="example@example.com"  id="formEmail"></p>
+                    <!--Gör textboxen obligatorisk samt lägger in en platshållare. "Id" och "for"-attributen läggs till om formuläret ska kunna fungera
+                    i framtiden med hjälp av JavaScript.-->
+
+                    <p><label for="formMessage">Meddelande</label><textarea rows="5" placeholder="Allergier, önskemål, osv." id="formMessage"></textarea></p>
+                    <!--Lägger in en platshållare. "Id" och "for"-attributen läggs till om formuläret ska kunna fungera
+                    i framtiden med hjälp av JavaScript.-->
+
+                    <p><label for="formButton">Boka</label><input type="submit" id="formButton"></p>
+                    <!--Skapar slutligen en knapp. "Id" och "for"-attributen läggs till om formuläret ska kunna fungera
+                    i framtiden med hjälp av JavaScript.-->
+
+                </form>
+                <!--Skapar ett formulär.-->
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <p>© 2021 Tamaras. Tel: <a href="tel:0123-456789">0123-456789</a>. <a href="mailto:tamaras@ingenriktigemail.se">tamaras@ingenriktigemail.se</a>. Lekgatan 5, 43495 Göteborg.</p>
+        </address>
+        <!--Texten har flera olika a-element i sig som ringer ett visst nummer eller mejlar en viss e-post.-->
+
+        <p>
+            <a href="https://pixabay.com/sv/photos/papper-gammal-textur-pergament-1074131" target="_blank">Bakgrundsbild</a> av <a href="https://pixabay.com/sv/users/chrisfiedler-935884/" target="_blank">ChrisFiedler</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/fish-and-chips-skottland-usa-platt-2753360/" target="_blank">fish and chips</a> av <a href="https://pixabay.com/sv/users/famifranquoi-3240024/" target="_blank">Famifranquoi</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/sushi-japanska-plattan-power-fisk-2853382/" target="_blank">sushi</a> av <a href="https://pixabay.com/sv/users/drawsandcooks-6719143/" target="_blank">Kevin Petit</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/tacos-mexikan-mat-lunch-uts%c3%b6kt-4540402/" target="_blank">tacos</a> av <a href="https://pixabay.com/sv/users/adoproducciones-121887/" target="_blank">Alfonso Charles</a> från Pixabay.
+            Bild på <a href="https://pixabay.com/sv/photos/efterr%c3%a4tt-hallon-bl%c3%a5b%c3%a4r-paj-4204924/" target="_blank">crème brûlée</a> av <a href="https://pixabay.com/sv/users/lukinigor-12475636/" target="_blank">Igor Lukin</a> från Pixabay.
+            Ikoner av <a href="https://www.freepik.com" target="_blank">Freepik</a> från <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>.
+        </p>
+        <!--Texten har flera olika a-element i sig som önskar en viss länk, länken öppnas i en ny filk med hjälp av "target="_blank"".-->
+
+    </footer>
+    <!--Lägger till en footer med kontaktinformation och uppehovsrättsinformation.-->
+    
+</body>
+</html>
