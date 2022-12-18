@@ -17,9 +17,14 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
+body {
+  overflow: hidden;
+}
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
   .NavBar {
@@ -32,33 +37,63 @@
     border-radius: 0 20% 30% 20%;
   }
 
-  .navLinkContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-    .navLinkContainer a {
-      text-decoration: none;
-      color: white;
-      font-family: 'Tenor Sans', sans-serif;
-      font-size: 200%;
-      font-weight: bold;
+    .navLinkContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 100%;
     }
 
-      .navLinkContainer:hover > a:not(:hover) {
-        transform: scale(0.7);
-        width: 200%;
-        opacity: 70%;
+      .navLink {
+        text-decoration: none;
+        color: white;
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 200%;
+        font-weight: bold;
+        width: 100%;
+        letter-spacing: 0.3rem;
       }
 
-    .backgroundVideo {
-      height: 1080px;
-      width: 1920px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: -1;
+        .navLinkContainer:hover > .navLink:not(:hover) {
+          transform: scale(0.7);
+          width: 200%;
+          opacity: 70%;
+        }
+
+        .navLink:hover {
+          color:rgb(127, 255, 212);
+        }
+
+  .backgroundVideo {
+    height: 1080px;
+    width: 1920px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    transform: scale(2);
+  }
+
+  .backgroundOverlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: black;
+    opacity: 0.2;
+}
+
+  .Footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+    .Footer p {
+      color: white;
+      font-family: 'Oxygen', sans-serif;
+      font-weight: bold;
+      font-size: 150%;
     }
