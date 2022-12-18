@@ -9,21 +9,21 @@ function Home() {
   const backgroundVideoRef = useRef(null);
 
   function blurBackground() {
-    backgroundOverlayRef.current.style.opacity = "0.7"
-    backgroundVideoRef.current.style.transform= "translateX(1.7)";
+    backgroundOverlayRef.current.style.animation = "backgroundFade 3s forwards";
+    backgroundVideoRef.current.style.animation = "backgroundZoom 2s forwards";
   }
 
   function unBlurBackground() {
-    backgroundOverlayRef.current.style.opacity = "0.2"
-
+    backgroundOverlayRef.current.style.animation = "backgroundUnFade 2s forwards";
+    backgroundVideoRef.current.style.animation = "backgroundUnZoom 1s forwards";
   }
 
     return (
       <div className="Home">
         <div className="background">
           <div ref={backgroundOverlayRef} className="backgroundOverlay"></div>
-          <video className="backgroundVideo" autoplay="autoplay" muted="muted" loop="loop">
-          <source ref={backgroundVideoRef} src={backgroundVideo} type="video/mp4"/>
+          <video ref={backgroundVideoRef} className="backgroundVideo" autoPlay="autoPlay" muted="muted">
+          <source src={backgroundVideo} type="video/mp4"/>
         </video>
         </div>
         <NavBar blurBackground={blurBackground} unBlurBackground={unBlurBackground}/>

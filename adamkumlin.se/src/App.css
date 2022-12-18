@@ -1,99 +1,96 @@
-@-webkit-keyframes HomeAnimation {
-  0%{background-position:89% 60%}
-  50%{background-position:6% 10%}
-  100%{background-position:89% 60%}
-}
-
-  @-moz-keyframes HomeAnimation {
-  0%{background-position:89% 60%}
-  50%{background-position:6% 10%}
-  100%{background-position:89% 60%}
-}
-
-  @keyframes HomeAnimation {
-  0%{background-position:89% 60%}
-  50%{background-position:6% 10%}
-  100%{background-position:89% 60%}
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
 body {
   overflow: hidden;
 }
-.App {
-  text-align: center;
-  overflow: hidden;
-}
 
-  .NavBar {
-    border-right: 5px solid white;
-    border-bottom: 5px solid white;
-    height: 20%;
-    padding-top: 5rem;
-    padding-bottom: 7rem;
-    width: 30%;
-    border-radius: 0 20% 30% 20%;
+  .App {
+    text-align: center;
   }
 
-    .navLinkContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .NavBar {
+      padding-top: 7rem;
+    }
+
+      .navLinkContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+      }
+
+        .navLink {
+          text-decoration: none;
+          color: white;
+          font-family: 'Tenor Sans', sans-serif;
+          font-size: 200%;
+          font-weight: bold;
+          width: 100%;
+          letter-spacing: 0.3rem;
+          transition: 0.3s;
+        }
+
+          .navLinkContainer:hover > .navLink:not(:hover) {
+            transform: scale(0.7); 
+            opacity: 70%;
+          }
+
+          .navLink:hover {
+            color:rgb(127, 255, 212);
+          }
+
+    .backgroundVideo {
+      height: 1080px;
+      width: 1920px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+
+      @keyframes backgroundZoom {
+        from {transform: scale(1);}
+        to {transform: scale(2);}
+      }
+
+      @keyframes backgroundUnZoom {
+        from {transform: scale(2);}
+        to {transform: scale(1);}
+      }
+
+    .backgroundOverlay {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: black;
+      opacity: 0.2;
+    }
+
+      @keyframes backgroundFade {
+        from {opacity: 0.2;}
+        to {opacity: 0.7;}
+      }
+
+      @keyframes backgroundUnFade {
+        from {opacity: 0.7;}
+        to {opacity: 0.2;}
+      }
+
+    .Footer {
+      bottom: 0;
+      position: absolute;
       width: 100%;
     }
 
-      .navLink {
-        text-decoration: none;
+      .Footer p {
         color: white;
-        font-family: 'Tenor Sans', sans-serif;
-        font-size: 200%;
+        font-family: 'Oxygen', sans-serif;
         font-weight: bold;
-        width: 100%;
-        letter-spacing: 0.3rem;
+        font-size: 150%;
       }
-
-        .navLinkContainer:hover > .navLink:not(:hover) {
-          transform: scale(0.7);
-          width: 200%;
-          opacity: 70%;
-        }
-
-        .navLink:hover {
-          color:rgb(127, 255, 212);
-        }
-
-  .backgroundVideo {
-    height: 1080px;
-    width: 1920px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -2;
-    transform: scale(2);
-  }
-
-  .backgroundOverlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: black;
-    opacity: 0.2;
-}
-
-  .Footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-  }
-
-    .Footer p {
-      color: white;
-      font-family: 'Oxygen', sans-serif;
-      font-weight: bold;
-      font-size: 150%;
-    }
