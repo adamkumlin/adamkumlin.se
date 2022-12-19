@@ -54,18 +54,52 @@ body {
       margin-top: 10rem;
     }
 
-    .NavButton i {
-      border: solid white;
-      border-width: 0 5px 5px 0;
-      display: inline-block;
-      padding: 10px;
-      transform: rotate(45deg);
+    .NavButton {
       cursor: pointer;
+      margin-top: 20rem;
     }
 
-      .NavButton i:hover {
-        padding: 20px;
+      .arrowLine0, .arrowLine1, .arrowLine2 {
+        background-color: white;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        border-radius: 25px;
       }
+
+        .arrowLine0 {
+          transform: rotate(45deg) translate(-50px);
+          width: 100px;
+          height: 20px;
+          border-bottom-right-radius: 0px;
+        }
+
+        .arrowLine1 {
+          transform: rotate(-45deg) translate(50px);
+          width: 100px;
+          height: 20px;
+          border-bottom-left-radius: 0px;
+        }
+
+        .arrowLine2 {
+          transform: rotate(90deg) translateX(-60px);
+          width: 140px;
+          height: 20px;
+        }
+
+        .NavButton:hover .arrowLine0 {
+          animation: navButtonArrowLine0Move 1s linear;
+        }
+
+          @keyframes navButtonArrowLine0Move {
+            0%{transform: rotate(45deg) translate(-50px);}
+            33%{transform: rotate(90deg) translate(-60px);}
+            66%{transform: rotate(90deg) translate(-60px); width: 140px;}
+            100%{transform: rotate(90deg) translate(-60px) translateX(-100px) translateY(100px); width: 140px;}
+            /*100%{transform: rotate(45deg) translate(-50px);}*/
+          }
 
     .NavBar {
       margin-top: 100vh;
