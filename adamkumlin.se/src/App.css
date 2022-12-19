@@ -2,15 +2,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
   .App {
     text-align: center;
   }
 
+    .backgroundVideo {
+      height: 1080px;
+      width: 1920px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+
+      @keyframes backgroundZoom {
+        from {transform: scale(1);}
+        to {transform: scale(2);}
+      }
+
+      @keyframes backgroundUnZoom {
+        from {transform: scale(2);}
+        to {transform: scale(1);}
+      }
+
+    .backgroundOverlay {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: black;
+      opacity: 0.5;
+    }
+
+      @keyframes backgroundFade {
+        from {opacity: 0.5;}
+        to {opacity: 0.9;}
+      }
+
+      @keyframes backgroundUnFade {
+        from {opacity: 0.9;}
+        to {opacity: 0.2;}
+      }
+
+    .Introduction {
+      color: white;
+      margin-top: 10rem;
+    }
+
+    .NavButton i {
+      border: solid white;
+      border-width: 0 5px 5px 0;
+      display: inline-block;
+      padding: 10px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+
+      .NavButton i:hover {
+        padding: 20px;
+      }
+
     .NavBar {
-      padding-top: 7rem;
+      margin-top: 100vh;
     }
 
       .navLinkContainer {
@@ -42,50 +100,9 @@ body {
             color:rgb(127, 255, 212);
           }
 
-    .backgroundVideo {
-      height: 1080px;
-      width: 1920px;
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      z-index: -2;
-    }
-
-      @keyframes backgroundZoom {
-        from {transform: scale(1);}
-        to {transform: scale(2);}
-      }
-
-      @keyframes backgroundUnZoom {
-        from {transform: scale(2);}
-        to {transform: scale(1);}
-      }
-
-    .backgroundOverlay {
-      height: 100%;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      background: black;
-      opacity: 0.2;
-    }
-
-      @keyframes backgroundFade {
-        from {opacity: 0.2;}
-        to {opacity: 0.7;}
-      }
-
-      @keyframes backgroundUnFade {
-        from {opacity: 0.7;}
-        to {opacity: 0.2;}
-      }
-
     .Footer {
-      bottom: 0;
-      position: absolute;
       width: 100%;
+      margin-top: 100vh;
     }
 
       .Footer p {
