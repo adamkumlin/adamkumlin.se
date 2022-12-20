@@ -26,13 +26,16 @@ function Home() {
 
   function goToMainContent() {
 
-    arrowLine0Ref.current.style.animation = "navButtonArrowLine0Down 1s";
-    arrowLine1Ref.current.style.animation = "navButtonArrowLine1Down 1s";
-    arrowLine2Ref.current.style.animation = "navButtonArrowLine2Down 1s";
+    arrowLine0Ref.current.style.animation = "navButtonArrowLine0Down 0.3s";
+    arrowLine1Ref.current.style.animation = "navButtonArrowLine1Down 0.3s";
+    arrowLine2Ref.current.style.animation = "navButtonArrowLine2Down 0.3s";
 
     setTimeout( function() {
-      navBarRef.current.scrollIntoView({behavior: "smooth"});
-    }, 1000);
+      navBarRef.current.scrollIntoView({behavior: "smooth"}); 
+      arrowLine0Ref.current.style.animation = null;
+      arrowLine1Ref.current.style.animation = null;
+      arrowLine2Ref.current.style.animation = null;
+    }, 300);
   }
 
     return (

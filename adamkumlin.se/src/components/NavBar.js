@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { forwardRef } from "react";
 
-function NavBar (forwardRef((props, ref) {
+const NavBar = forwardRef((props, ref) => (
   <div className="NavBar" ref={ref}>
       <div className="navLinkContainer" onMouseLeave={props.unBlurBackground}>
         <Link className="navLink" to="/contact" onMouseEnter={props.blurBackground}>KONTAKTA MIG</Link>
@@ -10,7 +10,7 @@ function NavBar (forwardRef((props, ref) {
         <Link className="navLink" to="/cv" onMouseEnter={props.blurBackground}>CV</Link>
       </div>
     </div>
-}));
+));
 
 
 export default NavBar;
