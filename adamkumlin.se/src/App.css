@@ -56,7 +56,12 @@ body {
 
     .NavButton {
       cursor: pointer;
+      border: 2px solid green;
+      height: 200px;
       margin-top: 20rem;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 200px;
     }
 
       .arrowLine0, .arrowLine1, .arrowLine2 {
@@ -66,6 +71,7 @@ body {
         right: 0; 
         margin-left: auto; 
         margin-right: auto;
+        margin-top: 10rem;
         border-radius: 25px;
       }
 
@@ -90,15 +96,82 @@ body {
         }
 
         .NavButton:hover .arrowLine0 {
-          animation: navButtonArrowLine0Move 1s linear;
+          animation: navButtonArrowLine0Move 3s;
+          animation-iteration-count: infinite;
         }
 
           @keyframes navButtonArrowLine0Move {
             0%{transform: rotate(45deg) translate(-50px);}
-            33%{transform: rotate(90deg) translate(-60px);}
-            66%{transform: rotate(90deg) translate(-60px); width: 140px;}
-            100%{transform: rotate(90deg) translate(-60px) translateX(-100px) translateY(100px); width: 140px;}
-            /*100%{transform: rotate(45deg) translate(-50px);}*/
+            11%{transform: rotate(90deg) translate(-60px);}
+            22%{transform: rotate(90deg) translate(-60px) translateX(-100px);}
+            33%{transform: rotate(90deg) translate(-60px) translateX(-100px) translateY(50px);}
+            44%{transform: rotate(45deg) translate(-60px) translateX(-150px) translateY(-50px);}
+            55%{transform: rotate(45deg) translate(-60px) translateX(150px) translateY(-50px);}
+            66%{transform: rotate(45deg) translate(-60px) translateX(-150px) translateY(-50px);}
+            77%{transform: rotate(90deg) translate(-60px) translateX(-100px);}
+            88%{transform: rotate(90deg) translate(-60px);}
+            100%{transform: rotate(45deg) translate(-50px);}
+          }
+
+        .NavButton:hover .arrowLine1 {
+          animation: navButtonArrowLine1Move 3s;
+          animation-iteration-count: infinite;
+        }
+
+          @keyframes navButtonArrowLine1Move {
+            0%{transform: rotate(-45deg) translate(50px);}
+            11%{transform: rotate(-90deg) translate(60px);}
+            22%{transform: rotate(-90deg) translate(60px) translateX(100px);}
+            33%{transform: rotate(-90deg) translate(60px) translateX(100px) translateY(50px);}
+            44%{transform: rotate(-45deg) translate(60px) translateX(150px) translateY(-50px);}
+            55%{transform: rotate(-45deg) translate(60px) translateX(-150px) translateY(-50px);}
+            66%{transform: rotate(-45deg) translate(60px) translateX(150px) translateY(-50px);}
+            77%{transform: rotate(-90deg) translate(60px) translateX(100px);}
+            88%{transform: rotate(-90deg) translate(60px);}
+            100%{transform: rotate(-45deg) translate(50px);}
+          }
+
+
+        .NavButton:hover .arrowLine2 {
+          animation: navButtonArrowLine2Move 3s;
+          animation-iteration-count: infinite;
+        }
+
+          @keyframes navButtonArrowLine2Move {
+            0%{transform: rotate(90deg) translateX(-60px);}
+            10%{transform: rotate(90deg) translateX(-60px); width: 100px;}
+            20%{transform: rotate(90deg) translate(-250px); width: 100px;}
+            30%{transform: rotate(90deg); width: 100px;}
+            40%{transform: rotate(90deg) translate(-250px); width: 100px;}
+            50%{transform: rotate(90deg) translateX(-60px); width: 100px;}
+            100%{transform: rotate(90deg) translateX(-60px);}
+          }
+
+        .NavButton:active .arrowLine0 {
+          animation: navButtonArrowLine0Down 1s;
+        }
+
+          @keyframes navButtonArrowLine0Down {
+            from{transform: rotate(45deg) translate(-50px);}
+            to{transform: rotate(45deg) translate(54px, 106px);}
+          }
+
+        .NavButton:active .arrowLine1 {
+          animation: navButtonArrowLine1Down 1s;
+        }
+
+          @keyframes navButtonArrowLine1Down {
+            from{transform: rotate(-45deg) translate(50px);}
+            to{transform: rotate(-45deg) translate(-54px, 106px);}
+          }
+
+        .NavButton:active .arrowLine2 {
+          animation: navButtonArrowLine2Down 1s;
+        }
+
+          @keyframes navButtonArrowLine2Down {
+            from{transform: rotate(90deg) translateX(-60px);}
+            to{transform: rotate(90deg) translateX(90px);}
           }
 
     .NavBar {

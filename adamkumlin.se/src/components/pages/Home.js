@@ -19,11 +19,20 @@ function Home() {
     backgroundOverlayRef.current.style.animation = "backgroundUnFade 2s forwards";
     backgroundVideoRef.current.style.animation = "backgroundUnZoom 1s forwards";
   }
-
+  const arrowLine0Ref = useRef(null);
+  const arrowLine1Ref = useRef(null);
+  const arrowLine2Ref = useRef(null);
   const navBarRef = useRef(null);
 
   function goToMainContent() {
-    navBarRef.current.scrollIntoView({behavior: "smooth"});
+
+    arrowLine0Ref.current.style.animation = "navButtonArrowLine0Down 1s";
+    arrowLine1Ref.current.style.animation = "navButtonArrowLine1Down 1s";
+    arrowLine2Ref.current.style.animation = "navButtonArrowLine2Down 1s";
+
+    setTimeout( function() {
+      navBarRef.current.scrollIntoView({behavior: "smooth"});
+    }, 1000);
   }
 
     return (
@@ -35,7 +44,7 @@ function Home() {
             </video>
         </div>
         <Introduction/>
-        <NavButton goToMainContent={goToMainContent}/>
+        <NavButton goToMainContent={goToMainContent} ref={{ref0: arrowLine0Ref, ref1: arrowLine1Ref, ref2: arrowLine2Ref}}/>
         <NavBar blurBackground={blurBackground} unBlurBackground={unBlurBackground} ref={navBarRef} />
         <Footer/>
       </div>
