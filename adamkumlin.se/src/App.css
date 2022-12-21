@@ -49,14 +49,93 @@ body {
         to {opacity: 0.2;}
       }
 
-    .Introduction {
+    .Introduction h1 {
       color: white;
-      margin-top: 10rem;
+      opacity: 0%;
+      animation: showText 4s forwards;
     }
+
+      @keyframes showText {
+        from{opacity: 0%;}
+        to{opacity: 100%;}
+      }
+
+    .Introduction h2 {
+      color: rgb(255, 242, 242);
+
+    }
+
+      .Introduction h2::before {
+        content: "";
+        animation: typing 14s infinite forwards;
+      }
+
+      .Introduction h2::after {
+        content: "";
+        border-right: .15rem solid rgb(255, 211, 128);
+        animation: blinkText 0.75s linear infinite;
+      }
+
+      @media (prefers-reduced-motion) {
+        .Introduction h2::after {
+          animation: none;
+        }
+      }
+
+      @keyframes typing {
+        0%{ content: ""; }
+        1%{ content: "P"; }
+        2%{ content: "Pr"; }
+        3%{ content: "Pro"; }
+        4%{ content: "Prog"; }
+        5%{ content: "Progr"; }
+        6%{ content: "Progra"; }
+        7%, 8%{ content: "Progran"; }
+        9%, 10%{ content: "Progra"; }
+        11%{ content: "Program"; }
+        12%{ content: "Programm"; }
+        13%{ content: "Programme"; }
+        14%{ content: "Programmer"; }
+        15%{ content: "Programmera"; }
+        16%{ content: "Programmerar"; }
+        17%{ content: "Programmerare"; }
+        18%{ content: "Programmerare ";}
+        19%{ content: "Programmerare o";}
+        20%{ content: "Programmerare oc";}
+        21%{ content: "Programmerare och";}
+        22%{ content: "Programmerare och ";}
+        23%{ content: "Programmerare och u";}
+        24%{ content: "Programmerare och ut";}
+        25%{ content: "Programmerare och utv";}
+        26%{ content: "Programmerare och utve";}
+        27%, 28%{ content: "Programmerare och utv";}
+        29%{ content: "Programmerare och ut";}
+        30%{ content: "Programmerare och u";}
+        31%{ content: "Programmerare och ";}
+        32%{ content: "Programmerare och w";}
+        33%{ content: "Programmerare och we";}
+        34%{ content: "Programmerare och web";}
+        35%{ content: "Programmerare och webb";}
+        36%{ content: "Programmerare och webbu";}
+        37%{ content: "Programmerare och webbut";}
+        38%{ content: "Programmerare och webbutv";}
+        39%{ content: "Programmerare och webbutve";}
+        40%{ content: "Programmerare och webbutvec";}
+        41%{ content: "Programmerare och webbutveck";}
+        42%{ content: "Programmerare och webbutveckl";}
+        43%{ content: "Programmerare och webbutveckla";}
+        44%{ content: "Programmerare och webbutvecklar";}
+        45%{ content: "Programmerare och webbutvecklare";}
+        100%{ content: "Programmerare och webbutvecklare";}
+      }
+
+      @keyframes blinkText {
+        to, from{opacity: 100%;}
+        50%{opacity: 0%;}
+      }
 
     .NavButton {
       cursor: pointer;
-      border: 2px solid green;
       height: 200px;
       margin-top: 20rem;
       margin-left: auto; 
@@ -73,6 +152,7 @@ body {
         margin-right: auto;
         margin-top: 10rem;
         border-radius: 25px;
+        animation: blinkButton 10s infinite;
       }
 
         .arrowLine0 {
@@ -80,16 +160,7 @@ body {
           width: 100px;
           height: 20px;
           border-bottom-right-radius: 0px;
-          animation: navButtonArrowLine0Blink 4s;
-          animation-iteration-count: infinite;
         }
-
-          @keyframes navButtonArrowLine0Blink {
-            0%{border: none}
-            33%{border: 1px solid lime;}
-            66%{border: 1px solid aqua;}
-            100%{border: none}
-          }
 
         .arrowLine1 {
           transform: rotate(-45deg) translate(50px);
@@ -104,8 +175,18 @@ body {
           height: 20px;
         }
 
+        @keyframes blinkButton {
+          0%{background-color: white;}
+          20%{background-color: rgb(226, 168, 168);}
+          40%{background-color: rgb(184, 219, 183);}
+          60%{background-color: rgb(157, 201, 214);}
+          80%{background-color: rgb(201, 153, 202);}
+          100%{background-color: white;}
+
+        }
+
         .NavButton:hover .arrowLine0 {
-          animation: navButtonArrowLine0Move 3s;
+          animation: navButtonArrowLine0Move 2s;
           animation-iteration-count: infinite;
         }
 
@@ -123,7 +204,7 @@ body {
           }
 
         .NavButton:hover .arrowLine1 {
-          animation: navButtonArrowLine1Move 3s;
+          animation: navButtonArrowLine1Move 2s;
           animation-iteration-count: infinite;
         }
 
@@ -142,7 +223,7 @@ body {
 
 
         .NavButton:hover .arrowLine2 {
-          animation: navButtonArrowLine2Move 3s;
+          animation: navButtonArrowLine2Move 2s;
           animation-iteration-count: infinite;
         }
 
