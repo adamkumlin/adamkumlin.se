@@ -46,7 +46,7 @@ body {
 
       @keyframes backgroundUnFade {
         from {opacity: 0.9;}
-        to {opacity: 0.2;}
+        to {opacity: 0.5;}
       }
 
     .Introduction h1 {
