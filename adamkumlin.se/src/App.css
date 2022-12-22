@@ -254,6 +254,7 @@ body {
 
     .NavBar {
       margin-top: 100vh;
+      margin-bottom: 50vh;
     }
 
       .navLinkContainer {
@@ -287,7 +288,8 @@ body {
 
     .Footer {
       width: 100%;
-      margin-top: 100vh;
+      position: sticky;
+      bottom: 0;
     }
 
       .Footer p {
