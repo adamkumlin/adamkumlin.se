@@ -67,7 +67,7 @@ body {
 
       .Introduction h2::before {
         content: "";
-        animation: typing 14s infinite forwards;
+        animation: typing 10s infinite forwards;
       }
 
       .Introduction h2::after {
@@ -285,6 +285,33 @@ body {
           .navLink:hover {
             color:rgb(127, 255, 212);
           }
+
+    .BackButton a {
+      text-align: left;
+      height: fit-content;
+      background-color: red;
+      width: fit-content;
+      text-decoration: none;
+      color: white;
+    }
+
+      .BackButton a:hover {
+        left: 10px;
+      }
+
+      .backArrowLine0, .backArrowLine1 {
+        width: 20px;
+        height: 3px;
+        background-color: white;
+      }
+
+        .backArrowLine0 {
+          transform: rotate(45deg) translate(-5px);
+        }
+
+        .backArrowLine1 {
+          transform: rotate(135deg) translate(5px);
+        }
 
     .Footer {
       width: 100%;
