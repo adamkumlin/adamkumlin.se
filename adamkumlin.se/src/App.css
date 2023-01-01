@@ -286,31 +286,19 @@ body {
             color:rgb(127, 255, 212);
           }
 
-    .BackButton a {
-      text-align: left;
-      height: fit-content;
-      background-color: red;
-      width: fit-content;
-      text-decoration: none;
-      color: white;
-    }
-
-      .BackButton a:hover {
-        left: 10px;
-      }
-
       .backArrowLine0, .backArrowLine1 {
         width: 20px;
         height: 3px;
         background-color: white;
+        border-radius: 20px;
       }
 
         .backArrowLine0 {
-          transform: rotate(45deg) translate(-5px);
+          transform: rotate(150deg) translate(-6px);
         }
 
         .backArrowLine1 {
-          transform: rotate(135deg) translate(5px);
+          transform: rotate(-150deg) translate(-6px);
         }
 
     .Footer {

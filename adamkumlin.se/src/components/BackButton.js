@@ -4,11 +4,10 @@ function BackButton() {
 
     return (
       <div className="BackButton">
-          <Link to="/">Tillbaka</Link>
-          <div className="backArrow">
-            <div className="backArrowLine0"></div>
-            <div className="backArrowLine1"></div>
-          </div>
+          <Link to="/">
+              <div className="backArrowLine0"></div>
+              <div className="backArrowLine1"></div>
+            </Link> 
       </div>
     );
   }
