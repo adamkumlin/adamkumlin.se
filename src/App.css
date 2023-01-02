@@ -255,6 +255,7 @@ body {
     .NavBar {
       margin-top: 100vh;
       margin-bottom: 50vh;
+      transition: 3s;
     }
 
       .navLinkContainer {
@@ -286,20 +287,43 @@ body {
             color:rgb(127, 255, 212);
           }
 
-      .backArrowLine0, .backArrowLine1 {
-        width: 20px;
-        height: 3px;
-        background-color: white;
-        border-radius: 20px;
+      .BackButton {
+        width: fit-content;
       }
 
-        .backArrowLine0 {
-          transform: rotate(150deg) translate(-6px);
+        .BackButton:hover {
+          animation: backButtonMove 1s forwards;
+          animation-iteration-count: infinite;
         }
 
-        .backArrowLine1 {
-          transform: rotate(-150deg) translate(-6px);
+          @keyframes backButtonMove {
+            from{transform: none;}
+            to{transform: translate(5px);}
+          }
+
+          .BackButton:hover::after {
+            content: "Tillbaka";
+            color: white;
+            background-color: rgb(49, 43, 43);
+            position: absolute;
+            left: 0px;
+            top: 40px;
+          }
+          
+        .backArrowLine0, .backArrowLine1 {
+          width: 20px;
+          height: 3px;
+          background-color: white;
+          border-radius: 20px;
         }
+
+          .backArrowLine0 {
+            transform: rotate(150deg) translate(-6px);
+          }
+
+          .backArrowLine1 {
+            transform: rotate(-150deg) translate(-6px);
+          }
 
     .Footer {
       width: 100%;

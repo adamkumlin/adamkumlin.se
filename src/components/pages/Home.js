@@ -41,6 +41,10 @@ function Home() {
     }, 300);
   }
 
+  window.addEventListener(("load"), () => {
+    window.scrollTo(0, 0);
+  })
+
   window.addEventListener(("scroll"), () => {
     if (window.scrollY > 600) {
       setVideoBackground(backgroundVideo1);
@@ -51,7 +55,7 @@ function Home() {
 
   useEffect(() => {
     backgroundVideoRef.current.load();
-  }, [videoBackground])
+  }, [videoBackground]);
 
   return (
     <div className="Home">
@@ -63,10 +67,10 @@ function Home() {
       </div>
       <Introduction/>
       <NavButton goToMainContent={goToMainContent} ref={{ref0: arrowLine0Ref, ref1: arrowLine1Ref, ref2: arrowLine2Ref}}/>
-      <NavBar blurBackground={blurBackground} unBlurBackground={unBlurBackground} ref={navBarRef} />
+      <NavBar blurBackground={blurBackground} unBlurBackground={unBlurBackground} ref={navBarRef}/>
       <Footer/>
     </div>
   );
 }
   
-  export default Home;
+export default Home;
