@@ -49,90 +49,94 @@ body {
         to {opacity: 0.5;}
       }
 
-    .Introduction h1 {
-      color: white;
-      opacity: 0%;
-      animation: showText 4s forwards;
+    .Introduction {
+      font-family: 'Oxygen', sans-serif;
     }
 
-      @keyframes showText {
-        from{opacity: 0%;}
-        to{opacity: 100%;}
+      .Introduction h1 {
+        color: white;
+        opacity: 0%;
+        animation: showText 4s forwards;
       }
 
-    .Introduction h2 {
-      color: rgb(255, 242, 242);
-
-    }
-
-      .Introduction h2::before {
-        content: "";
-        animation: typing 10s infinite forwards;
-      }
-
-      .Introduction h2::after {
-        content: "";
-        border-right: .15rem solid rgb(255, 211, 128);
-        animation: blinkText 0.75s linear infinite;
-      }
-
-      @media (prefers-reduced-motion) {
-        .Introduction h2::after {
-          animation: none;
+        @keyframes showText {
+          from{opacity: 0%;}
+          to{opacity: 100%;}
         }
+
+      .Introduction h2 {
+        color: rgb(255, 242, 242);
+
       }
 
-      @keyframes typing {
-        0%{ content: ""; }
-        1%{ content: "P"; }
-        2%{ content: "Pr"; }
-        3%{ content: "Pro"; }
-        4%{ content: "Prog"; }
-        5%{ content: "Progr"; }
-        6%{ content: "Progra"; }
-        7%, 8%{ content: "Progran"; }
-        9%, 10%{ content: "Progra"; }
-        11%{ content: "Program"; }
-        12%{ content: "Programm"; }
-        13%{ content: "Programme"; }
-        14%{ content: "Programmer"; }
-        15%{ content: "Programmera"; }
-        16%{ content: "Programmerar"; }
-        17%{ content: "Programmerare"; }
-        18%{ content: "Programmerare ";}
-        19%{ content: "Programmerare o";}
-        20%{ content: "Programmerare oc";}
-        21%{ content: "Programmerare och";}
-        22%{ content: "Programmerare och ";}
-        23%{ content: "Programmerare och u";}
-        24%{ content: "Programmerare och ut";}
-        25%{ content: "Programmerare och utv";}
-        26%{ content: "Programmerare och utve";}
-        27%, 28%{ content: "Programmerare och utv";}
-        29%{ content: "Programmerare och ut";}
-        30%{ content: "Programmerare och u";}
-        31%{ content: "Programmerare och ";}
-        32%{ content: "Programmerare och w";}
-        33%{ content: "Programmerare och we";}
-        34%{ content: "Programmerare och web";}
-        35%{ content: "Programmerare och webb";}
-        36%{ content: "Programmerare och webbu";}
-        37%{ content: "Programmerare och webbut";}
-        38%{ content: "Programmerare och webbutv";}
-        39%{ content: "Programmerare och webbutve";}
-        40%{ content: "Programmerare och webbutvec";}
-        41%{ content: "Programmerare och webbutveck";}
-        42%{ content: "Programmerare och webbutveckl";}
-        43%{ content: "Programmerare och webbutveckla";}
-        44%{ content: "Programmerare och webbutvecklar";}
-        45%{ content: "Programmerare och webbutvecklare";}
-        100%{ content: "Programmerare och webbutvecklare";}
-      }
+        .Introduction h2::before {
+          content: "";
+          animation: typing 10s infinite forwards;
+        }
 
-      @keyframes blinkText {
-        to, from{opacity: 100%;}
-        50%{opacity: 0%;}
-      }
+        .Introduction h2::after {
+          content: "";
+          border-right: .15rem solid rgb(255, 211, 128);
+          animation: blinkText 0.75s linear infinite;
+        }
+
+        @media (prefers-reduced-motion) {
+          .Introduction h2::after {
+            animation: none;
+          }
+        }
+
+        @keyframes typing {
+          0%{ content: ""; }
+          1%{ content: "P"; }
+          2%{ content: "Pr"; }
+          3%{ content: "Pro"; }
+          4%{ content: "Prog"; }
+          5%{ content: "Progr"; }
+          6%{ content: "Progra"; }
+          7%, 8%{ content: "Progran"; }
+          9%, 10%{ content: "Progra"; }
+          11%{ content: "Program"; }
+          12%{ content: "Programm"; }
+          13%{ content: "Programme"; }
+          14%{ content: "Programmer"; }
+          15%{ content: "Programmera"; }
+          16%{ content: "Programmerar"; }
+          17%{ content: "Programmerare"; }
+          18%{ content: "Programmerare ";}
+          19%{ content: "Programmerare o";}
+          20%{ content: "Programmerare oc";}
+          21%{ content: "Programmerare och";}
+          22%{ content: "Programmerare och ";}
+          23%{ content: "Programmerare och u";}
+          24%{ content: "Programmerare och ut";}
+          25%{ content: "Programmerare och utv";}
+          26%{ content: "Programmerare och utve";}
+          27%, 28%{ content: "Programmerare och utv";}
+          29%{ content: "Programmerare och ut";}
+          30%{ content: "Programmerare och u";}
+          31%{ content: "Programmerare och ";}
+          32%{ content: "Programmerare och w";}
+          33%{ content: "Programmerare och we";}
+          34%{ content: "Programmerare och web";}
+          35%{ content: "Programmerare och webb";}
+          36%{ content: "Programmerare och webbu";}
+          37%{ content: "Programmerare och webbut";}
+          38%{ content: "Programmerare och webbutv";}
+          39%{ content: "Programmerare och webbutve";}
+          40%{ content: "Programmerare och webbutvec";}
+          41%{ content: "Programmerare och webbutveck";}
+          42%{ content: "Programmerare och webbutveckl";}
+          43%{ content: "Programmerare och webbutveckla";}
+          44%{ content: "Programmerare och webbutvecklar";}
+          45%{ content: "Programmerare och webbutvecklare";}
+          100%{ content: "Programmerare och webbutvecklare";}
+        }
+
+        @keyframes blinkText {
+          to, from{opacity: 100%;}
+          50%{opacity: 0%;}
+        }
 
     .NavButton {
       cursor: pointer;
@@ -292,13 +296,13 @@ body {
       }
 
         .BackButton:hover {
-          animation: backButtonMove 1s forwards;
-          animation-iteration-count: infinite;
+          animation: backButtonEnlarge 2s forwards;
         }
 
-          @keyframes backButtonMove {
-            from{transform: none;}
-            to{transform: translate(5px);}
+          @keyframes backButtonEnlarge {
+            0%{transform: none;}
+            50%{transform: scale(2);}
+            100%{transform: none;}
           }
 
           .BackButton:hover::after {
@@ -324,6 +328,40 @@ body {
           .backArrowLine1 {
             transform: rotate(-150deg) translate(-6px);
           }
+
+    .heading {
+      color: white;
+      font-family: 'Oxygen', sans-serif;
+    }
+
+    .email {
+    }
+
+      .envelopeTop {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 120px solid transparent;
+        border-bottom: 0;
+        border-top: 100px solid rgb(206, 166, 114);
+        animation: openEnvelopeTop 1s forwards;
+
+      }
+
+        @keyframes openEnvelopeTop {
+          0%{transform: none;}
+          33%{border-top-width: 0; transform: none;}
+          66%{transform: rotate(180deg); border-top-width: 0;}
+          100%{transform: rotate(180deg) translateY(100px);}
+        }
+
+      .envelopeBottom {
+        position: absolute;
+        width: 240px;
+        height: 150px;
+        background-color: rgb(216, 183, 133);
+        z-index: -1;
+      }
 
     .Footer {
       width: 100%;
