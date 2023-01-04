@@ -186,7 +186,6 @@ body {
           60%{background-color: rgb(157, 201, 214);}
           80%{background-color: rgb(201, 153, 202);}
           100%{background-color: white;}
-
         }
 
         .NavButton:hover .arrowLine0 {
@@ -304,15 +303,6 @@ body {
             50%{transform: scale(2);}
             100%{transform: none;}
           }
-
-          .BackButton:hover::after {
-            content: "Tillbaka";
-            color: white;
-            background-color: rgb(49, 43, 43);
-            position: absolute;
-            left: 0px;
-            top: 40px;
-          }
           
         .backArrowLine0, .backArrowLine1 {
           width: 20px;
@@ -404,6 +394,24 @@ body {
       width: 200px;
       height: 200px;
     }
+
+      .github img:hover {
+        transform: translate(2);
+      }
+
+      .github:hover > .githubTooltip {
+        display: block;
+        position: fixed;
+        overflow: hidden;
+      }
+
+      .githubTooltip {
+        display: none;
+        background-color: black;
+        color: white;
+        padding: 2px;
+        border-radius: 5px;
+      }
 
     .Footer {
       width: 100%;

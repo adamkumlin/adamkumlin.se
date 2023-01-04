@@ -4,7 +4,7 @@ import githubIcon from "../images/github-icon.svg";
 
 const ContactOptions = forwardRef((props, ref) => {
 
-  const {ref0, ref1, ref2} = ref;
+  const {ref0, ref1, ref2, ref3} = ref;
 
   return (
 
@@ -18,6 +18,7 @@ const ContactOptions = forwardRef((props, ref) => {
 
       <Link target="_blank" onClick={() => {window.location.href = "https://github.com/adamkumlin"}} className="github">
         <img src={githubIcon} alt="GitHub icon"/>
+        <span ref={ref3} className="githubTooltip">GitHub</span>
       </Link>
     </div>
   );

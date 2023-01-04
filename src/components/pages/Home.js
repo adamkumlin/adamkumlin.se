@@ -53,6 +53,7 @@ function Home() {
     }
   })
 
+
   useEffect(() => {
     backgroundVideoRef.current.load();
   }, [videoBackground]);
