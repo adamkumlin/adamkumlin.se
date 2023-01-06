@@ -2,6 +2,7 @@ import backgroundVideo from "../../images/background-video.mp4";
 import BackButton from "../BackButton";
 import ContactOptions from "../ContactOptions";
 import { useRef } from "react";
+import Footer from "../Footer.js";
 
 function Contact() {
 
@@ -42,6 +43,8 @@ function Contact() {
         <BackButton/>
 
         <ContactOptions playEmailAnimation={playEmailAnimation} ref={{ref0: emailTopRef, ref1: emailMiddleRef, ref2: emailTooltipRef, ref3: githubTooltipRef}}/>
+
+        <Footer/>
       </div>
     );
   }

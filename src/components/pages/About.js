@@ -1,3 +1,5 @@
+import Footer from "../Footer.js";
+
 function About() {
     return (
       <div className="About">
@@ -6,6 +8,8 @@ function About() {
           <li>Om mig</li>
           <li>Tidigare projekt</li>
         </ul>
+
+        <Footer/>
       </div>
     );
   }

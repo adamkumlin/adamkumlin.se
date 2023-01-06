@@ -1,3 +1,5 @@
+import Footer from "../Footer.js";
+
 function Cv() {
   return (
     <div className="Cv">
@@ -60,6 +62,8 @@ function Cv() {
         <li>Innehar B-körkort.</li>
         <li>Christian Danielsson, tel. mobil: 0761-953404</li>
       </ul>
+
+      <Footer/>
     </div>
   );
 }
