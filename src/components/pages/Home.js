@@ -3,15 +3,12 @@ import Introduction from "../Introduction.js";
 import Footer from "../Footer.js";
 import NavButton from "../NavButton.js";
 import backgroundVideo from "../../images/background-video.mp4";
-import backgroundVideo1 from "../../images/background-video1.mp4";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 
 function Home() {
 
   const backgroundOverlayRef = useRef(null);
   const backgroundVideoRef = useRef(null);
-
-  const [videoBackground, setVideoBackground] = useState(backgroundVideo);
 
   function blurBackground() {
     backgroundOverlayRef.current.style.animation = "backgroundFade 3s forwards";
@@ -47,23 +44,18 @@ function Home() {
 
   window.addEventListener(("scroll"), () => {
     if (window.scrollY > 600) {
-      setVideoBackground(backgroundVideo1);
+      backgroundVideoRef.current.pause();
     } else {
-      setVideoBackground(backgroundVideo);
+      backgroundVideoRef.current.play();
     }
   })
-
-
-  useEffect(() => {
-    backgroundVideoRef.current.load();
-  }, [videoBackground]);
 
   return (
     <div className="Home">
       <div className="background">
           <div ref={backgroundOverlayRef} className="backgroundOverlay"></div>
           <video ref={backgroundVideoRef} className="backgroundVideo" autoPlay="autoPlay" muted="muted" loop="loop">
-              <source src={videoBackground} type="video/mp4"/>
+              <source src={backgroundVideo} type="video/mp4"/>
           </video>
       </div>
       <Introduction/>

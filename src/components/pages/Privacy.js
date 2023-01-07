@@ -26,7 +26,7 @@ function Privacy() {
             lagra det också.
             jag gör detta för att kunna återkomma till dig när du skickar ett meddelande via e-post eller kontaktar mig via telefon. Enligt artikel 6.1 a) i GDPR har jag 
             rätt att lagra denna information om dig om du ger ditt samtycke. Genom att kontakta mig via e-post eller telefon så godkänner du denna behandling av 
-            personuppgifter. Webbhotellet kan behöva spara loggfiler med din ip-adress. Detta gör jag för att administera 
+            personuppgifter. Webbhotellet kan behöva spara loggfiler med din ip-adress. Detta gör jag för att administrera 
             webbplatsen: att den fungerar korrekt och att den fortsätter fungera som den ska. Loggfilerna används också för att säkerställa att webbplatsen inte blir 
             utsatt för IT-attacker.
             Loggfilerna används inte till marknadsföringssyften och de lagras inte tillsammans med andra personuppgifter. Artikel 6.1 f) i GDPR används som rättslig 
@@ -47,7 +47,7 @@ function Privacy() {
             Du har rätt till, om du begär, att få se de uppgifter om dig som jag sparar. Du kan ångra dig om du har givit mig samtycke att behandla personuppgifter. 
             Fortsättningsvis har du också rätt att få dina personuppgifter raderade. Kontakta mig om du önskar att göra detta. Slutligen har du, om du vill, rätt att lämna ett 
             klagomål angående min behandling av personuppgifter. För att göra detta så kan du kontakta 
-            <a href="https://www.imy.se/" target="_blank">Integritetsskyddsmyndigheten</a>.
+            <a target="_blank" href="https://www.imy.se/" rel="noreferrer">Integritetsskyddsmyndigheten</a>.
         </p>
 
         <h3>Delar jag dina personuppgifter med någon i Sverige eller utanför EU/EES?</h3>
@@ -63,7 +63,7 @@ function Privacy() {
         <h3>Hur håller jag dina personuppgifter säkra?</h3>
 
         <p>
-            Jag gör allt jag kan för att hålla dina personuppgifer säkra. Jag raderar regelbundet personuppgifter som inte längre behövs och gör allt för att dataintrång 
+            Jag gör allt jag kan för att hålla dina personuppgifter säkra. Jag raderar regelbundet personuppgifter som inte längre behövs och gör allt för att dataintrång 
             inte ska ske. Avslutningsvis använder jag också SSL (https) för att kryptera din anslutning till webbplatsen.
         </p>
 
@@ -77,7 +77,7 @@ function Privacy() {
         <h3>Undrar du något?</h3>
 
         <p>
-            Om du har några frågor så får du gärna kontakta webbplatsens personuppgiftsansvariga som är Adam Kumlin. Det kan du göra på e-post via e-postadressen <a href="mailto:kumlinadam99@gmail.com">kumlinadam99@gmail.com</a>.
+            Om du har några frågor så får du gärna kontakta webbplatsens personuppgiftsansvariga som är Adam Kumlin. Det kan du göra på e-post via e-postadressen <a href="mailto:kumlinadam99@gmail.com" target="_blank" rel="noreferrer">kumlinadam99@gmail.com</a>.
             Notera att om du gör detta så accepterar du att jag behandlar dina personuppgifter enligt denna integritetspolicy.
         </p>
 
