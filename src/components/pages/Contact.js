@@ -25,7 +25,6 @@ function Contact() {
     emailTooltipRef.current.style.left = x;
     githubTooltipRef.current.style.top = y;
     githubTooltipRef.current.style.left = x;
-    
   }
 
     return (
