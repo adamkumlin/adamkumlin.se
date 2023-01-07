@@ -6,7 +6,7 @@ function Privacy() {
         <h2>Behandling av personuppgifter på adamkumlin.se</h2>
 
         <p>
-            Personlig integritet är centralt för mig på adamkumlin.se. I denna policy förklarar jag hur jag samlar in och använder personuppgifter, jag beskriver också dina 
+            Personlig integritet är centralt för adamkumlin.se. I denna policy förklarar jag hur jag samlar in och använder personuppgifter, jag beskriver också dina 
             rättigheter. 
             Om du har frågor om hur jag behandlar personuppgifter så är du alltid välkommen att kontakta mig. Du hittar kontaktuppgifter längst ner på denna sida.
         </p>
@@ -26,7 +26,7 @@ function Privacy() {
             lagra det också.
             jag gör detta för att kunna återkomma till dig när du skickar ett meddelande via e-post eller kontaktar mig via telefon. Enligt artikel 6.1 a) i GDPR har jag 
             rätt att lagra denna information om dig om du ger ditt samtycke. Genom att kontakta mig via e-post eller telefon så godkänner du denna behandling av 
-            personuppgifter. Vårt webbhotell kan behöva spara loggfiler med din ip-adress. Detta gör jag för att administera 
+            personuppgifter. Webbhotellet kan behöva spara loggfiler med din ip-adress. Detta gör jag för att administera 
             webbplatsen: att den fungerar korrekt och att den fortsätter fungera som den ska. Loggfilerna används också för att säkerställa att webbplatsen inte blir 
             utsatt för IT-attacker.
             Loggfilerna används inte till marknadsföringssyften och de lagras inte tillsammans med andra personuppgifter. Artikel 6.1 f) i GDPR används som rättslig 
@@ -36,9 +36,9 @@ function Privacy() {
         <h3>Var lagras dina personuppgifter och hur länge sparar jag dem?</h3>
 
         <p>
-            Dina personuppgifter lagras säkert på min mejl när du skickar ett mejl till mig eller använder kontaktforumuläret. När du ringer till mig så lagras
+            Dina personuppgifter lagras säkert på min mejl när du skickar ett mejl till mig. När du ringer till mig så lagras
             ditt telefonnummer säkert på min telefon, jag sparar aldrig dina personuppgifter längre än vad jag behöver. Mejlet med dina personuppgifter tas bort permanent 
-            efter att ett ärende med dig är avslutat. Även ditt telefonnummer raderas permanent från min telefon direkt efter att min kontakt inte längre behövs.
+            efter att ett ärende med dig är avslutat. Även ditt telefonnummer raderas permanent från min telefon direkt efter att vår kontakt inte längre behövs.
         </p>
 
         <h3>Vad har du för rättigheter?</h3>
@@ -57,10 +57,7 @@ function Privacy() {
             Detta görs endast om det är nödvändigt för att webbplatsen ska fortsätta fungera. Dina personuppgifter delas aldrig för några andra syften som för exempelvis 
             marknadsföring.
             Skulle det vara så att dina personuppgifter lämnas ut finns ett personuppgiftsbiträdesavtal för att vara säker att våra personuppgiftsbiträden 
-            skyddar dina personuppgifter enligt GDPR. jag delar inte dina personuppgifter med någon utanför EU/EES, dock kan mejlet med dina personuppgifter lagras på servrar som befinner sig
-            utanför EU/EES-området (tills jag raderar mejlet). Fortsättningsvis kan våra personuppgiftsbiträden vara tvungna 
-            att dela
-            personuppgifer med någon utanför EU/EES.
+            skyddar dina personuppgifter enligt GDPR. Dina uppgifter finns alltid inom EU/EES-området, inga data skickas till länder utanför detta område.
         </p>
 
         <h3>Hur håller jag dina personuppgifter säkra?</h3>
