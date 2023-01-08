@@ -4,7 +4,8 @@ import Home from "./components/pages/Home.js";
 import About from "./components/pages/About.js";
 import Cv from "./components/pages/Cv.js";
 import Contact from "./components/pages/Contact.js";
-import Privacy from "./components/pages/Privacy";
+import Privacy from "./components/pages/Privacy.js";
+import LogIn from "./components/pages/LogIn.js";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="cv" element={<Cv />} />
         <Route path="privacy" element={<Privacy />} />
+        <Route path="login" element={<LogIn/>} />
       </Routes>
     </div>
   );

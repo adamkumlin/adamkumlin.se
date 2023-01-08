@@ -6,21 +6,21 @@ function Cv() {
       <h3>Om mig</h3>
 
       <p>
-        Adam Kumlin Strömstarevägen 41 43495 Kungsbacka
-        E-post: kumlinadam99(at)gmail.com
+        Adam Kumlin<br></br>
+        E-post: kumlinadam99@gmail.com
       </p>
 
       <h3>Utbildning</h3>
 
       <ul>
         <li>
-          Webbredaktörsprogrammet inriktning frontend, Högskolan i Borås aug
+          Webbredaktörsprogrammet inriktning frontend, Högskolan i Borås, aug
           2020 - juni 2023
         </li>
 
         <li>
           Samhällsvetenskapsprogrammet inriktning Beteende, Aranäsgymnasiet
-          Kungsbacka aug 2015 - juni 2018
+          Kungsbacka, aug 2015 - juni 2018
         </li>
       </ul>
 
@@ -52,15 +52,15 @@ function Cv() {
 
       <p>
         Mycket van att jobba med Google-produkter som Google Drive och Gmail. Är
-        även mycket van med Office-paketet. Har kunskaper inom CSS, HTML och
-        JavaScript. Har även grundläggande kunskaper inom C#.
+        även mycket van med Office-paketet. Har professionella kunskaper inom HTML, CSS och
+        JavaScript, är också mycket van vid ramverk som React. Har även grundläggande kunskaper inom C# och Python.
       </p>
 
       <h3>Körkort och referenser</h3>
 
       <ul>
         <li>Innehar B-körkort.</li>
-        <li>Christian Danielsson, tel. mobil: 0761-953404</li>
+        <li>Referenser ges på begäran.</li>
       </ul>
 
       <Footer/>

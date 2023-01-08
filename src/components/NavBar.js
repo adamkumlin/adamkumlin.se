@@ -12,5 +12,4 @@ const NavBar = forwardRef((props, ref) => (
     </div>
 ));
 
-
 export default NavBar;

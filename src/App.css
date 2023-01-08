@@ -427,7 +427,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       .NavBar {
         margin-top: 100vh;
         margin-bottom: 50vh;
-        transition: 3s;
       }
   
         .navLinkContainer {
@@ -449,6 +448,12 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             transition: 0.3s;
             padding: 1rem;
           }
+
+            @keyframes navBarFade {
+              from{opacity: 0;}
+              to{opacity: 1;}
+
+            }
   
             .navLinkContainer:active > .navLink:not(:active) {
               opacity: 0.2;
@@ -470,12 +475,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         .BackButton {
           width: fit-content;
         }
-  
-            @keyframes backButtonEnlarge {
-              0%{transform: none;}
-              50%{transform: scale(2);}
-              100%{transform: none;}
-            }
             
           .backArrowLine0, .backArrowLine1 {
             width: 20px;
@@ -570,6 +569,46 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           padding: 2px;
           border-radius: 5px;
         }
+
+      .LogInForm {
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.548);
+        padding: 1rem;
+      }
+    
+        .LogInForm h2 {
+          color: white;
+        }
+    
+        .inputContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: fit-content;
+          margin: auto;
+        }
+    
+          .LogInForm input{
+            width: 15rem;
+            height: 2rem;
+            border-radius: 12px;
+          }
+    
+          .LogInForm label {
+            color: white;
+          }
+    
+        .LogInForm button {
+          background-color: black;
+          color: white;
+          padding: 1rem 3rem 1rem 3rem;
+          border-radius: 10px;
+          cursor: pointer;
+          margin-top: 1rem;
+        }
   
       .Footer {
         width: 100%;
@@ -660,16 +699,18 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         }
 
         .navLinkContainer:hover > .navLink:nth-child(even) {
-          transform: translateX(20px) rotate(2deg);
+          transform: translateX(25px) rotate(2deg);
         }
 
         .navLinkContainer:hover > .navLink:nth-child(odd) {
-          transform: translateX(-20px) rotate(-2deg);
+          transform: translateX(-25px) rotate(-2deg);
         }
 
         .navLinkContainer:hover > .navLink:hover {
           transform: none;
           font-weight: bold;
+          border: solid rgb(99, 99, 99);
+          border-width: 0px 0px 0.1px 0px;
         }
 
       .BackButton:hover {
@@ -683,7 +724,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       }
       
     .github img:hover {
-      transform: translate(2);
+      transform: scale(1.5);
+      transition: 1s;
     }
 
     .github:hover > .githubTooltip {

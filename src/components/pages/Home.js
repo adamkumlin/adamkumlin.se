@@ -38,15 +38,13 @@ function Home() {
     }, 300);
   }
 
-  window.addEventListener(("load"), () => {
-    window.scrollTo(0, 0);
-  })
-
   window.addEventListener(("scroll"), () => {
     if (window.scrollY > 600) {
       backgroundVideoRef.current.pause();
+      navBarRef.current.style.animation = "navBarFade 2s";
     } else {
       backgroundVideoRef.current.play();
+      navBarRef.current.style.animation = "null";
     }
   })
 
