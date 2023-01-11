@@ -240,16 +240,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         z-index: -2;
       }
   
-        @keyframes backgroundZoom {
-          from {transform: scale(1);}
-          to {transform: scale(2);}
-        }
-  
-        @keyframes backgroundUnZoom {
-          from {transform: scale(2);}
-          to {transform: scale(1);}
-        }
-  
       .backgroundOverlay {
         height: 100%;
         width: 100%;
@@ -260,16 +250,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         background: black;
         opacity: 0.7;
       }
-  
-        @keyframes backgroundFade {
-          from {opacity: 0.7;}
-          to {opacity: 0.9;}
-        }
-  
-        @keyframes backgroundUnFade {
-          from {opacity: 0.9;}
-          to {opacity: 0.7;}
-        }
   
       .Introduction {
         font-family: 'Oxygen', sans-serif;
@@ -427,6 +407,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       .NavBar {
         margin-top: 100vh;
         margin-bottom: 50vh;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
       }
   
         .navLinkContainer {
@@ -633,8 +616,21 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   .backgroundVideo {
     height: 1080px;
     width: 1920px;
+    transition: transform 1s linear;
   }
 
+    .NavBar:hover + .Background .backgroundVideo {
+      transform: scale(2);
+    }
+
+  .backgroundOverlay {
+    transition: opacity 1s linear;
+  }
+
+    .NavBar:hover + .Background .backgroundOverlay {
+      opacity: 0.9;
+    }
+  
   .NavButton {
     margin-top: 20rem;
   }
@@ -709,8 +705,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         .navLinkContainer:hover > .navLink:hover {
           transform: none;
           font-weight: bold;
-          border: solid rgb(99, 99, 99);
-          border-width: 0px 0px 0.1px 0px;
         }
 
       .BackButton:hover {

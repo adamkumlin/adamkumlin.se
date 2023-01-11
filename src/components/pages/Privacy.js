@@ -1,9 +1,12 @@
 import Footer from "../Footer.js";
+import Background from "../Background.js";
 
 function Privacy() {
     
     return (
       <div className="Privacy">
+
+        <Background/>
         <h2>Behandling av personuppgifter på adamkumlin.se</h2>
 
         <p>

@@ -1,6 +1,6 @@
-import backgroundVideo from "../../images/background-video.mp4";
-import BackButton from "../BackButton";
-import ContactOptions from "../ContactOptions";
+import Background from "../Background.js";
+import BackButton from "../BackButton.js";
+import ContactOptions from "../ContactOptions.js";
 import { useRef } from "react";
 import Footer from "../Footer.js";
 
@@ -30,12 +30,7 @@ function Contact() {
     return (
       <div className="Contact">
 
-        <div className="background">
-          <div className="backgroundOverlay"></div>
-          <video className="backgroundVideo" autoPlay="autoPlay" muted="muted" loop="loop">
-              <source src={backgroundVideo} type="video/mp4"/>
-          </video>
-        </div>
+        <Background/>
 
         <h2 className="heading">Kontakta mig</h2>
 

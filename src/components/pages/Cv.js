@@ -1,8 +1,12 @@
 import Footer from "../Footer.js";
+import Background from "../Background.js";
 
 function Cv() {
   return (
     <div className="Cv">
+
+      <Background/>
+      
       <h3>Om mig</h3>
 
       <p>

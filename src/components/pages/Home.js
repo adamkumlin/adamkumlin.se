@@ -2,23 +2,11 @@ import NavBar from "../NavBar.js";
 import Introduction from "../Introduction.js";
 import Footer from "../Footer.js";
 import NavButton from "../NavButton.js";
-import backgroundVideo from "../../images/background-video.mp4";
+import Background from "../Background.js";
 import { useRef } from "react";
 
 function Home() {
 
-  const backgroundOverlayRef = useRef(null);
-  const backgroundVideoRef = useRef(null);
-
-  function blurBackground() {
-    backgroundOverlayRef.current.style.animation = "backgroundFade 3s forwards";
-    backgroundVideoRef.current.style.animation = "backgroundZoom 2s forwards";
-  }
-
-  function unBlurBackground() {
-    backgroundOverlayRef.current.style.animation = "backgroundUnFade 2s forwards";
-    backgroundVideoRef.current.style.animation = "backgroundUnZoom 1s forwards";
-  }
   const arrowLine0Ref = useRef(null);
   const arrowLine1Ref = useRef(null);
   const arrowLine2Ref = useRef(null);
@@ -40,25 +28,18 @@ function Home() {
 
   window.addEventListener(("scroll"), () => {
     if (window.scrollY > 600) {
-      backgroundVideoRef.current.pause();
       navBarRef.current.style.animation = "navBarFade 2s";
     } else {
-      backgroundVideoRef.current.play();
       navBarRef.current.style.animation = "null";
     }
   })
 
   return (
     <div className="Home">
-      <div className="background">
-          <div ref={backgroundOverlayRef} className="backgroundOverlay"></div>
-          <video ref={backgroundVideoRef} className="backgroundVideo" autoPlay="autoPlay" muted="muted" loop="loop">
-              <source src={backgroundVideo} type="video/mp4"/>
-          </video>
-      </div>
       <Introduction/>
       <NavButton goToMainContent={goToMainContent} ref={{ref0: arrowLine0Ref, ref1: arrowLine1Ref, ref2: arrowLine2Ref}}/>
-      <NavBar blurBackground={blurBackground} unBlurBackground={unBlurBackground} ref={navBarRef}/>
+      <NavBar ref={navBarRef}/>
+      <Background/>
       <Footer/>
     </div>
   );
