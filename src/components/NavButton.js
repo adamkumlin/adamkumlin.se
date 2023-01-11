@@ -1,16 +1,12 @@
-import { forwardRef } from "react";
 
-const NavButton = forwardRef((props, ref) => {
-
-  const {ref0, ref1, ref2} = ref;
+function NavButton(props){
 
   return (
-
-  <div className="NavButton" onClick={props.goToMainContent}>
-    <div className="arrowLine0" ref={ref0}></div>
-    <div className="arrowLine1" ref={ref1}></div>
-    <div className="arrowLine2" ref={ref2}></div>
-  </div>
+    <div className="NavButton" onClick={props.goToMainContent}>
+      <div className="arrowLine0">&nbsp;</div>
+      <div className="arrowLine1">&nbsp;</div>
+      <div className="arrowLine2">&nbsp;</div>
+    </div>
   );
-});
+}
   export default NavButton;

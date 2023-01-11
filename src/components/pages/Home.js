@@ -7,23 +7,11 @@ import { useRef } from "react";
 
 function Home() {
 
-  const arrowLine0Ref = useRef(null);
-  const arrowLine1Ref = useRef(null);
-  const arrowLine2Ref = useRef(null);
   const navBarRef = useRef(null);
 
   function goToMainContent() {
 
-    arrowLine0Ref.current.style.animation = "navButtonArrowLine0Down 0.3s";
-    arrowLine1Ref.current.style.animation = "navButtonArrowLine1Down 0.3s";
-    arrowLine2Ref.current.style.animation = "navButtonArrowLine2Down 0.3s";
-
-    setTimeout(function() {
-      navBarRef.current.scrollIntoView({behavior: "smooth"}); 
-      arrowLine0Ref.current.style.animation = null;
-      arrowLine1Ref.current.style.animation = null;
-      arrowLine2Ref.current.style.animation = null;
-    }, 300);
+    navBarRef.current.scrollIntoView({behavior: "smooth"});
   }
 
   window.addEventListener(("scroll"), () => {
@@ -37,7 +25,7 @@ function Home() {
   return (
     <div className="Home">
       <Introduction/>
-      <NavButton goToMainContent={goToMainContent} ref={{ref0: arrowLine0Ref, ref1: arrowLine1Ref, ref2: arrowLine2Ref}}/>
+      <NavButton goToMainContent={goToMainContent}/>
       <NavBar ref={navBarRef}/>
       <Background/>
       <Footer/>

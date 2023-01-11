@@ -7,6 +7,7 @@ function Privacy() {
       <div className="Privacy">
 
         <Background/>
+        
         <h2>Behandling av personuppgifter på adamkumlin.se</h2>
 
         <p>
