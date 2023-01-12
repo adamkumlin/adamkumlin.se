@@ -6,6 +6,7 @@ import Cv from "./components/pages/Cv.js";
 import Contact from "./components/pages/Contact.js";
 import Privacy from "./components/pages/Privacy.js";
 import LogIn from "./components/pages/LogIn.js";
+import Projects from "./components/pages/Projects.js";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="cv" element={<Cv />} />
         <Route path="privacy" element={<Privacy />} />
         <Route path="login" element={<LogIn/>} />
+        <Route path="projects" element={<Projects/>} />
       </Routes>
     </div>
   );

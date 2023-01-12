@@ -238,6 +238,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         left: 0;
         bottom: 0;
         z-index: -2;
+        pointer-events: none;
       }
   
       .backgroundOverlay {
@@ -251,11 +252,11 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         opacity: 0.7;
       }
   
-      .Introduction {
+      .Home h1, .Home h2 {
         font-family: 'Oxygen', sans-serif;
       }
   
-        .Introduction h1 {
+        .Home h1 {
           color: white;
           opacity: 0%;
           animation: showText 4s forwards;
@@ -266,23 +267,23 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             to{opacity: 100%;}
           }
   
-        .Introduction h2 {
+        .Home h2 {
           color: rgb(255, 242, 242);
         }
   
-          .Introduction h2::before {
+          .Home h2::before {
             content: "";
             animation: typing 10s infinite forwards;
           }
   
-          .Introduction h2::after {
+          .Home h2::after {
             content: "";
             border-right: .15rem solid rgb(255, 211, 128);
             animation: blinkText 0.75s linear infinite;
           }
   
           @media (prefers-reduced-motion) {
-            .Introduction h2::after {
+            .Home h2::after {
               animation: none;
             }
           }
@@ -493,17 +494,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             border-bottom: 0;
             border-top: 100px solid rgb(206, 166, 114);
           }
-
-            .email .animated:first-of-type {
-              animation: openEnvelopeTop 0.5s forwards linear;
-            }
-  
-            @keyframes openEnvelopeTop {
-              0%{transform: none;}
-              50%{border-top-width: 0; transform: none;}
-              66%{transform: rotate(180deg); border-top-width: 0;}
-              100%{transform: rotate(180deg) translateY(100px); z-index: -1;}
-            }
   
           .email div:nth-of-type(2) {
             position: absolute;
@@ -514,17 +504,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             margin-left: 5px;
             margin-top: 5px;
           }
-
-            .email .animated:nth-of-type(2) {
-              animation: openEnvelopeMiddle 1s forwards;
-              animation-delay: 0.6s;
-            }
-  
-            @keyframes openEnvelopeMiddle {
-              0%{transform: none;}
-              50%{transform: translateY(-150px);}
-              100%{transform: none; z-index: 0;}
-            }
   
           .email div:last-of-type {
             position: absolute;
@@ -701,15 +680,37 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           font-weight: bold;
         }
 
-      .BackButton:hover {
-        animation: backButtonEnlarge 2s forwards;
+    .BackButton:hover {
+      animation: backButtonEnlarge 2s forwards;
+    }
+
+    .email:hover > .emailTooltip {
+      display: block;
+      position: fixed;
+      overflow: hidden;
+    }
+
+      .email .animated:first-of-type {
+        animation: openEnvelopeTop 0.5s forwards linear;
       }
 
-      .email:hover > .emailTooltip {
-        display: block;
-        position: fixed;
-        overflow: hidden;
+        @keyframes openEnvelopeTop {
+          0%{transform: none;}
+          50%{border-top-width: 0; transform: none;}
+          66%{transform: rotate(180deg); border-top-width: 0;}
+          100%{transform: rotate(180deg) translateY(100px); z-index: -1;}
+        }
+
+      .email .animated:nth-of-type(2) {
+        animation: openEnvelopeMiddle 1s forwards;
+        animation-delay: 0.6s;
       }
+
+        @keyframes openEnvelopeMiddle {
+          0%{transform: none;}
+          50%{transform: translateY(-150px);}
+          100%{transform: none; z-index: 0;}
+        }
       
     .github img:hover {
       transform: scale(1.5);

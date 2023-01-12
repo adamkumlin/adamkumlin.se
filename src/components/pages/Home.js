@@ -1,5 +1,4 @@
 import NavBar from "../NavBar.js";
-import Introduction from "../Introduction.js";
 import Footer from "../Footer.js";
 import NavButton from "../NavButton.js";
 import Background from "../Background.js";
@@ -20,11 +19,12 @@ function Home() {
     } else {
       navBarRef.current.style.animation = "null";
     }
-  })
+  });
 
   return (
     <div className="Home">
-      <Introduction/>
+      <h1>Adam Kumlin</h1>
+      <h2></h2>
       <NavButton goToMainContent={goToMainContent}/>
       <NavBar ref={navBarRef}/>
       <Background/>
