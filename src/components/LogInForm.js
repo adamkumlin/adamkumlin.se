@@ -2,15 +2,19 @@ function LogInForm() {
 
   return (
     <div className="LogInForm">
+      <form action="/logIn.php" method="post" name="logInForm">
         <div className="inputContainer">
-          <label>Användarnamn</label>
-          <input type="text" name="password"/>
+          <label htmlFor="username">Användarnamn</label>
+          <input id="username" type="text" name="username"/>
         </div>
+
         <div className="inputContainer">
-          <label>Lösenord</label>
-          <input type="password" name="password"/>
+          <label htmlFor="password" >Lösenord</label>
+          <input id="password" type="password" name="password"/>
         </div>
-        <button>Logga in</button>
+        
+        <input type="submit" value="Skicka"/>
+      </form>
     </div>
   );
 }

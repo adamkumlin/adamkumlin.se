@@ -2,6 +2,7 @@ import NavBar from "../NavBar.js";
 import Footer from "../Footer.js";
 import NavButton from "../NavButton.js";
 import Background from "../Background.js";
+import LogInButton from "../LogInButton.js";
 import { useRef } from "react";
 
 function Home() {
@@ -28,6 +29,7 @@ function Home() {
       <NavButton goToMainContent={goToMainContent}/>
       <NavBar ref={navBarRef}/>
       <Background/>
+      <LogInButton/>
       <Footer/>
     </div>
   );
