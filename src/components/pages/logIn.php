@@ -1,42 +1,39 @@
 <?php
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        session_start();
 
-            $username = htmlspecialchars($_POST["username"]);
-            $password = htmlspecialchars($_POST["password"]);
-    
-            $from = "noreply@adamkumlin.se";
-            $to = "skola.adamkumlin99@gmail.com";
-    
-            $subject = "test";
-    
-            $headers = "From: $from\n";
-    
-            $message = "Namn: $username\n Lösenord: $password";
-    
-            if (empty($username)) {
-                            
-                echo "<h2>Vänligen använd endast bokstäver (A-Ö) och mellanslag i namnrutan.</h2>";
+        include "database.php";
 
-            } elseif (empty($password)) {
-                            
-                echo "<h2>Vänligen använd inga länkar i meddelanderutan.</h2>";
+        $user_name = htmlspecialchars($_POST["username"]);
+        $user_password = htmlspecialchars($_POST["password"]);
 
-            } else {
-    
-                $mail_sent = mail($to,$subject,$message,$headers);
-            }
-    
-            if ($mail_sent) {
-    
-                http_response_code(200);
-                
-                echo "<h2>skickat</h2>";
-            } else {
-                http_response_code(500);
-    
-                echo "<h2>Något gick fel. Ditt meddelande skickades inte.</h2>";
+        if (empty($user_name) || empty($user_password)) {
+
+            echo "<h2>Var snäll fyll i alla fält</h2>";
+
+        } else {
+
+            $sql = "SELECT * FROM log_in_details WHERE Username='$user_name' AND Password='$user_password'";
+
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_fetch_assoc($result) === 1 ) {
+
+                $row = mysqli_fetch_assoc($result);
+
+                if ($row["Username"] === $user_name && $row["Password"] === $user_password) {
+
+                    echo "<h2>logged in</h2>";
+
+
+                } else {
+
+                    echo "<h2>fail</h2>";
+                }
             }
         }
 
-    ?>
+    }
+?>
