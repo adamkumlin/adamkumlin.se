@@ -1,36 +1,41 @@
 <?php
 
+    session_start();
+
+    include "database.php";
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        session_start();
+        $username = htmlspecialchars($_POST["username"]);
+        $password = htmlspecialchars($_POST["password"]);
 
-        include "database.php";
-
-        $user_name = htmlspecialchars($_POST["username"]);
-        $user_password = htmlspecialchars($_POST["password"]);
-
-        if (empty($user_name) || empty($user_password)) {
+        if (empty($username) || empty($password)) {
 
             echo "<h2>Var snäll fyll i alla fält</h2>";
 
         } else {
 
-            $sql = "SELECT * FROM log_in_details WHERE Username='$user_name' AND Password='$user_password'";
+            $sql = "SELECT Username, Password FROM log_in_details";
 
             $result = mysqli_query($conn, $sql);
 
-            if (mysqli_fetch_assoc($result) === 1 ) {
+            if (mysqli_num_rows($result) > 0) {
 
                 $row = mysqli_fetch_assoc($result);
 
-                if ($row["Username"] === $user_name && $row["Password"] === $user_password) {
+                if ($row["Username"] === $username && $row["Password"] === $password) {
 
-                    echo "<h2>logged in</h2>";
+                    $_SESSION["Username"] = $row["Username"];
 
+                    header("Location: index.html");
+
+                    exit();
 
                 } else {
 
-                    echo "<h2>fail</h2>";
+                    header("Location: index.html?error=Du har skrivit in fel användarnamn eller lösenord");
+
+                    exit();
                 }
             }
         }
