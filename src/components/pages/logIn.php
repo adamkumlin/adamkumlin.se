@@ -27,18 +27,13 @@
 
                     $_SESSION["Username"] = $row["Username"];
 
-                    header("Location: index.html");
-
-                    exit();
+                    echo '<script>window.location.replace("https://adamkumlin.se/")</script>';
 
                 } else {
 
-                    header("Location: index.html?error=Du har skrivit in fel användarnamn eller lösenord");
-
-                    exit();
+                    echo '<script>window.location.replace("https://adamkumlin.se/cv")</script>';
                 }
             }
         }
-
     }
 ?>
