@@ -252,11 +252,11 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         opacity: 0.7;
       }
   
-      .Home h1, .Home h2 {
+      .pageHeading, .Home h2 {
         font-family: 'Oxygen', sans-serif;
       }
   
-        .Home h1 {
+        .pageHeading {
           color: white;
           opacity: 0%;
           animation: showText 4s forwards;
@@ -339,6 +339,19 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             to, from{opacity: 100%;}
             50%{opacity: 0%;}
           }
+
+      .LogInButton {
+        position: absolute;
+        right: 25px;
+        top: 10px;
+      }
+
+        .LogInButton a {
+          color: white;
+          font-size: 120%;
+          text-decoration: none;
+          text-shadow: 3px 3px 3px red, 3px 3px 3px rgb(48, 241, 9), 3px 3px 3px rgb(208, 255, 0);
+        }
   
       .NavButton {
         cursor: pointer;
@@ -441,24 +454,34 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
               font-weight: bold;
             }
   
-        .BackButton {
-          width: fit-content;
+        .HomeButton {
+          position: absolute;
+          top: 19.92px;
+          left: 10px;
         }
-            
-          .backArrowLine0, .backArrowLine1 {
-            width: 20px;
-            height: 3px;
-            background-color: white;
-            border-radius: 20px;
+
+          .HomeButton a {
+            color: white;
+            text-decoration: none;
           }
-  
-            .backArrowLine0 {
-              transform: rotate(150deg) translate(-6px);
+
+            .HomeButton a h1 {
+              margin: 0;
+              padding: 0;
+              font-family: 'Oxygen', sans-serif;
             }
-  
-            .backArrowLine1 {
-              transform: rotate(-150deg) translate(-6px);
-            }
+
+          .Home .HomeButton {
+            display: none;
+            position: absolute;
+            top: 0;
+            animation: homeButtonSlideLeft 2s forwards;
+          }
+
+          @keyframes homeButtonSlideLeft {
+            0%{transform: translateX(44vw);}
+            100%{transform: none;}
+          }
   
       .heading {
         color: white;
@@ -531,10 +554,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.548);
-        padding: 1rem;
+        padding: 3rem;      
       }
-    
+
         .LogInForm h2 {
           color: white;
         }
@@ -545,6 +567,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           align-items: flex-start;
           width: fit-content;
           margin: auto;
+          padding: 1rem;
         }
     
           .LogInForm input{
@@ -557,12 +580,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             color: white;
           }
     
-        .LogInForm button {
+        .LogInForm input[type="submit"] {
           background-color: black;
           color: white;
-          padding: 1rem 3rem 1rem 3rem;
-          border-radius: 10px;
-          cursor: pointer;
+          padding: 1rem 0 2rem 0;
           margin-top: 1rem;
         }
   
@@ -679,10 +700,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           transform: none;
           font-weight: bold;
         }
-
-    .BackButton:hover {
-      animation: backButtonEnlarge 2s forwards;
-    }
 
     .email:hover > .emailTooltip {
       display: block;

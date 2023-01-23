@@ -1,5 +1,6 @@
 import Footer from "../Footer.js";
 import Background from "../Background.js";
+import HomeButton from "../HomeButton.js";
 
 function Privacy() {
     
@@ -7,6 +8,8 @@ function Privacy() {
       <div className="Privacy">
 
         <Background/>
+
+        <HomeButton/>
         
         <h2>Behandling av personuppgifter på adamkumlin.se</h2>
 

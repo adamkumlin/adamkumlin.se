@@ -13,7 +13,7 @@ function LogInForm() {
           <input id="password" type="password" name="password"/>
         </div>
         
-        <input type="submit" value="Skicka"/>
+        <input type="submit" value="Logga in"/>
       </form>
     </div>
   );

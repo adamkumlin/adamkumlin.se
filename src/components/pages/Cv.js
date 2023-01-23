@@ -1,11 +1,14 @@
 import Footer from "../Footer.js";
 import Background from "../Background.js";
+import HomeButton from "../HomeButton.js";
 
 function Cv() {
   return (
     <div className="Cv">
 
       <Background/>
+
+      <HomeButton/>
       
       <h3>Om mig</h3>
 

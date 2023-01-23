@@ -1,5 +1,5 @@
 import Background from "../Background.js";
-import BackButton from "../BackButton.js";
+import HomeButton from "../HomeButton.js";
 import ContactOptions from "../ContactOptions.js";
 import { useRef } from "react";
 import { useState } from "react";
@@ -29,7 +29,7 @@ function Contact() {
 
         <h2 className="heading">Kontakta mig</h2>
 
-        <BackButton/>
+        <HomeButton/>
 
         <ContactOptions setIsAnimated={setIsAnimated} isAnimated={isAnimated} ref={{ref0: emailTooltipRef, ref1: githubTooltipRef}}/>
 

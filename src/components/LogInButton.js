@@ -5,8 +5,7 @@ function LogInButton() {
     return (
       <div className="LogInButton">
           <Link to="/login">
-            <div className="backArrowLine0"></div>
-            <div className="backArrowLine1"></div>
+            Logga in
           </Link> 
       </div>
     );
