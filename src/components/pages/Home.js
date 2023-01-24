@@ -4,11 +4,10 @@ import NavButton from "../NavButton.js";
 import Background from "../Background.js";
 import LogInButton from "../LogInButton.js";
 import { useRef } from "react";
-import HomeButton from "../HomeButton.js";
 
 function Home() {
 
-  const homeButtonRef = useRef(null);
+  const siteHeadingRef = useRef(null);
   const navBarRef = useRef(null);
 
   function goToMainContent() {
@@ -18,28 +17,23 @@ function Home() {
   window.addEventListener(("scroll"), () => {
     
     if (window.scrollY > 1) {
-      homeButtonRef.current.style.position = "absolute";
-      homeButtonRef.current.style.display = "block";
-      
-    } else if (window.scrollY > 50) {
 
-      homeButtonRef.current.style.position = "sticky";
-      
+      siteHeadingRef.current.style.transform = "translateX(-42vw)";
+
     } else if (window.scrollY > 600) {
 
       navBarRef.current.style.animation = "navBarFade 2s";
 
     } else {
-
       navBarRef.current.style.animation = "null";
+      siteHeadingRef.current.style.transform = "none";
     }
   });
 
   return (
     <div className="Home">
-      <h1 className="pageHeading">Adam Kumlin</h1>
+      <h1 className="siteHeading" ref={siteHeadingRef}>Adam Kumlin</h1>
       <h2></h2>
-      <HomeButton ref={homeButtonRef}/>
       <LogInButton/>
       <NavButton goToMainContent={goToMainContent}/>
       <NavBar ref={navBarRef}/>
@@ -48,5 +42,5 @@ function Home() {
     </div>
   );
 }
-  
+
 export default Home;
