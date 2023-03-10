@@ -470,6 +470,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       .heading {
         color: white;
         font-family: 'Oxygen', sans-serif;
+        margin-top: 5rem;
       }
   
       .ContactOptions {
@@ -570,6 +571,25 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           padding: 1rem 0 2rem 0;
           margin-top: 1rem;
         }
+
+      .About p {
+        color: white;
+        margin-left: 10rem;
+        margin-right: 10rem;
+      }
+
+      .About .Footer, .Cv .Footer {
+        bottom: 0;
+        position: fixed;
+      }
+
+      .Cv p, .Cv h3, .Cv li {
+        color: white;
+      }
+
+      .Cv ul {
+        list-style-type: none;
+      }
   
       .Footer {
         width: 100%;
