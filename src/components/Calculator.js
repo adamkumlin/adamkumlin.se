@@ -3,20 +3,33 @@ import { useState } from "react";
 function Calculator() {
 
     const [numberList, setNumberList] = useState([]);
-    const [sum, setSum] = useState(0);
+    const [plusClicked, setPlusClicked] = useState(false);
+    const [previousNumber, setPreviousNumber] = useState(null);
 
     function handleChange(e) {
-        setNumberList(current => [...current, e.target.value]);
+
+        setNumberList(current => [...current, parseInt(e.target.value)]);
+
+        if (numberList.length > 1) {
+            setNumberList(numberList.join(""));
+        }
+
+        setPreviousNumber(e.target.value)
+
+        setPlusClicked(false);
     }
 
     function add() {
-        setSum(parseInt(numberList.reduce((a, b) => a + b)) + parseInt(numberList[numberList.length - 1]));
+
+        if (plusClicked) {
+            setNumberList([parseInt(numberList) + previousNumber])
+        }
+
+        setPlusClicked(true);
     }
 
-    console.log(parseInt(numberList[numberList.length - 1]));
-
-    function subtract(a, b) {
-        return a - b;
+    function subtract() {
+        setNumberList(numberList.join(""));
     }
 
     function multiply(a, b) {
@@ -32,7 +45,7 @@ function Calculator() {
     }
 
     function calculate() {
-        console.log(sum);
+        console.log(numberList);
     }
 
   return (
