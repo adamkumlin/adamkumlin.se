@@ -590,6 +590,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       .Cv ul {
         list-style-type: none;
       }
+
+      .Calculator {
+        color: white;
+      }
   
       .Footer {
         width: 100%;
