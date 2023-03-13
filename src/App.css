@@ -594,6 +594,11 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       .Calculator {
         color: white;
       }
+
+        .Calculator button {
+          width: 60px;
+          height: 60px;
+        }
   
       .Footer {
         width: 100%;
