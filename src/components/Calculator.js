@@ -2,56 +2,56 @@ import { useState } from "react";
 
 function Calculator() {
 
-    const [numberList, setNumberList] = useState([]);
-    const [plusClicked, setPlusClicked] = useState(false);
-    const [previousNumber, setPreviousNumber] = useState(null);
+    const [eventList, setEventList] = useState([]);
+    const [number, setNumber] = useState(0);
+    const [previousNumber, setPreviousNumber] = useState(0);
+    const [operator, setOperator] = useState(0);
 
     function handleChange(e) {
 
-        setNumberList(current => [...current, parseInt(e.target.value)]);
-
-        if (numberList.length > 1) {
-            setNumberList(numberList.join(""));
+        if (number == 0) {
+            setNumber(e.target.value);
+        } else {
+            setNumber(number + e.target.value);
         }
 
-        setPreviousNumber(e.target.value)
-
-        setPlusClicked(false);
+        setEventList(current => [...current, e.target.value]);
     }
 
-    function add() {
-
-        if (plusClicked) {
-            setNumberList([parseInt(numberList) + previousNumber])
-        }
-
-        setPlusClicked(true);
+    function changeOperation(e) {
+        setOperator(e.target.value);
+        setPreviousNumber(number);
+        setNumber(0);
+        setEventList(current => [...current, e.target.value]);
     }
 
-    function subtract() {
-        setNumberList(numberList.join(""));
-    }
-
-    function multiply(a, b) {
-        return a * b;
-    }
-
-    function divide(a, b) {
-        return a / b;
-    }
-
-    function float() {
-        console.log(".");
+    function reset() {
+        setNumber(0);
+        setPreviousNumber(0);
+        setEventList([]);
     }
 
     function calculate() {
-        console.log(numberList);
+        switch (operator) {
+            case "+": setNumber(parseFloat(previousNumber) + parseFloat(number));
+                break;
+
+            case "-": setNumber(parseFloat(previousNumber) - parseFloat(number));
+                break;
+
+            case "*": setNumber(parseFloat(previousNumber) * parseFloat(number));
+                break;
+
+            case "/": setNumber(parseFloat(previousNumber) / parseFloat(number));
+                break;
+        }
     }
 
   return (
     <div className="Calculator">
 
-        <div className="screen">{numberList}</div>
+        <div>{number}</div>
+        <div>{eventList}</div>
 
         <div className="row1">
             <button value={9} onClick={handleChange}>9</button>
@@ -71,14 +71,15 @@ function Calculator() {
         </div>
         <div className="row4">
             <button value={0} onClick={handleChange}>0</button>
-            <button onClick={float}>.</button>
-            <button onClick={calculate}>=</button>
+            <button value={"."}onClick={changeOperation}>.</button>
+            <button value={"="}onClick={calculate}>=</button>
         </div>
         <div className="aside1">
-            <button onClick={add}>+</button>
-            <button onClick={subtract}>-</button>
-            <button onClick={multiply}>*</button>
-            <button onClick={divide}>/</button>
+            <button onClick={reset}>CE</button>
+            <button value={"+"}onClick={changeOperation}>+</button>
+            <button value={"-"}onClick={changeOperation}>-</button>
+            <button value={"*"}onClick={changeOperation}>*</button>
+            <button value={"/"}onClick={changeOperation}>/</button>
         </div>
     </div>
   );
