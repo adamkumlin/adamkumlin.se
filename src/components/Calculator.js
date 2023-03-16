@@ -38,9 +38,14 @@ function Calculator() {
         setPreviousNumber(0);
         setOperator(null);
         setEventList([]);
+        setOperatorUsed(false);
     }
 
     function calculate() {
+
+        let factorial = previousNumber;
+        let factorialMultiplicator = factorial - 1;
+
         switch (operator) {
             case "+": setNumber(parseFloat(previousNumber) + parseFloat(number));
                 break;
@@ -76,14 +81,16 @@ function Calculator() {
                 break;
 
             case "√": setNumber(Math.sqrt(number));
-                break;
+                break;  
+            }
 
-            case "x!":  if (number === 0) {
-                            setNumber(1);
-                        } else {
-                            setNumber(previousNumber * previousNumber - 1);
-                        }
-
+            if (operator === "!") {
+                for (let i = factorialMultiplicator; i > 1; i++) {
+                    factorial = factorial * i;
+                    console.log(factorial)
+                }
+                
+                
             }
 
             setOperatorUsed(false);
@@ -115,7 +122,7 @@ function Calculator() {
             <button value={"+"}onClick={changeOperation}>+</button>
         </div>
         <div className="row3">
-            <button value={"x!"} onClick={handleInput}>x!</button>
+            <button value={"!"} onClick={changeOperation}>x!</button>
             <button value={"tan"} onClick={changeOperation}>tan</button>
             <button value={6} onClick={handleInput}>6</button>
             <button value={5} onClick={handleInput}>5</button>
