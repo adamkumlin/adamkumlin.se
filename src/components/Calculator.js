@@ -5,7 +5,8 @@ function Calculator() {
     const [eventList, setEventList] = useState([]);
     const [number, setNumber] = useState(0);
     const [previousNumber, setPreviousNumber] = useState(0);
-    const [operator, setOperator] = useState(0);
+    const [operator, setOperator] = useState(null);
+    const [operatorUsed, setOperatorUsed] = useState(false);
 
     function handleInput(e) {
 
@@ -19,15 +20,23 @@ function Calculator() {
     }
 
     function changeOperation(e) {
-        setOperator(e.target.value);
-        setPreviousNumber(number);
-        setNumber(0);
-        setEventList(current => [...current, e.target.value]);
+
+        if (operatorUsed) {
+            alert("You must click the calculate button before switching operator.")
+        } else {
+            setOperator(e.target.value);
+            setPreviousNumber(number);
+            setNumber(0);
+            setEventList(current => [...current, e.target.value]);
+        }
+        
+        setOperatorUsed(true);
     }
 
     function reset() {
         setNumber(0);
         setPreviousNumber(0);
+        setOperator(null);
         setEventList([]);
     }
 
@@ -51,10 +60,10 @@ function Calculator() {
             case "sin": setNumber(Math.sin(parseFloat(number)));
                 break;
 
-            case "cos": setNumber(Math.cos(parseFloat(previousNumber)));
+            case "cos": setNumber(Math.cos(parseFloat(number)));
                 break;
 
-            case "tan": setNumber(Math.tan(parseFloat(previousNumber)));
+            case "tan": setNumber(Math.tan(parseFloat(number)));
                 break;
 
             case "ln": setNumber(Math.log(parseFloat(number)));
@@ -62,8 +71,25 @@ function Calculator() {
 
             case "log": setNumber(Math.log10(parseFloat(number)));
                 break;
+
+            case "%": setNumber(parseFloat(previousNumber) / parseInt(100));
+                break;
+
+            case "√": setNumber(Math.sqrt(number));
+                break;
+
+            case "x!":  if (number === 0) {
+                            setNumber(1);
+                        } else {
+                            setNumber(previousNumber * previousNumber - 1);
+                        }
+
+            }
+
+            setOperatorUsed(false);
         }
-    }
+
+        
 
   return (
     <div className="Calculator">
@@ -75,8 +101,8 @@ function Calculator() {
             <button value={Math.PI} onClick={handleInput}>&#960;</button>
             <button value={"log"} onClick={changeOperation}>log</button>
             <button value={"ln"} onClick={changeOperation}>ln</button>
-            <button value={"%"} onClick={handleInput}>%</button>
-            <button value={"exp"} onClick={handleInput}>EXP</button>
+            <button value={"%"} onClick={changeOperation}>%</button>
+            <button value={"exp"} onClick={changeOperation}>EXP</button>
             <button onClick={reset}>CE</button>
         </div>
 
@@ -98,7 +124,7 @@ function Calculator() {
         </div>
 
         <div className="row4">
-            <button value={"root"} onClick={handleInput}>&#8730;</button>
+            <button value={"√"} onClick={changeOperation}>&#8730;</button>
             <button value={"sin"} onClick={changeOperation}>sin</button>
             <button value={3} onClick={handleInput}>3</button>
             <button value={2} onClick={handleInput}>2</button>
@@ -106,7 +132,7 @@ function Calculator() {
             <button value={"*"}onClick={changeOperation}>*</button>
         </div>
         <div className="row5">
-            <button value={"ans"} onClick={handleInput}>ANS</button>
+            <button value={number} onClick={handleInput}>ANS</button>
             <button value={"^"}onClick={changeOperation}>x<sup>y</sup></button>
             <button value={0} onClick={handleInput}>0</button>
             <button value={"."}onClick={changeOperation}>.</button>
