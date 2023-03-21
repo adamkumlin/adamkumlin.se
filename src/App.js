@@ -6,7 +6,7 @@ import Cv from "./components/pages/Cv.js";
 import Contact from "./components/pages/Contact.js";
 import Privacy from "./components/pages/Privacy.js";
 import LogIn from "./components/pages/LogIn.js";
-import Projects from "./components/pages/Projects.js";
+import Projects from "./components/pages/Projects";
 
 function App() {
   return (

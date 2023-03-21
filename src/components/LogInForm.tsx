@@ -1,15 +1,22 @@
-function LogInForm() {
+import * as React from "react";
+
+type LogInFormProps = {
+  usernameLabel: string;
+  passwordLabel: string;
+}
+
+function LogInForm({usernameLabel, passwordLabel}: LogInFormProps) {
 
   return (
     <div className="LogInForm">
       <form action="/logIn.php" method="post" name="logInForm">
         <div className="inputContainer">
-          <label htmlFor="username">Användarnamn</label>
+          <label htmlFor="username">{usernameLabel}</label>
           <input id="username" type="text" name="username"/>
         </div>
 
         <div className="inputContainer">
-          <label htmlFor="password" >Lösenord</label>
+          <label htmlFor="password" >{passwordLabel}</label>
           <input id="password" type="password" name="password"/>
         </div>
         

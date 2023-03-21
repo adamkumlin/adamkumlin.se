@@ -1,6 +1,6 @@
-import Footer from "../Footer.js";
-import Background from "../Background.js";
-import HomeButton from "../HomeButton.js";
+import Footer from "../Footer.tsx";
+import Background from "../Background.tsx";
+import HomeButton from "../HomeButton.tsx";
 
 function Privacy() {
     
@@ -89,7 +89,7 @@ function Privacy() {
             Notera att om du gör detta så accepterar du att jag behandlar dina personuppgifter enligt denna integritetspolicy.
         </p>
 
-        <Footer/>
+        <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
       </div>
     );
   }

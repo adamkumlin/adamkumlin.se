@@ -1,6 +1,6 @@
-import Footer from "../Footer.js";
-import Background from "../Background.js";
-import HomeButton from "../HomeButton.js";
+import Footer from "../Footer.tsx";
+import Background from "../Background.tsx";
+import HomeButton from "../HomeButton.tsx";
 
 function Cv() {
   return (
@@ -70,7 +70,7 @@ function Cv() {
         <li>Referenser ges på begäran.</li>
       </ul>
 
-      <Footer/>
+      <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
     </div>
   );
 }

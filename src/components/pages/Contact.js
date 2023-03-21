@@ -1,9 +1,9 @@
-import Background from "../Background.js";
-import HomeButton from "../HomeButton.js";
-import ContactOptions from "../ContactOptions.js";
+import Background from "../Background.tsx";
+import HomeButton from "../HomeButton.tsx";
+import ContactOptions from "../ContactOptions.tsx";
 import { useRef } from "react";
 import { useState } from "react";
-import Footer from "../Footer.js";
+import Footer from "../Footer.tsx";
 
 function Contact() {
 
@@ -33,7 +33,7 @@ function Contact() {
 
         <ContactOptions setIsAnimated={setIsAnimated} isAnimated={isAnimated} ref={{ref0: emailTooltipRef, ref1: githubTooltipRef}}/>
 
-        <Footer/>
+        <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
       </div>
     );
   }

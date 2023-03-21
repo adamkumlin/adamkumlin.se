@@ -1,7 +1,8 @@
+import * as React from "react";
 import { forwardRef } from "react";
 import githubIcon from "../images/github-icon.svg";
 
-const ContactOptions = forwardRef((props, ref) => {
+const ContactOptions = forwardRef<HTMLAnchorElement, HTMLSpanElement>((props: any, ref: any) => {
 
   const {ref0, ref1} = ref;
 

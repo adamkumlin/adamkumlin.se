@@ -1,7 +1,7 @@
-import Footer from "../Footer.js";
-import Background from "../Background.js";
-import LogInForm from "../LogInForm.js";
-import HomeButton from "../HomeButton.js";
+import Footer from "../Footer.tsx";
+import Background from "../Background.tsx";
+import LogInForm from "../LogInForm.tsx";
+import HomeButton from "../HomeButton.tsx";
 
 function LogIn() {
 
@@ -14,7 +14,7 @@ function LogIn() {
       <h2 className="heading">Logga in</h2>
 
       <LogInForm/>
-      <Footer/>
+      <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
     </div>
   );
 }

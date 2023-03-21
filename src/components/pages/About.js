@@ -1,6 +1,6 @@
-import Footer from "../Footer.js";
-import Background from "../Background.js";
-import HomeButton from "../HomeButton.js";
+import Footer from "../Footer.tsx";
+import Background from "../Background.tsx";
+import HomeButton from "../HomeButton.tsx";
 
 function About() {
     return (
@@ -19,8 +19,9 @@ function About() {
             Utbildningen har också givit mig kunskap inom redaktionellt arbete som skrivande och fotoredigering. Slutligen har användbarhet, att en produkt ska kunna vara tillgänglig och enkel att använda,
             varit centralt under hela utbildningen. </p>
             
-            <p>Jag är också relativt kunnig gällande backend-utveckling med PHP, Python och Node.js, samt med databasspråket SQL.</p>
-        <Footer/>
+          <p>Jag är också relativt kunnig gällande backend-utveckling med PHP, Python och Node.js, samt med databasspråket SQL.</p>
+          
+        <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
       </div>
     );
   }

@@ -1,8 +1,8 @@
-import NavBar from "../NavBar.js";
-import Footer from "../Footer.js";
-import NavButton from "../NavButton.js";
-import Background from "../Background.js";
-import LogInButton from "../LogInButton.js";
+import NavBar from "../NavBar.tsx";
+import Footer from "../Footer.tsx";
+import NavButton from "../NavButton.tsx";
+import Background from "../Background.tsx";
+import LogInButton from "../LogInButton.tsx";
 import { useRef } from "react";
 
 function Home() {
@@ -34,11 +34,11 @@ function Home() {
     <div className="Home">
       <h1 className="siteHeading" ref={siteHeadingRef}>Adam Kumlin</h1>
       <h2></h2>
-      <LogInButton/>
+      <LogInButton text={"Logga in"}/>
       <NavButton goToMainContent={goToMainContent}/>
       <NavBar ref={navBarRef}/>
       <Background/>
-      <Footer/>
+      <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
     </div>
   );
 }

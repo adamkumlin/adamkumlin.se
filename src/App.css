@@ -475,7 +475,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   
       .ContactOptions {
         display: flex;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
         height: 80vh;
@@ -710,6 +710,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
       .navLink {
         padding: 0;
+        text-transform: uppercase;
       }
 
         .navLinkContainer:hover > .navLink:not(:hover) {
