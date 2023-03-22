@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 type LogInButtonProps = {
   text: string;
@@ -9,7 +9,7 @@ const LogInButton = ({text}: LogInButtonProps) => {
 
     return (
       <div className="LogInButton">
-          <Link to="/login">
+          <Link href="/login">
             {text}
           </Link> 
       </div>

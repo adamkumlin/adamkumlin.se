@@ -1,9 +1,10 @@
-import * as React from "react";
-import NavBar from "../NavBar";
-import Footer from "../Footer";
-import NavButton from "../NavButton";
-import Background from "../Background";
-import LogInButton from "../LogInButton";
+"use client";
+import './page.module.css'
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import NavButton from "./components/NavButton";
+import Background from "./components/Background";
+import LogInButton from "./components/LogInButton";
 import { useRef } from "react";
 
 const Home = () => {

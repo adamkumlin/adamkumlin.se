@@ -1,9 +1,10 @@
+"use client";
 import * as React from "react";
-import Background from "../Background";
-import HomeButton from "../HomeButton";
-import ContactOptions from "../ContactOptions";
+import Background from "../components/Background";
+import HomeButton from "../components/HomeButton";
+import ContactOptions from "../components/ContactOptions";
 import { useRef, useState } from "react";
-import Footer from "../Footer";
+import Footer from "../components/Footer";
 
 const Contact = () => {
 

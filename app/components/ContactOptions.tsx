@@ -1,6 +1,7 @@
 import * as React from "react";
 import { forwardRef } from "react";
-import githubIcon from "../images/github-icon.svg";
+import githubIcon from "../../public/github-icon.svg";
+import Image from "next/image";
 
 const ContactOptions = forwardRef<HTMLAnchorElement, HTMLSpanElement>((props: any, ref: any) => {
 
@@ -17,7 +18,7 @@ const ContactOptions = forwardRef<HTMLAnchorElement, HTMLSpanElement>((props: an
       </a>
 
       <a href="https://github.com/adamkumlin" target="_blank" rel="noreferrer" className="github">
-        <img src={githubIcon} alt="GitHub icon"/>
+        <Image src={githubIcon} alt="GitHub icon"/>
         <span ref={ref1} className="githubTooltip">GitHub</span>
       </a>
     </div>

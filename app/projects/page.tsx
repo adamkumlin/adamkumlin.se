@@ -1,8 +1,9 @@
+"use client";
 import * as React from "react";
-import Footer from "../Footer";
-import Background from "../Background";
-import HomeButton from "../HomeButton";
-import Calculator from "../Calculator";
+import Footer from "../components/Footer";
+import Background from "../components/Background";
+import HomeButton from "../components/HomeButton";
+import Calculator from "../components/Calculator";
 
 type ProjectsProps = {
   label2022: number;

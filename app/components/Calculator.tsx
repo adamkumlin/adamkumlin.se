@@ -1,6 +1,7 @@
+import * as React from "react";
 import { useState } from "react";
 
-function Calculator() {
+const Calculator = () => {
 
     const [eventList, setEventList] = useState([]);
     const [number, setNumber] = useState(0);
@@ -43,8 +44,8 @@ function Calculator() {
 
     function calculate() {
 
-        let factorial = previousNumber;
-        let factorialMultiplicator = factorial - 1;
+        let factorial: number = previousNumber;
+        let factorialMultiplicator: number = factorial - 1;
 
         switch (operator) {
             case "+": setNumber(parseFloat(previousNumber) + parseFloat(number));

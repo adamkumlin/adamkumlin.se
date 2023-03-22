@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import { forwardRef } from "react";
+import Link from "next/link";
 
 const HomeButton = forwardRef<HTMLDivElement>((props, ref) => {
 
   return (
     <div className="HomeButton" ref={ref}>
-      <Link to="/">
+      <Link href="/">
         <h1>Adam Kumlin</h1>
       </Link> 
     </div>

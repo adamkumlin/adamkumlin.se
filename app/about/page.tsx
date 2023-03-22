@@ -1,13 +1,15 @@
+"use client";
 import * as React from "react";
-import Footer from "../Footer";
-import Background from "../Background";
-import HomeButton from "../HomeButton";
+import * as Head from "next/head";
+import Footer from "../components/Footer";
+import Background from "../components/Background";
+import HomeButton from "../components/HomeButton";
 
 const About = () => {
     return (
       <div className="About">
         <Background/>
-
+ 
         <HomeButton/>
           
           <h2 className="heading">Hej!</h2>

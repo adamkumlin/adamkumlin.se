@@ -1,7 +1,8 @@
+"use client";
 import * as React from "react";
-import Footer from "../Footer";
-import Background from "../Background";
-import HomeButton from "../HomeButton";
+import Footer from "../components/Footer";
+import Background from "../components/Background";
+import HomeButton from "../components/HomeButton";
 
 const Privacy = () => {
     
