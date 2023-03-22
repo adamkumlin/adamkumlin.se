@@ -5,7 +5,7 @@ type LogInFormProps = {
   passwordLabel: string;
 }
 
-function LogInForm({usernameLabel, passwordLabel}: LogInFormProps) {
+const LogInForm = ({usernameLabel, passwordLabel}: LogInFormProps) => {
 
   return (
     <div className="LogInForm">

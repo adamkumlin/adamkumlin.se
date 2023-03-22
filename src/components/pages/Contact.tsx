@@ -1,16 +1,16 @@
-import Background from "../Background.tsx";
-import HomeButton from "../HomeButton.tsx";
-import ContactOptions from "../ContactOptions.tsx";
-import { useRef } from "react";
-import { useState } from "react";
-import Footer from "../Footer.tsx";
+import * as React from "react";
+import Background from "../Background";
+import HomeButton from "../HomeButton";
+import ContactOptions from "../ContactOptions";
+import { useRef, useState } from "react";
+import Footer from "../Footer";
 
-function Contact() {
+const Contact = () => {
 
   const [isAnimated, setIsAnimated] = useState(false);
 
-  const emailTooltipRef = useRef(null);
-  const githubTooltipRef = useRef(null);
+  const emailTooltipRef = useRef<HTMLInputElement>(null);
+  const githubTooltipRef = useRef<HTMLInputElement>(null);
 
   window.onmousemove = function(e) {
     let x = (e.clientX + 20) + "px";

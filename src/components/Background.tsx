@@ -1,7 +1,7 @@
 import * as React from "react";
 import backgroundVideo from "../images/background-video.mp4";
 
-function Background() {
+const Background = () => {
 
     return (
         <div className="Background">

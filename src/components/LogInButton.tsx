@@ -5,7 +5,7 @@ type LogInButtonProps = {
   text: string;
 }
 
-export default function LogInButton({text}: LogInButtonProps) {
+const LogInButton = ({text}: LogInButtonProps) => {
 
     return (
       <div className="LogInButton">
@@ -15,3 +15,5 @@ export default function LogInButton({text}: LogInButtonProps) {
       </div>
     );
   }
+
+export default LogInButton;

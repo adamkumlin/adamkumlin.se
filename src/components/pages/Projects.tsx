@@ -11,7 +11,7 @@ type ProjectsProps = {
   label2023: number;
 }
 
-export default function Projects({label2022, ehnsLabel, ehnsDescription, label2023}: ProjectsProps) {
+const Projects = ({label2022, ehnsLabel, ehnsDescription, label2023}: ProjectsProps) => {
 
     return (
       <div className="Projects">
@@ -35,3 +35,5 @@ export default function Projects({label2022, ehnsLabel, ehnsDescription, label20
       </div>
     );
   }
+
+export default Projects;

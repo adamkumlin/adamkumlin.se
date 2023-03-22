@@ -1,8 +1,9 @@
-import Footer from "../Footer.tsx";
-import Background from "../Background.tsx";
-import HomeButton from "../HomeButton.tsx";
+import * as React from "react";
+import Footer from "../Footer";
+import Background from "../Background";
+import HomeButton from "../HomeButton";
 
-function Cv() {
+const Cv = () => {
   return (
     <div className="Cv">
 

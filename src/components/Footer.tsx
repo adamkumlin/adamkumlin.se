@@ -6,7 +6,7 @@ type FooterProps = {
   copyrightLabel: string;
 }
 
-export default function Footer({privacyLabel, copyrightLabel}: FooterProps) {
+const Footer = ({privacyLabel, copyrightLabel}: FooterProps) => {
 
   return (
     <div className="Footer">
@@ -15,3 +15,5 @@ export default function Footer({privacyLabel, copyrightLabel}: FooterProps) {
     </div>
   );
 }
+
+export default Footer;

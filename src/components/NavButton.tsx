@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function NavButton(props) {
+const NavButton = (props) => {
 
   return (
     <div className="NavButton" onClick={props.goToMainContent}>
