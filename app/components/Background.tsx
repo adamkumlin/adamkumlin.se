@@ -1,14 +1,11 @@
 import * as React from "react";
-//import backgroundVideo from "../../public/background-video.mp4";
 
 const Background = () => {
 
     return (
         <div className="Background">
             <div className="backgroundOverlay"></div>
-            <video className="backgroundVideo" autoPlay={true} muted={true} loop={true}>
-                {/*<source src={backgroundVideo} type="video/mp4"/>*/}
-            </video>
+            <video className="backgroundVideo" autoPlay={true} muted={true} loop={true} src={require("../../public/background-video.mp4")}/>
         </div>
     )
   }
