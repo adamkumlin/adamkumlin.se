@@ -1,5 +1,5 @@
 "use client";
-import './page.module.css'
+import styles from "./Home.module.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import NavButton from "./components/NavButton";
@@ -35,7 +35,7 @@ const Home = () => {
   });
 
   return (
-    <div className="Home">
+    <div className={styles.Home}>
       <h1 className="siteHeading" ref={siteHeadingRef}>Adam Kumlin</h1>
       <h2></h2>
       <LogInButton text={"Logga in"}/>

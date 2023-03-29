@@ -5,7 +5,7 @@ const Background = () => {
     return (
         <div className="Background">
             <div className="backgroundOverlay"></div>
-            <video className="backgroundVideo" autoPlay={true} muted={true} loop={true} src={require("../../public/background-video.mp4")}/>
+            <video className="backgroundVideo" autoPlay={true} muted={true} loop={true} src={"/background-video.mp4"}/>
         </div>
     )
   }

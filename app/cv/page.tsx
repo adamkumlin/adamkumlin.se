@@ -3,10 +3,11 @@ import * as React from "react";
 import Footer from "../components/Footer";
 import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
+import styles from "./Cv.module.css";
 
 const Cv = () => {
   return (
-    <div className="Cv">
+    <div className={styles.Cv}>
 
       <Background/>
 

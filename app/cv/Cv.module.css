@@ -1,0 +1,8 @@
+.Cv p, .Cv h3, .Cv li {
+    color: white;
+    text-align: center;
+  }
+
+  .Cv ul {
+    list-style-type: none;
+  }

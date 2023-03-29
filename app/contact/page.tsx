@@ -5,6 +5,7 @@ import HomeButton from "../components/HomeButton";
 import ContactOptions from "../components/ContactOptions";
 import { useRef, useState } from "react";
 import Footer from "../components/Footer";
+import styles from "./Contact.module.css";
 
 const Contact = () => {
 
@@ -24,7 +25,7 @@ const Contact = () => {
   }
 
     return (
-      <div className="Contact">
+      <div className={styles.Contact}>
 
         <Background/>
 
