@@ -3,7 +3,7 @@ import * as React from "react";
 import Footer from "../components/Footer";
 import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
-import styles from "./Cv.module.css";
+import styles from "../../styles/Cv.module.css";
 
 const Cv = () => {
   return (
