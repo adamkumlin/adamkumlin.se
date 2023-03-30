@@ -6,11 +6,12 @@ type FooterProps = {
   copyrightLabel: string;
 }
 
-const Footer = ({privacyLabel, copyrightLabel}: FooterProps) => {
+const Footer: React.FC<FooterProps> = ({privacyLabel, copyrightLabel}) => {
 
   return (
     <div className="Footer">
         <p>{copyrightLabel}</p>
+        <p>{privacyLabel}</p>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Background from "../components/Background";
 import LogInForm from "../components/LogInForm";
 import HomeButton from "../components/HomeButton";
 
-const LogIn = () => {
+const LogIn: React.FC = () => {
 
   return (
     <div className="LogIn">

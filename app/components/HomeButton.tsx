@@ -3,7 +3,7 @@ import * as React from "react";
 import { forwardRef } from "react";
 import Link from "next/link";
 
-const HomeButton = forwardRef<HTMLDivElement>((props, ref) => {
+const HomeButton: React.FC = forwardRef<HTMLDivElement>((props, ref) => {
 
   return (
     <div className="HomeButton" ref={ref}>

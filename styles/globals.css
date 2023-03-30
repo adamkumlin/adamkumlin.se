@@ -300,6 +300,67 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         .Footer a {
           color: white;
         }
+
+        .ContactOptions {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: wrap;
+          height: 80vh;
+        }
+    
+          .email {
+            height: 150px;
+            width: 240px;
+          }
+    
+            .emailTooltip {
+              display: none;
+              background-color: black;
+              color: white;
+              padding: 2px;
+              border-radius: 5px;
+            }
+    
+            .email div:first-of-type {
+              position: absolute;
+              width: 0;
+              height: 0;
+              border: 120px solid transparent;
+              border-bottom: 0;
+              border-top: 100px solid rgb(206, 166, 114);
+            }
+    
+            .email div:nth-of-type(2) {
+              position: absolute;
+              width: 230px;
+              height: 140px;
+              background-color: rgb(255, 255, 255);
+              z-index: -1;
+              margin-left: 5px;
+              margin-top: 5px;
+            }
+    
+            .email div:last-of-type {
+              position: absolute;
+              width: 240px;
+              height: 150px;
+              background-color: rgb(216, 183, 133);
+              z-index: -1;
+            }
+    
+        .github img {
+          width: 200px;
+          height: 200px;
+        }
+    
+          .githubTooltip {
+            display: none;
+            background-color: black;
+            color: white;
+            padding: 2px;
+            border-radius: 5px;
+          }
 }
 
 @media screen and (min-width: 961px) {
@@ -320,5 +381,44 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
     .NavBar:hover + .Background .backgroundOverlay {
       opacity: 0.9;
+    }
+
+    .email:hover > .emailTooltip {
+      display: block;
+      position: fixed;
+      overflow: hidden;
+    }
+
+      .email .animated:first-of-type {
+        animation: openEnvelopeTop 0.5s forwards linear;
+      }
+
+        @keyframes openEnvelopeTop {
+          0%{transform: none;}
+          50%{border-top-width: 0; transform: none;}
+          66%{transform: rotate(180deg); border-top-width: 0;}
+          100%{transform: rotate(180deg) translateY(100px); z-index: -1;}
+        }
+
+      .email .animated:nth-of-type(2) {
+        animation: openEnvelopeMiddle 1s forwards;
+        animation-delay: 0.6s;
+      }
+
+        @keyframes openEnvelopeMiddle {
+          0%{transform: none;}
+          50%{transform: translateY(-150px);}
+          100%{transform: none; z-index: 0;}
+        }
+      
+    .github img:hover {
+      transform: scale(1.5);
+      transition: 1s;
+    }
+
+    .github:hover > .githubTooltip {
+      display: block;
+      position: fixed;
+      overflow: hidden;
     }
 }

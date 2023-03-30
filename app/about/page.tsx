@@ -5,7 +5,7 @@ import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 import styles from "../../styles/About.module.css";
 
-const About = () => {
+const About: React.FC = () => {
     return (
       <div className={styles.About}>
         <Background/>

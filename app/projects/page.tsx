@@ -12,7 +12,7 @@ type ProjectsProps = {
   label2023: number;
 }
 
-const Projects = ({label2022, ehnsLabel, ehnsDescription, label2023}: ProjectsProps) => {
+const Projects: React.FC<ProjectsProps> = ({label2022, ehnsLabel, ehnsDescription, label2023}) => {
 
     return (
       <div className="Projects">

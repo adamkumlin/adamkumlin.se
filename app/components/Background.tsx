@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 
-const Background = () => {
+const Background: React.FC = () => {
 
     return (
         <div className="Background">

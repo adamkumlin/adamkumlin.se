@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 
-const Privacy = () => {
+const Privacy: React.FC = () => {
     
     return (
       <div className="Privacy">

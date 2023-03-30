@@ -6,14 +6,14 @@ import ContactOptions from "../components/ContactOptions";
 import { useRef, useState } from "react";
 import Footer from "../components/Footer";
 
-const Contact = () => {
+const Contact: React.FC = () => {
 
-  const [isAnimated, setIsAnimated] = useState(false);
+  const [isAnimated, setIsAnimated] = useState<boolean>(false);
 
-  const emailTooltipRef = useRef<HTMLInputElement>(null);
-  const githubTooltipRef = useRef<HTMLInputElement>(null);
+  const emailTooltipRef = useRef<HTMLInputElement | null>(null);
+  const githubTooltipRef = useRef<HTMLInputElement | null>(null);
 
-  window.onmousemove = function(e) {
+  window.onmousemove = function(e: MouseEvent) {
     let x = (e.clientX + 20) + "px";
     let y = (e.clientY + 20) + "px";
 
@@ -26,8 +26,6 @@ const Contact = () => {
       githubTooltipRef.current.style.top = y;
       githubTooltipRef.current.style.left = x;
     }
-
-
   }
 
     return (

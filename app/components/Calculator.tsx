@@ -2,26 +2,28 @@
 import * as React from "react";
 import { useState } from "react";
 
-const Calculator = () => {
+const Calculator: React.FC = () => {
 
-    const [eventList, setEventList] = useState([]);
-    const [number, setNumber] = useState(0);
-    const [previousNumber, setPreviousNumber] = useState(0);
-    const [operator, setOperator] = useState(null);
-    const [operatorUsed, setOperatorUsed] = useState(false);
+    const [eventList, setEventList] = useState<string[]>([]);
+    const [number, setNumber] = useState<number>(0);
+    const [previousNumber, setPreviousNumber] = useState<number>(0);
+    const [operator, setOperator] = useState<string | null>(null);
+    const [operatorUsed, setOperatorUsed] = useState<boolean>(false);
 
-    function handleInput(e) {
+    function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
+
+        const value = parseInt(e.target.value);
 
         if (number === 0) {
-            setNumber(e.target.value);
+            setNumber(value);
         } else {
-            setNumber(number + e.target.value);
+            setNumber(number + value);
         }
 
         setEventList(current => [...current, e.target.value]);
     }
 
-    function changeOperation(e) {
+    function changeOperation(e: React.ChangeEvent<HTMLInputElement>) {
 
         if (operatorUsed) {
             alert("You must click the calculate button before switching operator.")
@@ -49,7 +51,7 @@ const Calculator = () => {
         let factorialMultiplicator: number = factorial - 1;
 
         switch (operator) {
-            case "+": setNumber(parseFloat(previousNumber) + parseFloat(number));
+            case "+": setNumber(previousNumber + number);
                 break;
 
             case "-": setNumber(parseFloat(previousNumber) - parseFloat(number));

@@ -4,7 +4,13 @@ import Link from "next/link";
 import { forwardRef } from "react";
 import styles from "../../styles/NavBar.module.css";
 
-const NavBar = forwardRef<HTMLDivElement>((props: any, ref) => {
+type NavBarProps = {
+  blurBackground?: () => void
+  unBlurBackground?: () => void;
+  ref?: React.RefObject<HTMLDivElement>;
+}
+
+const NavBar = forwardRef<HTMLDivElement, NavBarProps>((props, ref) => {
 
   return (
     <div className={styles.NavBar} ref={ref}>

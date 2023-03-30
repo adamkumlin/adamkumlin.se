@@ -6,7 +6,7 @@ type LogInFormProps = {
   passwordLabel: string;
 }
 
-const LogInForm = ({usernameLabel, passwordLabel}: LogInFormProps) => {
+const LogInForm: React.FC<LogInFormProps> = ({usernameLabel, passwordLabel}) => {
 
   return (
     <div className="LogInForm">

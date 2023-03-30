@@ -6,7 +6,7 @@ type LogInButtonProps = {
   text: string;
 }
 
-const LogInButton = ({text}: LogInButtonProps) => {
+const LogInButton: React.FC<LogInButtonProps> = ({text}) => {
 
     return (
       <div className="LogInButton">

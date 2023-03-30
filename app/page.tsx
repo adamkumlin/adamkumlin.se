@@ -7,10 +7,10 @@ import Background from "./components/Background";
 import LogInButton from "./components/LogInButton";
 import { useRef } from "react";
 
-const Home = () => {
+const Home: React.FC = () => {
 
   const siteHeadingRef = useRef<HTMLHeadingElement>(null);
-  const navBarRef = useRef<HTMLInputElement>(null);
+  const navBarRef = useRef<HTMLDivElement>(null);
 
   function goToMainContent() {
     if (navBarRef.current !== null) {

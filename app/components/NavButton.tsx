@@ -2,7 +2,11 @@
 import * as React from "react";
 import styles from "../../styles/NavButton.module.css";
 
-const NavButton = (props) => {
+type NavButtonProps = {
+  goToMainContent: () => void;
+}
+
+const NavButton: React.FC<NavButtonProps> = (props) => {
 
   return (
     <div className={styles.NavButton} onClick={props.goToMainContent}>
