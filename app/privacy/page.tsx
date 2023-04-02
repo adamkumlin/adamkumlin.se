@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 
+// Privacy policy page
+
 const Privacy: React.FC = () => {
     
     return (

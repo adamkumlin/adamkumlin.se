@@ -4,14 +4,18 @@ import { forwardRef } from "react";
 import githubIcon from "../../public/github-icon.svg";
 import Image from "next/image";
 
+// Contact Options component
+
 type ContactOptionsProps = {
   setIsAnimated: React.Dispatch<React.SetStateAction<boolean>>;
   isAnimated: boolean;
 }
 
 const ContactOptions: React.FC<ContactOptionsProps> = forwardRef((props, ref: any) => {
+// Forward the refs from the parent component with forwardRef, define type ContactOptionsProps and pass it to the component
 
   const {ref0, ref1} = ref;
+  // Create two constants with the two refs, from the one ref parameter
 
   return (
 

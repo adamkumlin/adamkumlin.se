@@ -7,15 +7,18 @@ import Background from "./components/Background";
 import LogInButton from "./components/LogInButton";
 import { useRef } from "react";
 
+// Home page/start page
+
 const Home: React.FC = () => {
 
   const siteHeadingRef = useRef<HTMLHeadingElement>(null);
   const navBarRef = useRef<HTMLDivElement>(null);
 
   function goToMainContent() {
-    if (navBarRef.current !== null) {
-      return navBarRef.current.scrollIntoView({behavior: "smooth"});
+    if (navBarRef.current) {
+      navBarRef.current.scrollIntoView({behavior: "smooth"});
     }
+    // If ref object contains an element, use it
   }
 
   window.addEventListener(("scroll"), () => {
@@ -33,6 +36,7 @@ const Home: React.FC = () => {
         siteHeadingRef.current!.style.transform = "none";
     }
   });
+  // For the scroll animation
 
   return (
     <div className={styles.Home}>

@@ -1,6 +1,8 @@
 "use client";
 import * as React from "react";
 
+// Background component
+
 const Background: React.FC = () => {
 
     return (

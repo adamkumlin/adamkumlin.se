@@ -2,6 +2,8 @@
 import * as React from "react";
 import { useState } from "react";
 
+// Calculator component
+
 const Calculator: React.FC = () => {
 
     const [eventList, setEventList] = useState<string[]>([]);
@@ -10,28 +12,35 @@ const Calculator: React.FC = () => {
     const [operator, setOperator] = useState<string | null>(null);
     const [operatorUsed, setOperatorUsed] = useState<boolean>(false);
 
-    function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleInput(e: React.MouseEvent<HTMLButtonElement>) {
 
-        const value = parseInt(e.target.value);
+        const numberTarget = e.target as HTMLButtonElement;
+        const numberValue: number = parseInt(numberTarget.value);
+        // Convert to type HTMLButtonElement, followed by converting the value to type number
 
         if (number === 0) {
-            setNumber(value);
+            setNumber(numberValue);
         } else {
-            setNumber(number + value);
+            setNumber(number + numberValue);
         }
 
-        setEventList(current => [...current, e.target.value]);
+        setEventList(current => [...current, numberValue.toString()]);
+        // Add to eventList array of type string, numberValue of type number gets stringified
     }
 
-    function changeOperation(e: React.ChangeEvent<HTMLInputElement>) {
+    function changeOperation(e: React.MouseEvent<HTMLButtonElement>) {
+
+        const operationTarget = e.target as HTMLButtonElement;
+        const operationValue: string = operationTarget.value;
+        // Convert to type HTMLButtonElement, followed by converting the value to type string
 
         if (operatorUsed) {
             alert("You must click the calculate button before switching operator.")
         } else {
-            setOperator(e.target.value);
+            setOperator(operationValue);
             setPreviousNumber(number);
             setNumber(0);
-            setEventList(current => [...current, e.target.value]);
+            setEventList(current => [...current, operationValue]);
         }
         
         setOperatorUsed(true);
@@ -44,6 +53,7 @@ const Calculator: React.FC = () => {
         setEventList([]);
         setOperatorUsed(false);
     }
+    // Set all state variables to their original values
 
     function calculate() {
 
@@ -54,34 +64,34 @@ const Calculator: React.FC = () => {
             case "+": setNumber(previousNumber + number);
                 break;
 
-            case "-": setNumber(parseFloat(previousNumber) - parseFloat(number));
+            case "-": setNumber(previousNumber - number);
                 break;
 
-            case "*": setNumber(parseFloat(previousNumber) * parseFloat(number));
+            case "*": setNumber(previousNumber * number);
                 break;
 
-            case "/": setNumber(parseFloat(previousNumber) / parseFloat(number));
+            case "/": setNumber(previousNumber / number);
                 break;
 
-            case "^": setNumber(Math.pow(parseFloat(previousNumber), parseFloat(number)));
+            case "^": setNumber(Math.pow(previousNumber, number));
                 break;
 
-            case "sin": setNumber(Math.sin(parseFloat(number)));
+            case "sin": setNumber(Math.sin(number));
                 break;
 
-            case "cos": setNumber(Math.cos(parseFloat(number)));
+            case "cos": setNumber(Math.cos(number));
                 break;
 
-            case "tan": setNumber(Math.tan(parseFloat(number)));
+            case "tan": setNumber(Math.tan(number));
                 break;
 
-            case "ln": setNumber(Math.log(parseFloat(number)));
+            case "ln": setNumber(Math.log(number));
                 break;
 
-            case "log": setNumber(Math.log10(parseFloat(number)));
+            case "log": setNumber(Math.log10(number));
                 break;
 
-            case "%": setNumber(parseFloat(previousNumber) / parseInt(100));
+            case "%": setNumber(previousNumber / (100));
                 break;
 
             case "√": setNumber(Math.sqrt(number));

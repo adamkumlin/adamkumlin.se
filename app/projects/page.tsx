@@ -5,6 +5,8 @@ import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 import Calculator from "../components/Calculator";
 
+// Projects page
+
 type ProjectsProps = {
   label2022: number;
   ehnsLabel: string;

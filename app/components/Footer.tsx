@@ -1,6 +1,8 @@
 "use client";
 import * as React from "react";
 
+// Footer component
+
 type FooterProps = {
   privacyLabel: string;
   copyrightLabel: string;

@@ -5,6 +5,8 @@ import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 import styles from "../../styles/Cv.module.css";
 
+// CV page
+
 const Cv: React.FC = () => {
   return (
     <div className={styles.Cv}>

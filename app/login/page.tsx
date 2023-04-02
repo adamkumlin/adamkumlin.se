@@ -5,6 +5,8 @@ import Background from "../components/Background";
 import LogInForm from "../components/LogInForm";
 import HomeButton from "../components/HomeButton";
 
+// Log In page
+
 const LogIn: React.FC = () => {
 
   return (

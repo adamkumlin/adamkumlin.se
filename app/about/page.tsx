@@ -5,6 +5,8 @@ import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 import styles from "../../styles/About.module.css";
 
+// About page
+
 const About: React.FC = () => {
     return (
       <div className={styles.About}>
