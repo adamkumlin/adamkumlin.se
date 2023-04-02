@@ -2,15 +2,16 @@
   
   .Home {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
   }
   
       .siteHeading, .Home h2 {
-        font-family: 'Oxygen', sans-serif;
         text-align: center;
       }
   
         .siteHeading {
           color: white;
+          font-size: 250%;
           position: sticky;
           top: 19.92px;
           transition: transform 0.6s;
@@ -18,6 +19,7 @@
   
         .Home h2 {
           color: rgb(255, 242, 242);
+          font-weight: lighter;
         }
   
           .Home h2::before {

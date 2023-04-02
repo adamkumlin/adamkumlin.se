@@ -3,19 +3,18 @@ import * as React from "react";
 import Footer from "../components/Footer";
 import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
-import styles from "../../styles/Cv.module.css";
 
 // CV page
 
 const Cv: React.FC = () => {
   return (
-    <div className={styles.Cv}>
+    <div className="Cv">
 
       <Background/>
 
       <HomeButton/>
       
-      <h3>Om mig</h3>
+      <h2 className="heading">Om mig</h2>
 
       <p>
         Adam Kumlin<br></br>

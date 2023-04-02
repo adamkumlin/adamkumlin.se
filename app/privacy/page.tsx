@@ -15,7 +15,7 @@ const Privacy: React.FC = () => {
 
         <HomeButton/>
         
-        <h2>Behandling av personuppgifter på adamkumlin.se</h2>
+        <h2 className="heading">Behandling av personuppgifter på adamkumlin.se</h2>
 
         <p>
             Personlig integritet är centralt för adamkumlin.se. I denna policy förklarar jag hur jag samlar in och använder personuppgifter, jag beskriver också dina 

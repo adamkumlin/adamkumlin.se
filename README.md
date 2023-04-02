@@ -7,3 +7,6 @@ I initially created this website in feburary of 2022 using HTML, CSS and JavaScr
 - React
 - TypeScript
 - Next.js
+- first
+- second
+- third
