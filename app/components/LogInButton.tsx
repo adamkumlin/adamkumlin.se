@@ -6,17 +6,14 @@ import Link from "next/link";
 
 type LogInButtonProps = {
   text: string;
-}
+};
 
-const LogInButton: React.FC<LogInButtonProps> = ({text}) => {
-
-    return (
-      <div className="LogInButton">
-          <Link href="/login">
-            {text}
-          </Link> 
-      </div>
-    );
-  }
+const LogInButton: React.FC<LogInButtonProps> = ({ text }) => {
+  return (
+    <div className="LogInButton">
+      <Link href="/login">{text}</Link>
+    </div>
+  );
+};
 
 export default LogInButton;

@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { useState } from "react";
+import styles from "../../styles/Calculator.module.css";
 
 // Calculator component
 
@@ -103,22 +104,18 @@ const Calculator: React.FC = () => {
                     factorial = factorial * i;
                     console.log(factorial)
                 }
-                
-                
             }
 
             setOperatorUsed(false);
         }
 
-        
-
   return (
-    <div className="Calculator">
+    <div className={styles.Calculator}>
 
         <div>{number}</div>
         <div>{eventList}</div>
 
-        <div className="row1">
+        <div className={styles.row1}>
             <button value={Math.PI} onClick={handleInput}>&#960;</button>
             <button value={"log"} onClick={changeOperation}>log</button>
             <button value={"ln"} onClick={changeOperation}>ln</button>
@@ -127,7 +124,7 @@ const Calculator: React.FC = () => {
             <button onClick={reset}>CE</button>
         </div>
 
-        <div className="row2">
+        <div className={styles.row2}>
             <button value={"e"} onClick={handleInput}>e</button>
             <button value={"cos"} onClick={changeOperation}>cos</button>
             <button value={9} onClick={handleInput}>9</button>
@@ -135,7 +132,7 @@ const Calculator: React.FC = () => {
             <button value={7} onClick={handleInput}>7</button>
             <button value={"+"}onClick={changeOperation}>+</button>
         </div>
-        <div className="row3">
+        <div className={styles.row3}>
             <button value={"!"} onClick={changeOperation}>x!</button>
             <button value={"tan"} onClick={changeOperation}>tan</button>
             <button value={6} onClick={handleInput}>6</button>
@@ -144,7 +141,7 @@ const Calculator: React.FC = () => {
             <button value={"-"}onClick={changeOperation}>-</button>
         </div>
 
-        <div className="row4">
+        <div className={styles.row4}>
             <button value={"√"} onClick={changeOperation}>&#8730;</button>
             <button value={"sin"} onClick={changeOperation}>sin</button>
             <button value={3} onClick={handleInput}>3</button>
@@ -152,7 +149,7 @@ const Calculator: React.FC = () => {
             <button value={1} onClick={handleInput}>1</button>
             <button value={"*"}onClick={changeOperation}>*</button>
         </div>
-        <div className="row5">
+        <div className={styles.row5}>
             <button value={number} onClick={handleInput}>ANS</button>
             <button value={"^"}onClick={changeOperation}>x<sup>y</sup></button>
             <button value={0} onClick={handleInput}>0</button>

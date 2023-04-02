@@ -6,10 +6,9 @@ import styles from "../../styles/NavButton.module.css";
 
 type NavButtonProps = {
   goToMainContent: () => void;
-}
+};
 
 const NavButton: React.FC<NavButtonProps> = (props) => {
-
   return (
     <div className={styles.NavButton} onClick={props.goToMainContent}>
       <div className={styles.arrowLine0}></div>
@@ -17,5 +16,5 @@ const NavButton: React.FC<NavButtonProps> = (props) => {
       <div className={styles.arrowLine2}></div>
     </div>
   );
-}
-  export default NavButton;
+};
+export default NavButton;

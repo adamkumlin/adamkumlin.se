@@ -1,224 +1,262 @@
 /* roboto-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url('../public/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
-  src: url('../public/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../public/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../public/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../public/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../public/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  src: url("../public/roboto-v30-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../public/roboto-v30-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/roboto-v30-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../public/roboto-v30-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../public/roboto-v30-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/roboto-v30-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
 }
 
-
 @media screen and (min-width: 320px) {
-  
-  .About, .Contact, .Cv, .LogIn, .Privacy, .Projects {
+  .About,
+  .Contact,
+  .Cv,
+  .LogIn,
+  .Privacy,
+  .Projects {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     color: white;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
-    ul {
-      list-style-type: none;
-    }
-  
-      .backgroundVideo {
-        height: 1080px;
-        width: 500px;
-        object-fit: cover;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        z-index: -2;
-        pointer-events: none;
-      }
-  
-      .backgroundOverlay {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: black;
-        opacity: 0.7;
-      }
-  
-        .HomeButton {
-          position: absolute;
-          top: 19.92px;
-          left: 10px;
-        }
+  ul {
+    list-style-type: none;
+  }
 
-          .HomeButton a {
-            color: white;
-            text-decoration: none;
-          }
+  p {
+    margin-left: 30rem;
+    margin-right: 30rem;
+  }
 
-            .HomeButton a h1 {
-              margin: 0;
-              padding: 0;
-            }
+  .backgroundVideo {
+    height: 1080px;
+    width: 500px;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    pointer-events: none;
+  }
 
-            .LogInButton {
-              position: absolute;
-              right: 25px;
-              top: 10px;
-            }
-      
-              .LogInButton a {
-                color: white;
-                font-size: 120%;
-                text-decoration: none;
-                text-shadow: 3px 3px 3px red, 3px 3px 3px rgb(48, 241, 9), 3px 3px 3px rgb(208, 255, 0);
-              }
-  
-      .heading {
-        color: white;
-        margin-top: 5rem;
-        text-align: center;
-      }
-  
-      .Footer {
-        margin-top: auto;
-        text-align: center;
-      }
-  
-        .Footer p {
-          color: white;
-          font-weight: bold;
-          font-size: 150%;
-        }
-  
-        .Footer a {
-          color: white;
-        }
+  .backgroundOverlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: black;
+    opacity: 0.7;
+  }
 
-        .ContactOptions {
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-          flex-wrap: wrap;
-          height: 80vh;
-        }
-    
-          .email {
-            height: 150px;
-            width: 240px;
-          }
-    
-            .emailTooltip {
-              display: none;
-              background-color: black;
-              color: white;
-              padding: 2px;
-              border-radius: 5px;
-            }
-    
-            .email div:first-of-type {
-              position: absolute;
-              width: 0;
-              height: 0;
-              border: 120px solid transparent;
-              border-bottom: 0;
-              border-top: 100px solid rgb(206, 166, 114);
-            }
-    
-            .email div:nth-of-type(2) {
-              position: absolute;
-              width: 230px;
-              height: 140px;
-              background-color: rgb(255, 255, 255);
-              z-index: -1;
-              margin-left: 5px;
-              margin-top: 5px;
-            }
-    
-            .email div:last-of-type {
-              position: absolute;
-              width: 240px;
-              height: 150px;
-              background-color: rgb(216, 183, 133);
-              z-index: -1;
-            }
-    
-        .github img {
-          width: 200px;
-          height: 200px;
-        }
-    
-          .githubTooltip {
-            display: none;
-            background-color: black;
-            color: white;
-            padding: 2px;
-            border-radius: 5px;
-          }
+  .HomeButton {
+    position: absolute;
+    top: 19.92px;
+    left: 10px;
+  }
+
+  .HomeButton a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .HomeButton a h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .LogInButton {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+  }
+
+  .LogInButton a {
+    color: white;
+    font-size: 120%;
+    text-decoration: none;
+    text-shadow: 3px 3px 3px red, 3px 3px 3px rgb(48, 241, 9),
+      3px 3px 3px rgb(208, 255, 0);
+  }
+
+  .Projects iframe {
+    height: 50rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+  }
+
+  .heading {
+    color: white;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 200%;
+  }
+
+  .Footer {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .Footer p {
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+  }
+
+  .Footer a {
+    color: white;
+  }
+
+  .ContactOptions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80vh;
+  }
+
+  .email {
+    height: 150px;
+    width: 240px;
+  }
+
+  .emailTooltip {
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+  }
+
+  .email div:first-of-type {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 120px solid transparent;
+    border-bottom: 0;
+    border-top: 100px solid rgb(206, 166, 114);
+  }
+
+  .email div:nth-of-type(2) {
+    position: absolute;
+    width: 230px;
+    height: 140px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  .email div:last-of-type {
+    position: absolute;
+    width: 240px;
+    height: 150px;
+    background-color: rgb(216, 183, 133);
+    z-index: -1;
+  }
+
+  .github img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .githubTooltip {
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+  }
 }
 
 @media screen and (min-width: 961px) {
-  
   .backgroundVideo {
     height: 1080px;
     width: 1920px;
     transition: transform 1s linear;
   }
 
-    .NavBar:hover + .Background .backgroundVideo {
-      transform: scale(2);
-    }
+  .NavBar:hover + .Background .backgroundVideo {
+    transform: scale(2);
+  }
 
   .backgroundOverlay {
     transition: opacity 1s linear;
   }
 
-    .NavBar:hover + .Background .backgroundOverlay {
-      opacity: 0.9;
+  .NavBar:hover + .Background .backgroundOverlay {
+    opacity: 0.9;
+  }
+
+  .email:hover > .emailTooltip {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+  }
+
+  .email .animated:first-of-type {
+    animation: openEnvelopeTop 0.5s forwards linear;
+  }
+
+  @keyframes openEnvelopeTop {
+    0% {
+      transform: none;
     }
-
-    .email:hover > .emailTooltip {
-      display: block;
-      position: fixed;
-      overflow: hidden;
+    50% {
+      border-top-width: 0;
+      transform: none;
     }
-
-      .email .animated:first-of-type {
-        animation: openEnvelopeTop 0.5s forwards linear;
-      }
-
-        @keyframes openEnvelopeTop {
-          0%{transform: none;}
-          50%{border-top-width: 0; transform: none;}
-          66%{transform: rotate(180deg); border-top-width: 0;}
-          100%{transform: rotate(180deg) translateY(100px); z-index: -1;}
-        }
-
-      .email .animated:nth-of-type(2) {
-        animation: openEnvelopeMiddle 1s forwards;
-        animation-delay: 0.6s;
-      }
-
-        @keyframes openEnvelopeMiddle {
-          0%{transform: none;}
-          50%{transform: translateY(-150px);}
-          100%{transform: none; z-index: 0;}
-        }
-      
-    .github img:hover {
-      transform: scale(1.5);
-      transition: 1s;
+    66% {
+      transform: rotate(180deg);
+      border-top-width: 0;
     }
-
-    .github:hover > .githubTooltip {
-      display: block;
-      position: fixed;
-      overflow: hidden;
+    100% {
+      transform: rotate(180deg) translateY(100px);
+      z-index: -1;
     }
+  }
+
+  .email .animated:nth-of-type(2) {
+    animation: openEnvelopeMiddle 1s forwards;
+    animation-delay: 0.6s;
+  }
+
+  @keyframes openEnvelopeMiddle {
+    0% {
+      transform: none;
+    }
+    50% {
+      transform: translateY(-150px);
+    }
+    100% {
+      transform: none;
+      z-index: 0;
+    }
+  }
+
+  .github img:hover {
+    transform: scale(1.5);
+    transition: 1s;
+  }
+
+  .github:hover > .githubTooltip {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+  }
 }

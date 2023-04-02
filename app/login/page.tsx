@@ -8,19 +8,18 @@ import HomeButton from "../components/HomeButton";
 // Log In page
 
 const LogIn: React.FC = () => {
-
   return (
     <div className="LogIn">
-      <Background/>
+      <Background />
 
-      <HomeButton/>
+      <HomeButton />
 
       <h2 className="heading">Logga in</h2>
 
-      <LogInForm usernameLabel="Användarnamn" passwordLabel="Lösenord"/>
-      <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
+      <LogInForm usernameLabel="Användarnamn" passwordLabel="Lösenord" />
+      <Footer/>
     </div>
   );
-}
-  
+};
+
 export default LogIn;

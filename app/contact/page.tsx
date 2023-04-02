@@ -9,14 +9,13 @@ import Footer from "../components/Footer";
 // Contact page
 
 const Contact: React.FC = () => {
-
   const [isAnimated, setIsAnimated] = useState<boolean>(false);
   const emailTooltipRef = useRef<HTMLInputElement | null>(null);
   const githubTooltipRef = useRef<HTMLInputElement | null>(null);
 
-  window.onmousemove = function(e: MouseEvent) {
-    let x = (e.clientX + 20) + "px";
-    let y = (e.clientY + 20) + "px";
+  window.onmousemove = function (e: MouseEvent) {
+    let x = e.clientX + 20 + "px";
+    let y = e.clientY + 20 + "px";
 
     if (emailTooltipRef.current) {
       emailTooltipRef.current.style.top = y;
@@ -29,23 +28,26 @@ const Contact: React.FC = () => {
       githubTooltipRef.current.style.left = x;
     }
     // If ref's current object is defined, use it
-  }
+  };
 
-    return (
-      <div className="Contact">
+  return (
+    <div className="Contact">
+      <Background />
 
-        <Background/>
+      <h2 className="heading">Kontakta mig</h2>
 
-        <h2 className="heading">Kontakta mig</h2>
+      <HomeButton />
 
-        <HomeButton/>
+      <ContactOptions
+        setIsAnimated={setIsAnimated}
+        isAnimated={isAnimated}
+        ref={{ ref0: emailTooltipRef, ref1: githubTooltipRef }}
+      />
+      {/* Send ref object to component, it contains the two refs defined at the top-level */}
 
-        <ContactOptions setIsAnimated={setIsAnimated} isAnimated={isAnimated} ref={{ref0: emailTooltipRef, ref1: githubTooltipRef}}/>
-        {/* Send ref object to component, it contains the two refs defined at the top-level */}
+      <Footer />
+    </div>
+  );
+};
 
-        <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
-      </div>
-    );
-  }
-  
-  export default Contact;
+export default Contact;

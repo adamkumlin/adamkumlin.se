@@ -7,36 +7,40 @@ import Calculator from "../components/Calculator";
 
 // Projects page
 
-type ProjectsProps = {
-  label2022: number;
-  ehnsLabel: string;
-  ehnsDescription: string;
-  label2023: number;
-}
+const Projects: React.FC = () => {
+  return (
+    <div className="Projects">
+      <Background />
 
-const Projects: React.FC<ProjectsProps> = ({label2022, ehnsLabel, ehnsDescription, label2023}) => {
+      <HomeButton />
 
-    return (
-      <div className="Projects">
-        <Background/>
+      <h2 className="heading">Tidigare projekt</h2>
 
-        <HomeButton/>
+      <h3>2022</h3>
 
-        <h2>{label2022}</h2>
-        
-        <h3>{ehnsLabel}</h3>
-        
-        <p>{ehnsDescription}</p>
+      <h4>Ehns BBQ</h4>
 
-        <h2>{label2023}</h2>
+      <p>
+        Våren 2022 hade jag ett projekt i skolan där vi skulle hitta en extern
+        organisation (exempelvis ett företag eller en annan organisation) som
+        antingen inte hade en webbplats eller redan hade en webbplats som de
+        önskade göra om. Vi fick alltså i uppgift att skapa en webbplats åt ett
+        företag och jag hittade företaget Ehns BBQ som behövde en webbplats.
+        Webbplatsen är skapad med HTML, CSS och JavaScript. Dessutom har PHP
+        använts på backend:en.
+      </p>
 
-        <iframe src="https://adamkumlin.se/ehnsbbq/index.html"/>
+      <iframe src="https://adamkumlin.se/ehnsbbq/index.html" />
 
-        <Calculator/>
+      <h3>2023</h3>
 
-        <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
-      </div>
-    );
-  }
+      <h4>En simpel miniräknare</h4>
+
+      <Calculator />
+
+      <Footer/>
+    </div>
+  );
+};
 
 export default Projects;

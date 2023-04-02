@@ -4,19 +4,13 @@ import Link from "next/link";
 
 // Footer component
 
-type FooterProps = {
-  privacyLabel: string;
-  copyrightLabel: string;
-}
-
-const Footer: React.FC<FooterProps> = ({privacyLabel, copyrightLabel}) => {
-
+const Footer: React.FC= () => {
   return (
     <div className="Footer">
-        <p>{copyrightLabel}</p>
-        <Link href="privacy">{privacyLabel}</Link>
+      <p>© 2022 Adam Kumlin</p>
+      <Link href="privacy">Integritetspolicy</Link>
     </div>
   );
-}
+};
 
 export default Footer;

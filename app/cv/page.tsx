@@ -9,11 +9,10 @@ import HomeButton from "../components/HomeButton";
 const Cv: React.FC = () => {
   return (
     <div className="Cv">
+      <Background />
 
-      <Background/>
+      <HomeButton />
 
-      <HomeButton/>
-      
       <h2 className="heading">Om mig</h2>
 
       <p>
@@ -63,8 +62,9 @@ const Cv: React.FC = () => {
 
       <p>
         Mycket van att jobba med Google-produkter som Google Drive och Gmail. Är
-        även mycket van med Office-paketet. Har professionella kunskaper inom HTML, CSS och
-        JavaScript, är också mycket van vid ramverk som React. Har även grundläggande kunskaper inom C# och Python.
+        även mycket van med Office-paketet. Har professionella kunskaper inom
+        HTML, CSS och JavaScript, är också mycket van vid ramverk som React. Har
+        även grundläggande kunskaper inom C# och Python.
       </p>
 
       <h3>Körkort och referenser</h3>
@@ -74,9 +74,9 @@ const Cv: React.FC = () => {
         <li>Referenser ges på begäran.</li>
       </ul>
 
-      <Footer copyrightLabel={"© 2022 Adam Kumlin"} privacyLabel={"Integritetspolicy"}/>
+      <Footer/>
     </div>
   );
-}
+};
 
 export default Cv;
