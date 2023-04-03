@@ -16,4 +16,6 @@ const HomeButton: React.FC = forwardRef<HTMLDivElement>((props, ref) => {
   );
 });
 
+HomeButton.displayName = "HomeButton";
+
 export default HomeButton;

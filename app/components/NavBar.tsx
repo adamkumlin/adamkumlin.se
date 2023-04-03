@@ -27,4 +27,6 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>((props, ref) => {
     </div>
   )});
 
+  NavBar.displayName = "NavBar";
+
   export default NavBar;

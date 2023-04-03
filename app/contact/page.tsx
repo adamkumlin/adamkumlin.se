@@ -2,7 +2,8 @@
 import * as React from "react";
 import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
-import ContactOptions from "../components/ContactOptions";
+import ContactEmailOption from "../components/ContactEmailOption";
+import ContactLinkOption from "../components/ContactLinkOption";
 import { useRef, useState } from "react";
 import Footer from "../components/Footer";
 
@@ -10,22 +11,22 @@ import Footer from "../components/Footer";
 
 const Contact: React.FC = () => {
   const [isAnimated, setIsAnimated] = useState<boolean>(false);
-  const emailTooltipRef = useRef<HTMLInputElement | null>(null);
-  const githubTooltipRef = useRef<HTMLInputElement | null>(null);
+  const emailTooltipRef = useRef<HTMLSpanElement>(null);
+  const linkTooltipRef = useRef<HTMLSpanElement>(null);
 
   window.onmousemove = function (e: MouseEvent) {
     let x = e.clientX + 20 + "px";
     let y = e.clientY + 20 + "px";
-
+    
     if (emailTooltipRef.current) {
       emailTooltipRef.current.style.top = y;
       emailTooltipRef.current.style.left = x;
     }
     // If ref's current object is defined, use it
 
-    if (githubTooltipRef.current) {
-      githubTooltipRef.current.style.top = y;
-      githubTooltipRef.current.style.left = x;
+    if (linkTooltipRef.current) {
+      linkTooltipRef.current.style.top = y;
+      linkTooltipRef.current.style.left = x;
     }
     // If ref's current object is defined, use it
   };
@@ -38,12 +39,19 @@ const Contact: React.FC = () => {
 
       <HomeButton />
 
-      <ContactOptions
+      <ContactEmailOption
         setIsAnimated={setIsAnimated}
         isAnimated={isAnimated}
-        ref={{ ref0: emailTooltipRef, ref1: githubTooltipRef }}
+        ref={emailTooltipRef}
+        name="E-post"
       />
-      {/* Send ref object to component, it contains the two refs defined at the top-level */}
+      
+      <ContactLinkOption
+        link="https://github.com/adamkumlin"
+        ref={linkTooltipRef}
+        image="/github-icon.svg"
+        name="GitHub"
+      />
 
       <Footer />
     </div>
