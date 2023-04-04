@@ -20,16 +20,25 @@ const Home: React.FC = () => {
     // If ref object contains an element, use it
   }
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 1) {
-      siteHeadingRef.current!.style.transform = "translateX(-42vw)";
-    } else if (window.scrollY > 600) {
-      navBarRef.current!.style.animation = "navBarFade 2s";
-    } else {
-      navBarRef.current!.style.animation = "null";
-      siteHeadingRef.current!.style.transform = "none";
-    }
-  });
+  if (typeof window !== "undefined") {
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 1) {
+
+        if (siteHeadingRef.current) { siteHeadingRef.current.style.transform = "translateX(-42vw)"; }
+
+      } else if (window.scrollY > 600) {
+
+        if (navBarRef.current) { navBarRef.current.style.animation = "navBarFade 2s"; }
+
+      } else {
+
+        if (navBarRef.current) {navBarRef.current.style.animation = "null";}
+        
+        if (siteHeadingRef.current) {siteHeadingRef.current.style.transform = "none";}
+      }
+    });
+  }
   // For the scroll animation
 
   return (
