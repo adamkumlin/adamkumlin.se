@@ -129,54 +129,43 @@
 
   .Contact .Footer {
     bottom: 0;
-    position:relative;
+    position: relative;
     transform: translateY(75vh);
   }
 
-
-  .ContactEmailOption {
-    width: 290px;
-    height: 200px;
-    position: absolute;
-    margin-top: 13rem;
-    margin-left: 20vw;
+  .contactOptions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    justify-content: space-evenly;
   }
 
-  .ContactLinkOption {
-    width: 200px;
-    height: 200px;
-    margin-top: 13rem;
-    position: absolute;
-    margin-left: 60vw;
+  .ContactEmailOption {
+    width: 240px;
+    height: 150px;
+    display: block;
   }
 
   .email {
+    width: 240px;
+    height: 150px;
     display: block;
-    width: 290px;
-    height: 200px;
-  }
-
-  .emailTooltip {
-    display: none;
-    background-color: black;
-    color: white;
-    padding: 2px;
-    border-radius: 5px;
   }
 
   .email div:first-of-type {
     position: absolute;
     width: 0;
     height: 0;
-    border: 146px solid transparent;
+    border: 120px solid transparent;
     border-bottom: 0;
-    border-top: 140px solid rgb(206, 166, 114);
+    border-top: 100px solid rgb(206, 166, 114);
   }
 
   .email div:nth-of-type(2) {
     position: absolute;
-    width: 280px;
-    height: 190px;
+    width: 230px;
+    height: 140px;
     background-color: rgb(255, 255, 255);
     z-index: -1;
     margin-left: 5px;
@@ -185,18 +174,18 @@
 
   .email div:last-of-type {
     position: absolute;
-    width: 290px;
-    height: 200px;
+    width: 240px;
+    height: 150px;
     background-color: rgb(216, 183, 133);
     z-index: -1;
   }
 
-  .linkTooltip {
+  .linkTooltip, .emailTooltip {
     display: none;
-    background-color: black;
     color: white;
-    padding: 2px;
-    border-radius: 5px;
+    font-size: 120%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -219,12 +208,6 @@
     opacity: 0.9;
   }
 
-  .email:hover > .emailTooltip {
-    display: block;
-    position: fixed;
-    overflow: hidden;
-  }
-
   .email .animated:first-of-type {
     animation: openEnvelopeTop 0.5s forwards linear;
   }
@@ -242,7 +225,7 @@
       border-top-width: 0;
     }
     100% {
-      transform: rotate(180deg) translateY(140px);
+      transform: rotate(180deg) translateY(100px);
       z-index: -1;
     }
   }
@@ -270,9 +253,7 @@
     transition: 1s;
   }
 
-  .link:hover > .linkTooltip {
+  .ContactLinkOption:hover > .linkTooltip, .ContactEmailOption:hover > .emailTooltip {
     display: block;
-    position: fixed;
-    overflow: hidden;
   }
 }
