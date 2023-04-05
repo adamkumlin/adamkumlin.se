@@ -1,14 +1,15 @@
 "use client";
 import * as React from "react";
+import styles from "../../styles/Home.module.css";
 
 // Background component
 
 const Background: React.FC = () => {
   return (
-    <div className="Background">
-      <div className="backgroundOverlay"></div>
+    <div className={styles.Background}>
+      <div className={styles.backgroundOverlay}></div>
       <video
-        className="backgroundVideo"
+        className={styles.backgroundVideo}
         autoPlay={true}
         muted={true}
         loop={true}

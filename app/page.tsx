@@ -6,6 +6,7 @@ import NavButton from "./components/NavButton";
 import Background from "./components/Background";
 import LogInButton from "./components/LogInButton";
 import { useRef } from "react";
+import { ScrollReveal } from "reveal-on-scroll-react";
 
 // Home page/start page
 
@@ -21,20 +22,10 @@ const Home: React.FC = () => {
   }
 
   if (typeof window !== "undefined") {
-
     window.addEventListener("scroll", () => {
       if (window.scrollY > 1) {
-
         if (siteHeadingRef.current) { siteHeadingRef.current.style.transform = "translateX(-42vw)"; }
-
-      } else if (window.scrollY > 600) {
-
-        if (navBarRef.current) { navBarRef.current.style.animation = "navBarFade 2s"; }
-
       } else {
-
-        if (navBarRef.current) {navBarRef.current.style.animation = "null";}
-        
         if (siteHeadingRef.current) {siteHeadingRef.current.style.transform = "none";}
       }
     });
@@ -49,7 +40,9 @@ const Home: React.FC = () => {
       <h2></h2>
       <LogInButton text={"Logga in"} />
       <NavButton goToMainContent={goToMainContent} />
-      <NavBar ref={navBarRef} />
+      <ScrollReveal.div animation="fade-in" duration={2}>
+        <NavBar ref={navBarRef}/>
+      </ScrollReveal.div>
       <Background />
       <Footer/>
     </div>

@@ -18,6 +18,7 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "reveal-on-scroll-react": "^0.0.6",
     "typescript": "5.0.2",
     "webpack": "^4.46.0"
   },

@@ -1,19 +1,31 @@
 .Calculator button {
-    width: 60px;
-    height: 60px;
-  }
+  width: 60px;
+  height: 60px;
+}
 
-    .Calculator button[value="9"], .Calculator button[value="8"], .Calculator button[value="7"], .Calculator button[value="6"],
-    .Calculator button[value="5"], .Calculator button[value="4"], .Calculator button[value="3"], .Calculator button[value="2"],
-    .Calculator button[value="1"], .Calculator button[value="0"], .Calculator button[value="-"], .Calculator button[value="="], 
-    .Calculator button[value="+"], .Calculator button[value="."], .Calculator button[value="/"], .Calculator button[value="*"] {
-      background-color: rgb(153, 185, 212);
-    }
+.Calculator button[value="9"],
+.Calculator button[value="8"],
+.Calculator button[value="7"],
+.Calculator button[value="6"],
+.Calculator button[value="5"],
+.Calculator button[value="4"],
+.Calculator button[value="3"],
+.Calculator button[value="2"],
+.Calculator button[value="1"],
+.Calculator button[value="0"],
+.Calculator button[value="-"],
+.Calculator button[value="="],
+.Calculator button[value="+"],
+.Calculator button[value="."],
+.Calculator button[value="/"],
+.Calculator button[value="*"] {
+  background-color: rgb(153, 185, 212);
+}
 
-    .Calculator .row1 button:last-of-type {
-      background-color: rgb(219, 63, 36);
-    }
+.Calculator .row1 button:last-of-type {
+  background-color: rgb(219, 63, 36);
+}
 
-    .Calculator button[value="="] {
-      background-color: lime;
-    }
+.Calculator button[value="="] {
+  background-color: lime;
+}
