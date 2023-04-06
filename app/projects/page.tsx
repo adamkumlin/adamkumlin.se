@@ -1,7 +1,5 @@
 "use client";
 import * as React from "react";
-import Footer from "../components/Footer";
-import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 import Calculator from "../components/Calculator";
 
@@ -10,7 +8,6 @@ import Calculator from "../components/Calculator";
 const Projects: React.FC = () => {
   return (
     <div className="Projects">
-      <Background />
 
       <HomeButton />
 
@@ -37,8 +34,6 @@ const Projects: React.FC = () => {
       <h4>En simpel miniräknare</h4>
 
       <Calculator />
-
-      <Footer/>
     </div>
   );
 };

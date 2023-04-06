@@ -1,7 +1,5 @@
 "use client";
 import * as React from "react";
-import Footer from "../components/Footer";
-import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 
 // About page
@@ -9,7 +7,6 @@ import HomeButton from "../components/HomeButton";
 const About: React.FC = () => {
   return (
     <div className="About">
-      <Background />
 
       <HomeButton />
 
@@ -29,7 +26,7 @@ const About: React.FC = () => {
         frontend-frameworks som React. Utbildningen har också givit mig kunskap
         inom redaktionellt arbete som skrivande och fotoredigering. Slutligen
         har användbarhet, att en produkt ska kunna vara tillgänglig och enkel
-        att använda, varit centralt under hela utbildningen.{" "}
+        att använda, varit centralt under hela utbildningen.
       </p>
 
       <p>
@@ -37,7 +34,6 @@ const About: React.FC = () => {
         och Node.js, samt med databasspråket SQL.
       </p>
 
-      <Footer/>
     </div>
   );
 };

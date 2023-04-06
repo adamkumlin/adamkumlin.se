@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import Footer from "./components/Footer";
+import Background from "./components/Background";
 
 export default function RootLayout({
   children,
@@ -7,7 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Background/>
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }

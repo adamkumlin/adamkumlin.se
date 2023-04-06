@@ -1,11 +1,9 @@
 "use client";
 import * as React from "react";
-import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 import ContactEmailOption from "../components/ContactEmailOption";
 import ContactLinkOption from "../components/ContactLinkOption";
 import { useState } from "react";
-import Footer from "../components/Footer";
 
 // Contact page
 
@@ -14,7 +12,6 @@ const Contact: React.FC = () => {
 
   return (
     <div className="Contact">
-      <Background />
 
       <h2 className="heading">Kontakta mig</h2>
 
@@ -39,8 +36,6 @@ const Contact: React.FC = () => {
         name="Discord"
         />
       </div>
-
-      <Footer />
     </div>
   );
 };

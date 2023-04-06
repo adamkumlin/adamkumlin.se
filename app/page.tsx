@@ -1,9 +1,7 @@
 "use client";
 import styles from "../styles/Home.module.css";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import NavButton from "./components/NavButton";
-import Background from "./components/Background";
 import LogInButton from "./components/LogInButton";
 import { useRef } from "react";
 import { ScrollReveal } from "reveal-on-scroll-react";
@@ -43,8 +41,6 @@ const Home: React.FC = () => {
       <ScrollReveal.div animation="fade-in" duration={2}>
         <NavBar ref={navBarRef}/>
       </ScrollReveal.div>
-      <Background />
-      <Footer/>
     </div>
   );
 };

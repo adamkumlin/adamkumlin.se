@@ -1,7 +1,5 @@
 "use client";
 import * as React from "react";
-import Footer from "../components/Footer";
-import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 
 // Privacy policy page
@@ -9,7 +7,6 @@ import HomeButton from "../components/HomeButton";
 const Privacy: React.FC = () => {
   return (
     <div className="Privacy">
-      <Background />
 
       <HomeButton />
 
@@ -135,8 +132,6 @@ const Privacy: React.FC = () => {
         . Notera att om du gör detta så accepterar du att jag behandlar dina
         personuppgifter enligt denna integritetspolicy.
       </p>
-
-      <Footer/>
     </div>
   );
 };

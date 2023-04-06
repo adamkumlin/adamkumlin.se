@@ -1,7 +1,5 @@
 "use client";
 import * as React from "react";
-import Footer from "../components/Footer";
-import Background from "../components/Background";
 import HomeButton from "../components/HomeButton";
 
 // CV page
@@ -9,7 +7,6 @@ import HomeButton from "../components/HomeButton";
 const Cv: React.FC = () => {
   return (
     <div className="Cv">
-      <Background />
 
       <HomeButton />
 
@@ -73,8 +70,6 @@ const Cv: React.FC = () => {
         <li>Innehar B-körkort.</li>
         <li>Referenser ges på begäran.</li>
       </ul>
-
-      <Footer/>
     </div>
   );
 };
