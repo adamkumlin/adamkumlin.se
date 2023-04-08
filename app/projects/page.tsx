@@ -2,6 +2,7 @@
 import * as React from "react";
 import HomeButton from "../components/HomeButton";
 import Calculator from "../components/Calculator";
+import HangMan from "../components/HangMan";
 
 // Projects page
 
@@ -34,6 +35,10 @@ const Projects: React.FC = () => {
       <h4>En simpel miniräknare</h4>
 
       <Calculator />
+
+      <h4>Hänga gubbe</h4>
+
+      <HangMan/>
     </div>
   );
 };

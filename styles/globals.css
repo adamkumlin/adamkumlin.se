@@ -168,6 +168,11 @@
     margin-right: 0;
     margin-left: 0;
   }
+
+  .HangMan img.hidden {
+    display: none;
+  }
+
 }
 
 @media screen and (min-width: 961px) {
