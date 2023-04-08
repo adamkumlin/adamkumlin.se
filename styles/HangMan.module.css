@@ -1,0 +1,27 @@
+.HangMan .hidden {
+    display: none;
+  }
+
+  .HangMan img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .HangMan p {
+    font-family: 'Poppins';
+  }
+
+  .HangMan label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+  }
+
+  .HanMan button, .HangMan input {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
