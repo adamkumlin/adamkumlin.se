@@ -1,5 +1,5 @@
 "use client";
-import * as React from "react";
+import React from "react";
 import styles from "../../styles/NavButton.module.css";
 
 // Nav Button component

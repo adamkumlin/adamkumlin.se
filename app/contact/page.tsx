@@ -1,9 +1,8 @@
 "use client";
-import * as React from "react";
+import React, { useState } from "react";
 import HomeButton from "../components/HomeButton";
 import ContactEmailOption from "../components/ContactEmailOption";
 import ContactLinkOption from "../components/ContactLinkOption";
-import { useState } from "react";
 
 // Contact page
 

@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useState, useId } from "react";
+import React, { useState, useId } from "react";
 import Image from "next/image";
 import styles from "../../styles/HangMan.module.css";
 
