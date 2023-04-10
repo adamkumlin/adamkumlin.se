@@ -23,14 +23,22 @@ const RemindMe: React.FC = () => {
     setReminders(current => [...current, {message: "", date: todaysDate, time: currentTime, id: Id}])
   }
 
+  function deleteReminder(id: number) {
+
+    const updatedReminders = reminders.filter(reminder => reminder.id !== id);
+
+    setReminders(updatedReminders)
+  }
+
   return (
     <div className={styles.RemindMe}>
 
         <button onClick={() => addReminder()}>New reminder</button>
         <div className="reminders">
-          {reminders.map((reminder, index) => {
+          {reminders.map(reminder => {
             return (
-              <div className="reminder" key={index}>
+              <div className="reminder" key={reminder.id}>
+                <button onClick={() => deleteReminder(reminder.id)}>-</button>
                 <input type="text" onChange={(e) => reminder.message = e.target.value}/>
                 <p>{reminder.date}, kl. {reminder.time}</p>
               </div>
