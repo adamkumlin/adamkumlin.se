@@ -11,6 +11,7 @@
     vertical-align: middle;
     background-color: white;
     padding: 1px;
+    cursor: pointer;
 }
 
 .reminderInput {
@@ -29,3 +30,10 @@
 .hidden {
     display: none;
 }
+
+div.shown {
+    background-color: rgb(230, 230, 230);
+    display: inline-block;
+    position: absolute;
+}
+

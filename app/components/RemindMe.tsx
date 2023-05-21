@@ -21,15 +21,6 @@ const RemindMe: React.FC = () => {
   let currentTime: string | string[] = date.getHours() + ":" + date.getMinutes();
   const Id = Date.now();
 
-  if (currentTime.charAt(5) === undefined ) {
-    currentTime = currentTime.split(":");
-    console.log(currentTime)
-    currentTime[1] = "0" + currentTime[1];
-
-    currentTime = currentTime.join(":")
-    
-  }
-
   function handleShowOptions(id: number) {
 
     const updatedReminders = reminders.map(reminder => {
