@@ -21,8 +21,12 @@ const Cv: React.FC = () => {
 
       <ul>
         <li>
+          .NET Utvecklare, Teknikhögskolan Göteborg, aug 2023 - nu
+        </li>
+
+        <li>
           Webbredaktörsprogrammet inriktning frontend, Högskolan i Borås, aug
-          2020 - juni 2023
+          2020 - nu
         </li>
 
         <li>
@@ -60,8 +64,8 @@ const Cv: React.FC = () => {
       <p>
         Mycket van att jobba med Google-produkter som Google Drive och Gmail. Är
         även mycket van med Office-paketet. Har professionella kunskaper inom
-        HTML, CSS och JavaScript, är också mycket van vid ramverk som React. Har
-        även grundläggande kunskaper inom C# och Python.
+        HTML, CSS och JavaScript/Typescript (även ramverk), C#/.NET och SQL. Har
+        även kunskaper inom Java.
       </p>
 
       <h3>Körkort och referenser</h3>
