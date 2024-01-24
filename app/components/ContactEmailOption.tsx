@@ -4,11 +4,11 @@ import Link from "next/link";
 
 // Contact Email Option component
 
-type ContactEmailOptionProps = {
+interface ContactEmailOptionProps {
   setIsAnimated: React.Dispatch<React.SetStateAction<boolean>>;
   isAnimated: boolean;
   name: string;
-};
+}
 
 const ContactEmailOption: React.FC<ContactEmailOptionProps> = ({ setIsAnimated, isAnimated, name }) => {
 

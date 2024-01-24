@@ -25,13 +25,7 @@ const Cv: React.FC = () => {
         </li>
 
         <li>
-          Webbredaktörsprogrammet inriktning frontend, Högskolan i Borås, aug
-          2020 - nu
-        </li>
-
-        <li>
-          Samhällsvetenskapsprogrammet inriktning Beteende, Aranäsgymnasiet
-          Kungsbacka, aug 2015 - juni 2018
+          Kandidatexamen i Informationsarkitektur inrikting Frontendutveckling, Högskolan i Borås, aug 2020 - jan 2024
         </li>
       </ul>
 
@@ -54,8 +48,7 @@ const Cv: React.FC = () => {
 
       <ul>
         <li>Svenska, modersmål</li>
-        <li>Engelska, mycket bra i tal och skrift</li>
-        <li>Tyska, grundläggande kunskaper</li>
+        <li>Engelska, flytande i tal och skrift</li>
         <li>Ryska, grundläggande kunskaper</li>
       </ul>
 

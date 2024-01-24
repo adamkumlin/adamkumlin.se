@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // Contact Link Option component
 
-type ContactLinkOptionProps = {
+interface ContactLinkOptionProps {
   name: string;
   image: string;
   link: string;

@@ -7,7 +7,6 @@ import HomeButton from "../components/HomeButton";
 const About: React.FC = () => {
   return (
     <div className="About">
-
       <HomeButton />
 
       <h2 className="heading">Hej!</h2>
@@ -20,20 +19,20 @@ const About: React.FC = () => {
       </p>
 
       <p>
-        Jag går just nu sista året på Webbredaktörsprogrammet på Högskolan i
-        Borås. Genom min utbildning har jag lärt mig programmering med
-        JavaScript samt kodning med HTML och CSS. Jag är också kunnig inom flera
-        frontend-frameworks som React. Utbildningen har också givit mig kunskap
-        inom redaktionellt arbete som skrivande och fotoredigering. Slutligen
-        har användbarhet, att en produkt ska kunna vara tillgänglig och enkel
-        att använda, varit centralt under hela utbildningen.
+        Jag har precis tagit min fil.kand i Informationsarkitektur inriktning
+        Frontendutveckling. Genom min utbildning har jag lärt mig programmering
+        med JavaScript samt kodning med HTML och CSS. Jag är också kunnig inom
+        flera frontend-frameworks som React. Utbildningen har också givit mig
+        kunskap inom redaktionellt arbete som skrivande och fotoredigering.
+        Slutligen har användbarhet, att en produkt ska kunna vara tillgänglig
+        och enkel att använda, varit centralt under hela utbildningen.
       </p>
 
       <p>
-        Jag är också relativt kunnig gällande backend-utveckling med PHP, Python
-        och Node.js, samt med databasspråket SQL.
+        Just nu studerar jag till .NET-utvecklare på Teknikhögskolan. Här lär
+        vi oss om C#/.NET-utveckling, webbutveckling med HTML, CSS,
+        JavaScript/TypeScript, databasmanipulation med SQL i SQL Server, m.m.
       </p>
-
     </div>
   );
 };

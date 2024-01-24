@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import styles from "../styles/Home.module.css";
 import NavBar from "./components/NavBar";
 import NavButton from "./components/NavButton";
-import LogInButton from "./components/LogInButton";
 import { ScrollReveal } from "reveal-on-scroll-react";
 
 // Home page/start page
@@ -36,7 +35,6 @@ const Home: React.FC = () => {
         Adam Kumlin
       </h1>
       <h2></h2>
-      <LogInButton text={"Logga in"} />
       <NavButton goToMainContent={goToMainContent} />
       <ScrollReveal.div animation="fade-in" duration={2}>
         <NavBar ref={navBarRef}/>
