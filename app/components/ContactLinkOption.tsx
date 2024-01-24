@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "../../styles/ContactLinkOption.module.css";
 
 // Contact Link Option component
 
@@ -15,11 +16,11 @@ const ContactLinkOption: React.FC<ContactLinkOptionProps> = ({name, image, link}
 // Forward the refs from the parent component with forwardRef, define type ContactLinkOptionsProps and pass it to the component
 
   return (
-    <div className="ContactLinkOption">
-      <Link href={link} target="_blank" rel="noreferrer" className="link">
+    <div className={styles.ContactLinkOption}>
+      <Link href={link} target="_blank" rel="noreferrer" className={styles.link}>
         <Image width="200" height="200" src={image} alt={name}/>
       </Link>
-      <p className="linkTooltip">{name}</p>
+      <p className={styles.linkTooltip}>{name}</p>
     </div>
   );
 };

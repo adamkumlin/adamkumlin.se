@@ -34,7 +34,8 @@ const Home: React.FC = () => {
       <h1 className={styles.siteHeading} ref={siteHeadingRef}>
         Adam Kumlin
       </h1>
-      <h2></h2>
+      <h2>Fullstackutvecklare</h2>
+      <h3>Som kan </h3>
       <NavButton goToMainContent={goToMainContent} />
       <ScrollReveal.div animation="fade-in" duration={2}>
         <NavBar ref={navBarRef}/>

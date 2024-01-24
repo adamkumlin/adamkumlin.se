@@ -1,0 +1,14 @@
+.ContactLinkOption .linkTooltip {
+    display: none;
+    color: white;
+    font-size: 120%;
+}
+
+.ContactLinkOption img:hover {
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+.ContactLinkOption:hover>.linkTooltip {
+    display: block;
+}

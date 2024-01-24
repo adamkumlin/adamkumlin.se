@@ -1,40 +1,47 @@
-@media screen and (min-width: 320px) {
   .Home {
-    text-align: center;
     font-family: "Roboto", sans-serif;
   }
 
-  .siteHeading,
-  .Home h2 {
-    text-align: center;
-  }
-
   .siteHeading {
-    color: white;
-    font-size: 250%;
+    font-size: 500%;
     position: sticky;
     top: 19.92px;
     transition: transform 0.6s;
   }
 
   .Home h2 {
-    color: rgb(255, 242, 242);
-    font-weight: lighter;
+    margin-top: 1rem;
+    font-size: 250%;
+    font-weight: normal;
+    animation: effectMiddle 10s infinite forwards;
   }
 
-  .Home h2::before {
+  .Home h3 {
+    margin-top: 5rem;
+    font-weight: lighter;
+    font-size: 200%;
+  }
+
+  .Home h3::after {
     content: "";
     animation: typing 10s infinite forwards;
   }
 
+  .Home h2::before {
+    content: "";
+    animation: effectBefore 10s infinite forwards;
+    color: rgb(150, 150, 150);
+  }
+
   .Home h2::after {
     content: "";
-    border-right: 0.15rem solid rgb(255, 211, 128);
-    animation: blinkText 0.75s linear infinite;
+    animation: effectAfter 10s infinite forwards;
+    color: rgb(150, 150, 150);
   }
 
   @media (prefers-reduced-motion) {
-    .Home h2::after {
+
+    .Home h3::after {
       animation: none;
     }
   }
@@ -43,147 +50,359 @@
     0% {
       content: "";
     }
+
     1% {
-      content: "P";
+      content: "C";
     }
+
     2% {
-      content: "Pr";
+      content: "C#";
+      color: rgb(231, 231, 231);
     }
-    3% {
-      content: "Pro";
-    }
-    4% {
-      content: "Prog";
-    }
-    5% {
-      content: "Progr";
-    }
-    6% {
-      content: "Progra";
-    }
-    7%,
-    8% {
-      content: "Progran";
-    }
-    9%,
-    10% {
-      content: "Progra";
-    }
-    11% {
-      content: "Program";
-    }
-    12% {
-      content: "Programm";
-    }
+
+    3%,
     13% {
-      content: "Programme";
+      content: "C#";
+      color: rgb(17, 172, 17);
     }
+
     14% {
-      content: "Programmer";
+      color: rgb(231, 231, 231);
+      content: "C#";
     }
+
     15% {
-      content: "Programmera";
+      content: "C";
     }
+
     16% {
-      content: "Programmerar";
+      content: "";
     }
+
     17% {
-      content: "Programmerare";
+      content: "H";
     }
+
     18% {
-      content: "Programmerare ";
+      content: "HT";
     }
+
     19% {
-      content: "Programmerare o";
+      content: "HTM";
+      color: rgb(231, 231, 231);
     }
-    20% {
-      content: "Programmerare oc";
-    }
-    21% {
-      content: "Programmerare och";
-    }
-    22% {
-      content: "Programmerare och ";
-    }
-    23% {
-      content: "Programmerare och u";
-    }
-    24% {
-      content: "Programmerare och ut";
-    }
-    25% {
-      content: "Programmerare och utv";
-    }
-    26% {
-      content: "Programmerare och utve";
-    }
-    27%,
-    28% {
-      content: "Programmerare och utv";
-    }
-    29% {
-      content: "Programmerare och ut";
-    }
+
+    20%,
     30% {
-      content: "Programmerare och u";
+      content: "HTML";
+      color: rgb(255, 154, 3);
     }
+
     31% {
-      content: "Programmerare och ";
+      content: "HTM";
+      color: rgb(231, 231, 231);
     }
+
     32% {
-      content: "Programmerare och w";
+      content: "HT";
     }
+
     33% {
-      content: "Programmerare och we";
+      content: "H";
     }
+
     34% {
-      content: "Programmerare och web";
+      content: "";
     }
+
     35% {
-      content: "Programmerare och webb";
+      content: "C";
     }
+
     36% {
-      content: "Programmerare och webbu";
+      content: "CS";
+      color: rgb(231, 231, 231);
     }
-    37% {
-      content: "Programmerare och webbut";
+
+    37%,
+    47% {
+      content: "CSS";
+      color: rgb(35, 124, 226)
     }
-    38% {
-      content: "Programmerare och webbutv";
+
+    48% {
+      content: "CS";
+      color: rgb(231, 231, 231);
     }
-    39% {
-      content: "Programmerare och webbutve";
+
+    49% {
+      content: "C";
     }
-    40% {
-      content: "Programmerare och webbutvec";
+
+    50% {
+      content: "";
     }
-    41% {
-      content: "Programmerare och webbutveck";
+
+    51% {
+      content: "J";
     }
-    42% {
-      content: "Programmerare och webbutveckl";
+
+    52% {
+      content: "Ja";
     }
-    43% {
-      content: "Programmerare och webbutveckla";
+
+    53% {
+      content: "Jav;
+
     }
-    44% {
-      content: "Programmerare och webbutvecklar";
+
+    54% {
+      content: "Java";
     }
-    45% {
-      content: "Programmerare och webbutvecklare";
+
+    55% {
+      content: "JavaS";
     }
+
+    56% {
+      content: "JavaSc";
+    }
+
+    57% {
+      content: "JavaScr;
+
+    }
+
+    58% {
+      content: "JavaScri";
+    }
+
+    59% {
+      content: "JavaScrip";
+      color: rgb(231, 231, 231);
+    }
+
+    60%,
+    70% {
+      content: "JavaScript";
+      color: rgb(255, 251, 39);
+    }
+
+    71% {
+      content: "JavaScrip";
+      color: rgb(231, 231, 231);
+    }
+
+    72% {
+      content: "JavaScri";
+    }
+
+    73% {
+      content: "JavaScr";
+    }
+
+    74% {
+      content: "JavaSc";
+    }
+
+    75% {
+      content: "JavaS";
+    }
+
+    76% {
+      content: "Java";
+    }
+
+    77% {
+      content: "Jav";
+    }
+
+    78% {
+      content: "Jav";
+    }
+
+    79% {
+      content: "Ja";
+    }
+
+    80% {
+      content: "J";
+    }
+
+    81% {
+      content: "";
+    }
+
+    82% {
+      content: "S";
+    }
+
+    83% {
+      content: "SQ";
+      color: rgb(231, 231, 231);
+    }
+
+    84%,
+    94% {
+      content: "SQL";
+      color: #FFF;
+    }
+
+    95% {
+      content: "SQ";
+      color: rgb(231, 231, 231);
+    }
+
+    96% {
+      content: "S";
+    }
+
+    97%,
     100% {
-      content: "Programmerare och webbutvecklare";
+      content: "";
+    }
+
+  }
+
+  @keyframes effectBefore {
+    16% {
+      content: "";
+    }
+
+    17% {
+      content: "<";
+    }
+
+    18% {
+      content: "<h";
+    }
+
+    19% {
+      content: "<h2";
+    }
+
+    20%,
+    30% {
+      content: "<h2>";
+      font-weight: normal;
+    }
+
+    31% {
+      content: "<h2";
+    }
+
+    32% {
+      content: "<h";
+    }
+
+    33% {
+      content: "<";
+    }
+
+    34% {
+      content: "";
+    }
+
+    81% {
+      content: "";
+    }
+
+    82% {
+      content: "SELE";
+    }
+
+    83% {
+      content: "SELECT * F";
+    }
+
+    84%,
+    94% {
+      content: "SELECT * FROM ";
     }
   }
 
-  @keyframes blinkText {
-    to,
-    from {
-      opacity: 100%;
+  @keyframes effectAfter {
+    16% {
+      content: "";
     }
-    50% {
-      opacity: 0%;
+
+    17% {
+      content: "<";
+    }
+
+    18% {
+      content: "</";
+    }
+
+    19% {
+      content: "</h";
+    }
+
+    20% {
+      content: "</h2"
+    }
+
+    21%,
+    31% {
+      content: "</h2>";
+      font-weight: normal;
+    }
+
+    32% {
+      content: "</h2";
+    }
+
+    33% {
+      content: "</h";
+    }
+
+    34% {
+      content: "";
+    }
+
+    81% {
+      content: "";
+    }
+
+    82% {
+      content: " WHERE Fir";
+    }
+
+    83% {
+      content: "WHERE FirstName = 'A";
+    }
+
+    84%,
+    94% {
+      content: " WHERE FirstName = 'Adam'";
+    }
+
+    95% {
+      content: " WHERE FirstName = 'A";
+    }
+
+    96% {
+      content: " WHERE F";
+    }
+
+    97%,
+    100% {
+      content: "";
+    }
+  }
+
+  @keyframes effectMiddle {
+    19% {
+      font-weight: normal;
+    }
+
+    20%,
+    30% {
+      font-weight: bolder;
+    }
+
+    31% {
+      font-weight: normal;
     }
   }
 
@@ -216,19 +435,19 @@
     text-transform: uppercase;
   }
 
-  .navLinkContainer:active > .navLink:not(:active) {
+  .navLinkContainer:active>.navLink:not(:active) {
     opacity: 0.2;
   }
 
-  .navLinkContainer:active > .navLink:nth-child(even) {
+  .navLinkContainer:active>.navLink:nth-child(even) {
     transform: translateX(20px) rotate(2deg);
   }
 
-  .navLinkContainer:active > .navLink:nth-child(odd) {
+  .navLinkContainer:active>.navLink:nth-child(odd) {
     transform: translateX(-20px) rotate(-2deg);
   }
 
-  .navLinkContainer:active > .navLink:active {
+  .navLinkContainer:active>.navLink:active {
     transform: none;
     font-weight: bold;
   }
@@ -254,41 +473,40 @@
     background: black;
     opacity: 0.7;
   }
-}
 
-@media screen and (min-width: 961px) {
-  .navLinkContainer:hover > .navLink:not(:hover) {
-    opacity: 0.2;
-  }
+  @media screen and (min-width: 961px) {
+    .navLinkContainer:hover>.navLink:not(:hover) {
+      opacity: 0.2;
+    }
 
-  .navLinkContainer:hover > .navLink:nth-child(even) {
-    transform: translateX(25px) rotate(2deg);
-  }
+    .navLinkContainer:hover>.navLink:nth-child(even) {
+      transform: translateX(25px) rotate(2deg);
+    }
 
-  .navLinkContainer:hover > .navLink:nth-child(odd) {
-    transform: translateX(-25px) rotate(-2deg);
-  }
+    .navLinkContainer:hover>.navLink:nth-child(odd) {
+      transform: translateX(-25px) rotate(-2deg);
+    }
 
-  .navLinkContainer:hover > .navLink:hover {
-    transform: none;
-    font-weight: bold;
-  }
+    .navLinkContainer:hover>.navLink:hover {
+      transform: none;
+      font-weight: bold;
+    }
 
-  .backgroundVideo {
-    height: 1080px;
-    width: 1920px;
-    transition: transform 1s linear;
-  }
+    .backgroundVideo {
+      height: 1080px;
+      width: 1920px;
+      transition: transform 1s linear;
+    }
 
-  .NavBar:hover + .Background .backgroundVideo {
-    transform: scale(2);
-  }
+    .NavBar:hover+.Background .backgroundVideo {
+      transform: scale(2);
+    }
 
-  .backgroundOverlay {
-    transition: opacity 1s linear;
-  }
+    .backgroundOverlay {
+      transition: opacity 1s linear;
+    }
 
-  .NavBar:hover + .Background .backgroundOverlay {
-    opacity: 0.9;
+    .NavBar:hover+.Background .backgroundOverlay {
+      opacity: 0.9;
+    }
   }
-}

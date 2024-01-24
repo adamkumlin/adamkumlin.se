@@ -1,0 +1,94 @@
+.ContactEmailOption {
+    width: 240px;
+    height: 150px;
+    display: block;
+}
+
+.ContactEmailOption .email {
+    width: 240px;
+    height: 150px;
+    display: block;
+}
+
+.ContactEmailOption .email div:first-of-type {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 120px solid transparent;
+    border-bottom: 0;
+    border-top: 100px solid rgb(206, 166, 114);
+}
+
+.ContactEmailOption .email div:nth-of-type(2) {
+    position: absolute;
+    width: 230px;
+    height: 140px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.ContactEmailOption .email div:last-of-type {
+    position: absolute;
+    width: 240px;
+    height: 150px;
+    background-color: rgb(216, 183, 133);
+    z-index: -1;
+}
+
+@media screen and (min-width: 961px) {
+    .ContactEmailOption .email .animated:first-of-type {
+        animation: openEnvelopeTop 0.5s forwards linear;
+    }
+
+    @keyframes openEnvelopeTop {
+        0% {
+            transform: none;
+        }
+
+        50% {
+            border-top-width: 0;
+            transform: none;
+        }
+
+        66% {
+            transform: rotate(180deg);
+            border-top-width: 0;
+        }
+
+        100% {
+            transform: rotate(180deg) translateY(100px);
+            z-index: -1;
+        }
+    }
+
+    .ContactEmailOption .email .animated:nth-of-type(2) {
+        animation: openEnvelopeMiddle 1s forwards;
+        animation-delay: 0.6s;
+    }
+
+    @keyframes openEnvelopeMiddle {
+        0% {
+            transform: none;
+        }
+
+        50% {
+            transform: translateY(-150px);
+        }
+
+        100% {
+            transform: none;
+            z-index: 0;
+        }
+    }
+
+    .ContactEmailOption .emailTooltip {
+        display: none;
+        font-size: 120%;
+    }
+
+    .ContactEmailOption:hover>.emailTooltip {
+        display: block;
+    }
+}
