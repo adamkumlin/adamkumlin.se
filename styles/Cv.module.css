@@ -1,0 +1,11 @@
+.mainContent {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.education, .workExperience {
+    width: 50%;
+}
+
