@@ -17,7 +17,6 @@ const NavBar = forwardRef<HTMLDivElement, NavBarProps>((props, ref) => {
     <div className={styles.NavBar} ref={ref}>
       <div className={styles.navLinkContainer}>
         <Link className={styles.navLink} href="/contact">Kontakta mig</Link>
-        <Link className={styles.navLink} href="/about">Om mig</Link>
         <Link className={styles.navLink} href="/projects">Tidigare projekt</Link>
         <Link className={styles.navLink} href="/cv">CV</Link>
       </div>

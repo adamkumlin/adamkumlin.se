@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         <h2 className={styles.middle}>Fullstackutvecklare</h2>
         <h2 className={styles.last}></h2>
       </div>
-      <h3>Som kan </h3>
+      <h3>som kan </h3>
       <NavButton goToMainContent={goToMainContent} />
       <ScrollReveal.div animation="fade-in" duration={2}>
         <NavBar ref={navBarRef} />

@@ -340,17 +340,17 @@
     }
 
     36% {
-      content: '<h2 style="font-family: Georgia';
+      content: '<h2 style="font-family: Impact';
     }
 
     37%,
     47% {
       font-family: Roboto;
-      content: '<h2 style="font-family: Georgia; color: red;">';
+      content: '<h2 style="font-family: Impact; color: red;">';
     }
 
     48% {
-      content: '<h2 style="font-family: Georgia';
+      content: '<h2 style="font-family: Impact';
     }
 
     49% {
@@ -485,25 +485,30 @@
   @keyframes effectMiddle {
     19% {
       font-weight: normal;
+      font-size: 200%;
     }
 
     20%,
     30% {
+      font-size: 210%;
       font-weight: bolder;
     }
 
     36% {
       font-family: Roboto;
       color: rgb(231, 231, 231);
+      
     }
 
     37%,
     47% {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       color: red;
+      font-size: 210%;
     }
 
     48% {
+      font-size: 200%;
       font-weight: normal;
       font-family: Roboto;
       color: rgb(231, 231, 231);

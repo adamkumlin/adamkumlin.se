@@ -1,13 +1,26 @@
 "use client";
 import React from "react";
 import styles from "../../styles/Cv.module.css";
+import Image from "next/image";
 import HomeButton from "../components/HomeButton";
 
 const Cv: React.FC = () => {
   return (
     <div className={styles.Cv}>
       <HomeButton />
-      <h2 className="heading">Adam Kumlin</h2>
+      <div className={styles.header}>
+        <Image
+          className={styles.profileImage}
+          src="github-icon.svg"
+          alt="Adam Kumlin"
+          width={150}
+          height={150}
+        />
+        <div className={styles.headings}>
+          <h2>Adam Kumlin</h2>
+          <h3>Fullstackutvecklare</h3>
+        </div>
+      </div>
       <div className={styles.mainContent}>
         <div className={styles.education}>
           <h3>Utbildning</h3>
@@ -35,7 +48,8 @@ const Cv: React.FC = () => {
             </li>
           </ul>
         </div>
-
+      </div>
+      <div className={styles.sideContent}>
         <div className={styles.languagesAndMore}>
           <h3>Språk och övrigt</h3>
           <ul>
