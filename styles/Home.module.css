@@ -2,15 +2,33 @@
     font-family: "Roboto", sans-serif;
   }
 
-  .siteHeading {
+  .Home .siteHeading {
     font-size: 500%;
     position: sticky;
     top: 19.92px;
     transition: transform 0.6s;
   }
 
-  .Home h2 {
+  .animationContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .first {
+    font-size: 250%;
+    color: rgb(141, 141, 141);
+    font-weight: normal;
+    display: inline-block;
+  }
+
+  .first::after {
+    content: "";
+    animation: effectBefore 10s infinite forwards;
+  }
+
+  .middle {
     margin-top: 1rem;
+    display: inline-block;
     font-size: 250%;
     font-weight: normal;
     animation: effectMiddle 10s infinite forwards;
@@ -25,18 +43,6 @@
   .Home h3::after {
     content: "";
     animation: typing 10s infinite forwards;
-  }
-
-  .Home h2::before {
-    content: "";
-    animation: effectBefore 10s infinite forwards;
-    color: rgb(150, 150, 150);
-  }
-
-  .Home h2::after {
-    content: "";
-    animation: effectAfter 10s infinite forwards;
-    color: rgb(150, 150, 150);
   }
 
   @media (prefers-reduced-motion) {
@@ -265,6 +271,31 @@
   }
 
   @keyframes effectBefore {
+    0% {
+      content: "";
+    }
+
+    1% {
+      content: "publ ";
+    }
+
+    2% {
+      content: "public cl ";
+    }
+
+    3%,
+    13% {
+      content: "public class ";
+    }
+
+    14% {
+      content: "public cl ";
+    }
+
+    15% {
+      content: "publ ";
+    }
+
     16% {
       content: "";
     }
@@ -282,24 +313,34 @@
     }
 
     20%,
-    30% {
+    34% {
       content: "<h2>";
       font-weight: normal;
     }
 
-    31% {
-      content: "<h2";
+    35% {
+      content: '<h2 style="font';
     }
 
-    32% {
-      content: "<h";
+    36% {
+      content: '<h2 style="font-family: Georgia';
     }
 
-    33% {
-      content: "<";
+    37%,
+    47% {
+      font-family: Roboto;
+      content: '<h2 style="font-family: Georgia; color: red;">';
     }
 
-    34% {
+    48% {
+      content: '<h2 style="font-family: Georgia';
+    }
+
+    49% {
+      content: '<h2 style="font';
+    }
+
+    50% {
       content: "";
     }
 
@@ -322,6 +363,31 @@
   }
 
   @keyframes effectAfter {
+    0% {
+      content: "";
+    }
+
+    1% {
+      content: "{ public int ";
+    }
+
+    2% {
+      content: "{ public int id; public stri";
+    }
+
+    3%,
+    13% {
+      content: "{ public int id; public string FirstName; }";
+    }
+
+    14% {
+      content: "{ public int id; public stri";
+    }
+
+    15% {
+      content: "{ public int ";
+    }
+
     16% {
       content: "";
     }
@@ -343,20 +409,12 @@
     }
 
     21%,
-    31% {
+    49% {
       content: "</h2>";
       font-weight: normal;
     }
 
-    32% {
-      content: "</h2";
-    }
-
-    33% {
-      content: "</h";
-    }
-
-    34% {
+    50% {
       content: "";
     }
 
@@ -401,8 +459,21 @@
       font-weight: bolder;
     }
 
-    31% {
+    36% {
+      font-family: Roboto;
+      color: rgb(231, 231, 231);
+    }
+
+    37%,
+    47% {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: red;
+    }
+
+    48% {
       font-weight: normal;
+      font-family: Roboto;
+      color: rgb(231, 231, 231);
     }
   }
 

@@ -3,8 +3,6 @@ import React from "react";
 import styles from "../../styles/Cv.module.css";
 import HomeButton from "../components/HomeButton";
 
-// CV page
-
 const Cv: React.FC = () => {
   return (
     <div className={styles.Cv}>

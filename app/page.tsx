@@ -5,8 +5,6 @@ import NavBar from "./components/NavBar";
 import NavButton from "./components/NavButton";
 import { ScrollReveal } from "reveal-on-scroll-react";
 
-// Home page/start page
-
 const Home: React.FC = () => {
   const siteHeadingRef = useRef<HTMLHeadingElement>(null);
   const navBarRef = useRef<HTMLDivElement>(null);
@@ -21,9 +19,13 @@ const Home: React.FC = () => {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 1) {
-        if (siteHeadingRef.current) { siteHeadingRef.current.style.transform = "translateX(-42vw)"; }
+        if (siteHeadingRef.current) {
+          siteHeadingRef.current.style.transform = "translateX(-42vw)";
+        }
       } else {
-        if (siteHeadingRef.current) {siteHeadingRef.current.style.transform = "none";}
+        if (siteHeadingRef.current) {
+          siteHeadingRef.current.style.transform = "none";
+        }
       }
     });
   }
@@ -34,11 +36,15 @@ const Home: React.FC = () => {
       <h1 className={styles.siteHeading} ref={siteHeadingRef}>
         Adam Kumlin
       </h1>
-      <h2>Fullstackutvecklare</h2>
+      <div className={styles.animationContainer}>
+        <h2 className={styles.first}></h2>
+        <h2 className={styles.middle}>Fullstackutvecklare</h2>
+        <h2 className={styles.last}></h2>
+      </div>
       <h3>Som kan </h3>
       <NavButton goToMainContent={goToMainContent} />
       <ScrollReveal.div animation="fade-in" duration={2}>
-        <NavBar ref={navBarRef}/>
+        <NavBar ref={navBarRef} />
       </ScrollReveal.div>
     </div>
   );
