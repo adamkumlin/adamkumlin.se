@@ -20,7 +20,7 @@ const Home: React.FC = () => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 1) {
         if (siteHeadingRef.current) {
-          siteHeadingRef.current.style.transform = "translateX(-42vw)";
+          siteHeadingRef.current.style.transform = "translateX(-39vw)";
         }
       } else {
         if (siteHeadingRef.current) {

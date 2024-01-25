@@ -1,4 +1,3 @@
-@media screen and (min-width: 320px) {
   .NavButton {
     cursor: pointer;
     height: 200px;
@@ -62,7 +61,6 @@
     width: 140px;
     height: 20px;
   }
-}
 
 @media screen and (min-width: 961px) {
   .NavButton {

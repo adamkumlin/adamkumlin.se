@@ -8,7 +8,7 @@ import Link from "next/link";
 const Footer: React.FC= () => {
   return (
     <div className={styles.Footer}>
-      <p>© 2022 Adam Kumlin</p>
+      <p>&copy; 2024 Adam Kumlin</p>
       <Link href="privacy">Integritetspolicy</Link>
     </div>
   );
