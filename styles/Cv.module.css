@@ -22,13 +22,31 @@
     color:gray;
 }
 
-.mainContent {
+.content {
     display: flex;
-    flex-direction: column;
-    background-color: rgb(238, 238, 238);
-    color: black;
+    flex-direction: row-reverse;
 }
 
-.education,
-.workExperience {
+.education, .workExperience, .aboutMe {
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainContent {
+    background-color: rgb(238, 238, 238);
+    color: black;
+    flex: 2;
+}
+
+.sideContent {
+    background-color: gray;
+    flex: 1;
+}
+
+.Cv h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    border-bottom: 1px dashed white;
 }

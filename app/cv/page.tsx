@@ -20,55 +20,73 @@ const Cv: React.FC = () => {
           <h2>Adam Kumlin</h2>
           <h3>Fullstackutvecklare</h3>
         </div>
-      </div>
-      <div className={styles.mainContent}>
-        <div className={styles.education}>
-          <h3>Utbildning</h3>
-          <ul>
-            <li>.NET Utvecklare, Teknikhögskolan Göteborg, aug 2023 - nu</li>
-            <li>
-              Kandidatexamen i Informationsarkitektur inrikting
-              Frontendutveckling, Högskolan i Borås, aug 2020 - jan 2024
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.workExperience}>
-          <h3>Anställningar</h3>
-
-          <ul>
-            <li>
-              Aranäs Fastigheter AB, Kungsbacka Städade korridorer, rensade
-              ogräs och delade ut reklam- samt informationsblad från företaget.
-              Sommar 2016, 2017
-            </li>
-            <li>
-              Aranäs Fastigheter AB, Kungsbacka Kollade till miljörum så att det
-              såg snyggt och bra ut. Sommar 2019, 2020
-            </li>
-          </ul>
+        <div className={styles.aboutMe}>
+          <h4>Om mig</h4>
+          <p>
+            Jag heter Adam och är extremt teknikintresserad. Nyligen tog jag min
+            fil.kand i Informationsarkitektur inriktning Frontendutveckling från
+            Högskolan i Borås. Jag blev på den utbildningen mycket intresserad
+            av programmering, och därför valde jag att läsa till .NET-utvecklare
+            på Teknikhögskolan. Som person är jag mycket målinriktad, effektiv
+            och fokuserad. Jag gillar också att arbeta i grupp.
+          </p>
         </div>
       </div>
-      <div className={styles.sideContent}>
-        <div className={styles.languagesAndMore}>
-          <h3>Språk och övrigt</h3>
-          <ul>
-            <li>Svenska, modersmål</li>
-            <li>Engelska, flytande i tal och skrift</li>
-            <li>Ryska, grundläggande kunskaper</li>
-            <li>Innehar B-körkort.</li>
-          </ul>
-        </div>
+      <div className={styles.content}>
+        <div className={styles.mainContent}>
+          <div className={styles.education}>
+            <h4>Utbildning</h4>
+            <ul>
+              <li>.NET Utvecklare, Teknikhögskolan Göteborg, aug 2023 - nu</li>
+              <li>
+                Kandidatexamen i Informationsarkitektur inrikting
+                Frontendutveckling, Högskolan i Borås, aug 2020 - jan 2024
+              </li>
+            </ul>
+          </div>
 
-        <div className={styles.skills}>
-          <h3>Färdigheter</h3>
-          <ul>
-            <li>Visual Studio Code/Visual Studio</li>
-            <li>.NET/C#</li>
-            <li>HTML/CSS (även Tailwind.css)</li>
-            <li>JavaScript (även React, Vue.js)</li>
-            <li>SQL/Microsoft SQL Server</li>
-          </ul>
+          <div className={styles.workExperience}>
+            <h4>Anställningar</h4>
+
+            <ul>
+              <li>
+                Aranäs Fastigheter AB, Kungsbacka Städade korridorer, rensade
+                ogräs och delade ut reklam- samt informationsblad från
+                företaget. Sommar 2016, 2017
+              </li>
+              <li>
+                Aranäs Fastigheter AB, Kungsbacka Kollade till miljörum så att
+                det såg snyggt och bra ut. Sommar 2019, 2020
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={styles.sideContent}>
+          <div className={styles.languagesAndMore}>
+            <h4>Språk och övrigt</h4>
+            <ul>
+              <li>Svenska, modersmål</li>
+              <li>Engelska, flytande i tal och skrift</li>
+              <li>Ryska, grundläggande kunskaper</li>
+              <li>Innehar B-körkort.</li>
+            </ul>
+          </div>
+
+          <div className={styles.skills}>
+            <h4>Färdigheter</h4>
+            <ul>
+              <li>Visual Studio Code/Visual Studio</li>
+              <li>.NET/C# (även EF Core, WinForms)</li>
+              <li>HTML/CSS (även Tailwind.css)</li>
+              <li>JavaScript (även React, Vue.js)</li>
+              <li>SQL/Microsoft SQL Server</li>
+            </ul>
+
+            <div className={styles.references}>
+              <h4>Färdigheter</h4>
+              <p>Referenser ges på begäran.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
