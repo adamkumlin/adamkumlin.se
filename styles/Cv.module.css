@@ -1,6 +1,8 @@
+
+
 .header {
     display: flex;
-    background-color: rgb(94, 162, 221);
+    background-color: rgb(15, 86, 148);
     margin-top: 7rem;
     padding: 1rem 0 1rem 0;
     align-items: center;
@@ -15,11 +17,15 @@
 
 .headings h2 {
     font-size: 300%;
+    font-family: Lemon;
+    font-weight: normal;
 }
 
 .headings h3 {
     font-size: 150%;
     color:gray;
+    font-weight: normal;
+    font-family: Lemon;
 }
 
 .content {
@@ -40,13 +46,29 @@
     flex: 2;
 }
 
+.education, .workExperience, .skills, .languagesAndMore {
+    padding-top: 1rem;
+}
+
+.Cv p, .Cv li {
+    font-family: Poppins;
+}
+
 .sideContent {
     background-color: gray;
     flex: 1;
 }
 
+.sideContent ul {
+    list-style-position: inside;
+}
+
+.sideContent ul li {
+    margin: 1rem;;
+}
+
 .Cv h4 {
     text-transform: uppercase;
     letter-spacing: 0.3ch;
-    border-bottom: 1px dashed white;
+    font-family: Merienda;
 }

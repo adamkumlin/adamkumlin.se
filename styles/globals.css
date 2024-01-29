@@ -40,11 +40,36 @@
   /* Legacy iOS */
 }
 
+/* merienda-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/merienda-v19-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lemon-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lemon';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/lemon-v17-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /*
 Copyright (c) 2014, Indian Type Foundry (https://fonts.google.com/?query=Indian%20Type%20Foundry),
 with Reserved Font Name Poppins.
 Copyright (c) 2014, Johnny Pinhorn (https://fonts.google.com/?query=Jonny%20Pinhorn),
 with Reserved Font Name Poppins.
+Copyright (c) 2017, The Merienda Project Authors (https: //github.com/etunni/merienda)
+with Reserved Font Name "Merienda".
+Copyright (c) 2011, The Lemon Project Authors (https: //github.com/etunni/lemon) with Reserved Font Name "Lemon".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

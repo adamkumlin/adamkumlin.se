@@ -62,15 +62,6 @@ const Cv: React.FC = () => {
           </div>
         </div>
         <div className={styles.sideContent}>
-          <div className={styles.languagesAndMore}>
-            <h4>Språk och övrigt</h4>
-            <ul>
-              <li>Svenska, modersmål</li>
-              <li>Engelska, flytande i tal och skrift</li>
-              <li>Ryska, grundläggande kunskaper</li>
-              <li>Innehar B-körkort.</li>
-            </ul>
-          </div>
 
           <div className={styles.skills}>
             <h4>Färdigheter</h4>
@@ -82,8 +73,18 @@ const Cv: React.FC = () => {
               <li>SQL/Microsoft SQL Server</li>
             </ul>
 
+          <div className={styles.languagesAndMore}>
+            <h4>Språk och övrigt</h4>
+            <ul>
+              <li>Svenska, modersmål</li>
+              <li>Engelska, flytande i tal och skrift</li>
+              <li>Ryska, grundläggande kunskaper</li>
+              <li>Innehar B-körkort.</li>
+            </ul>
+          </div>
+
             <div className={styles.references}>
-              <h4>Färdigheter</h4>
+              <h4>Referenser</h4>
               <p>Referenser ges på begäran.</p>
             </div>
           </div>
