@@ -18,7 +18,7 @@ const Cv: React.FC = () => {
         />
         <div className={styles.headings}>
           <h2>Adam Kumlin</h2>
-          <h3>Fullstackutvecklare</h3>
+          <h3>Mjukvaruutvecklare</h3>
         </div>
         <div className={styles.aboutMe}>
           <h4>Om mig</h4>

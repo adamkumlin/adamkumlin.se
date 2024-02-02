@@ -38,7 +38,7 @@ const Home: React.FC = () => {
       </h1>
       <div className={styles.animationContainer}>
         <h2 className={styles.first}></h2>
-        <h2 className={styles.middle}>Fullstackutvecklare</h2>
+        <h2 className={styles.middle}>Mjukvaruutvecklare</h2>
         <h2 className={styles.last}></h2>
       </div>
       <h3>som kan </h3>
