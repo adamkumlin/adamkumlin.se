@@ -1,8 +1,8 @@
-"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../../styles/ContactLinkOption.module.css";
+import styles from "./styles/ContactLinkOption.module.css";
 
 // Contact Link Option component
 

@@ -1,7 +1,7 @@
-"use client";
+
 import React, { forwardRef } from "react";
 import Link from "next/link";
-import styles from "../../styles/Home.module.css";
+import styles from "./styles/NavBar.module.css";
 
 // Nav Bar component
 

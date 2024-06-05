@@ -1,7 +1,7 @@
-"use client";
+
 import React from "react";
 import Link from "next/link";
-import styles from "../../styles/ContactEmailOption.module.css";
+import styles from "./styles/ContactEmailOption.module.css";
 
 // Contact Email Option component
 

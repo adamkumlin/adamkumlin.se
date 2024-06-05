@@ -23,7 +23,7 @@
         "@/*": ["./*"]
       }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js", "webpack.config.js"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js", "webpack.config.js", "src"],
     "exclude": ["node_modules"]
   }
   

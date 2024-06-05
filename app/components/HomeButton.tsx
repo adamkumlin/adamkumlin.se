@@ -1,6 +1,6 @@
-"use client";
+
 import React, { forwardRef } from "react";
-import styles from "../../styles/HomeButton.module.css";
+import styles from "./styles/HomeButton.module.css";
 import Link from "next/link";
 
 // Home Button component

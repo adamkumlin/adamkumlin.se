@@ -1,6 +1,7 @@
+
 "use client";
 import React, { useRef } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "./Home.module.css";
 import NavBar from "./components/NavBar";
 import NavButton from "./components/NavButton";
 import { ScrollReveal } from "reveal-on-scroll-react";

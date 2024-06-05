@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import HomeButton from "../components/HomeButton";
 import ContactEmailOption from "../components/ContactEmailOption";
-import styles from "../../styles/Contact.module.css";
+import styles from "./Contact.module.css"
 import ContactLinkOption from "../components/ContactLinkOption";
 
 // Contact page
